@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.dinbtechit.vscodetheme.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.dinbtechit.vscodetheme.MyBundle
 
 class MyApplicationService {
 
