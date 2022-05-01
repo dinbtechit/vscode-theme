@@ -1,0 +1,72 @@
+{
+  "name": "VSCode Dark",
+  "dark": true,
+  "author": "Alexander Makarov",
+  "editorScheme": "/visual_studio_code_dark_plus.xml",
+  "ui": {
+    "*": {
+      "background": "#323232"
+    },
+    "Borders": {
+      "color": "#323232",
+      "ContrastBorderColor": "#323232"
+    },
+    "EditorTabs": {
+      "selectedBackground": "#1d1d1d",
+      "underlinedTabBackground": "#1d1d1d",
+      "selectedForeground": "#e6e6e6",
+      "inactiveMaskColor": "#2c2c2c",
+      "inactiveColoredFileBackground": "#2c2c2c",
+      "underlineHeight": 0,
+      "borderColor": "#323232"
+    },
+    "Panel" : {
+      "foreground": "#acacac",
+      "background": "#323232"
+    },
+    "Tree": {
+      "background": "#242425",
+      "foreground": "#c7c7c7",
+      "selectionForeground": "#f8fafb"
+    },
+    "Menu": {
+      "background": "#323232",
+      "foreground": "#cbcbc2",
+      "borderColor": "#141414",
+      "separatorColor": "#606060"
+    },
+    "PopupMenuSeparator": {
+      "height": 13,
+      "stripeIndent": 6,
+      "stripeWidth": 1
+    },
+    "MenuBar": {
+      "borderColor": "#323232"
+    },
+    "MenuItem": {
+      "background": "#242425",
+      "foreground": "#cbcbc2",
+      "selectionBackground": "#094770"
+    },
+    "NavBar": {
+      "borderColor": "#323232"
+    },
+    "CompletionPopup": {
+      "background": "#242425",
+      "foreground": "#cecece"
+    },
+    "Button": {
+      "arc": 2
+    },
+    "StatusBar": {
+      "borderColor": "#323232"
+    },
+    "ToolWindow": {
+      "Header": {
+        "borderColor": "#323232",
+        "background": "#323232",
+        "inactiveBackground": "#323232"
+      }
+    }
+  }
+}

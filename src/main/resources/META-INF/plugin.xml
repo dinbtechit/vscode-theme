@@ -5,8 +5,11 @@
     <vendor>dinbtechit</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="e843a6a0-d4df-4c2a-b5b6-99dcbb839b8d" path="themes/visual_studio_code_dark_plus.theme.json"/>
+        <bundledColorScheme path="themes/visual_studio_code_dark_plus"/>
         <applicationService serviceImplementation="com.github.dinbtechit.vscodetheme.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.dinbtechit.vscodetheme.services.MyProjectService"/>
     </extensions>
