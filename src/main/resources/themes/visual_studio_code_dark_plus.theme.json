@@ -2,7 +2,7 @@
   "name": "VSCode Dark",
   "dark": true,
   "author": "Alexander Makarov",
-  "editorScheme": "/visual_studio_code_dark_plus.xml",
+  "editorScheme": "/themes/visual_studio_code_dark_plus.xml",
   "ui": {
     "*": {
       "background": "#323232"
