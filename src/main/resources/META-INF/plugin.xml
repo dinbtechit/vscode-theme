@@ -3,9 +3,12 @@
     <id>com.github.dinbtechit.vscodetheme</id>
     <name>vscode-theme</name>
     <vendor>dinbtechit</vendor>
-
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <depends config-file="lang-config/dinbtechit-javascript.xml" optional="true">JavaScript</depends>
+    <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
 
     <extensions defaultExtensionNs="com.intellij">
         <themeProvider id="e843a6a0-d4df-4c2a-b5b6-99dcbb839b8d" path="themes/visual_studio_code_dark_plus.theme.json"/>

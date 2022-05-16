@@ -48,6 +48,7 @@
       "foreground": "#cbcbc2",
       "selectionBackground": "#094770"
     },
+
     "NavBar": {
       "borderColor": "#323232"
     },
@@ -61,12 +62,11 @@
     "StatusBar": {
       "borderColor": "#323232"
     },
-    "ToolWindow": {
-      "Header": {
-        "borderColor": "#323232",
-        "background": "#323232",
-        "inactiveBackground": "#323232"
-      }
+    "WelcomeScreen" : {
+      "background" : "#313335",
+      "SidePanel.background" : "3c3f41",
+      "Projects.background": "#313335",
+      "Projects.actions.background": "#3c5c86"
     }
   }
 }

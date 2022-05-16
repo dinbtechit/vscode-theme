@@ -1,4 +1,4 @@
-<scheme name="Visual Studio Code Dark Plus" version="142" parent_scheme="Darcula">
+<scheme name="VSCode Dark" version="142" parent_scheme="Darcula">
   <metaInfo>
     <property name="created">2019-07-05T16:51:16</property>
     <property name="ide">Idea</property>
@@ -528,6 +528,21 @@
     <option name="JS.PARAMETER">
       <value>
         <option name="FOREGROUND" value="9cdcfe" />
+      </value>
+    </option>
+    <option name="TS.MODULE_KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="ba7c97" />
+      </value>
+    </option>
+    <option name="JS.FROM_KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="ba7c97" />
+      </value>
+    </option>
+    <option name="TS.FROM_KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="ba7c97" />
       </value>
     </option>
     <option name="KOTLIN_ANNOTATION" baseAttributes="ANNOTATION_NAME_ATTRIBUTES" />
