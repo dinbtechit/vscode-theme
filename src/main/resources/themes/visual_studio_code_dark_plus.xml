@@ -513,6 +513,21 @@
         <option name="FOREGROUND" value="39c8b0" />
       </value>
     </option>
+    <option name="JS.FROM_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="ba7c97" />
+      </value>
+    </option>
+    <option name="JS.MODULE_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="ba7c97" />
+      </value>
+    </option>
+    <option name="JS.IMPORT_SPECIFIER" baseAttributes="DEFAULT_INSTANCE_FIELD">
+      <value>
+        <option name="FOREGROUND" value="9cdcfe" />
+      </value>
+    </option>
     <option name="JS.DOC_TYPE">
       <value>
         <option name="FOREGROUND" value="39c8b0" />
@@ -530,17 +545,12 @@
         <option name="FOREGROUND" value="9cdcfe" />
       </value>
     </option>
-    <option name="TS.MODULE_KEYWORD">
+    <option name="TS.MODULE_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
       <value>
         <option name="FOREGROUND" value="ba7c97" />
       </value>
     </option>
-    <option name="JS.FROM_KEYWORD">
-      <value>
-        <option name="FOREGROUND" value="ba7c97" />
-      </value>
-    </option>
-    <option name="TS.FROM_KEYWORD">
+    <option name="TS.FROM_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
       <value>
         <option name="FOREGROUND" value="ba7c97" />
       </value>

@@ -19,6 +19,7 @@ import javax.swing.Icon
 class JSColorSettingsPage : BaseColorSettings() {
 
     private val JS_ATTRIBUTES: Array<AttributesDescriptor?> = arrayOf(
+        AttributesDescriptor("Import specifiers", THIS_SUPER),
         AttributesDescriptor("Keywords//this, super", THIS_SUPER),
         AttributesDescriptor("Keywords//module, import, export, return", MODULE),
         AttributesDescriptor("Keywords//from", FROM_KEYWORD),
@@ -40,6 +41,7 @@ class JSColorSettingsPage : BaseColorSettings() {
         val FUNCTION: TextAttributesKey = JSAnnotator.FUNCTION
         val THIS_SUPER: TextAttributesKey = JSAnnotator.THIS_SUPER
         val MODULE: TextAttributesKey = JSAnnotator.MODULE
+        val IMPORT_SPECIFIER: TextAttributesKey = JSAnnotator.IMPORT_SPECIFIER
         val FROM_KEYWORD: TextAttributesKey = JSAnnotator.FROM_KEYWORD
         val CONSOLE: TextAttributesKey = JSAnnotator.CONSOLE
         val DEBUGGER: TextAttributesKey = JSAnnotator.DEBUGGER
@@ -57,6 +59,7 @@ class JSColorSettingsPage : BaseColorSettings() {
         val descriptors: MutableMap<String, TextAttributesKey> = THashMap()
         descriptors["string"] = DefaultLanguageHighlighterColors.STRING
         descriptors["from"] = FROM_KEYWORD
+        descriptors["import_specifier"] = IMPORT_SPECIFIER
         descriptors["keyword"] = JS_KEYWORD
         descriptors["function"] = FUNCTION
         descriptors["function_name"] = FUNCTION_NAME
@@ -85,6 +88,8 @@ class JSColorSettingsPage : BaseColorSettings() {
 
     override fun getDemoText(): String {
         return """<import>import</import> <local_variable>_</local_variable> <from>from</from> <string>'lodash'</string>;
+<import>import</import> {<import_specifier>Hello</import_specifier>, <import_specifier>World</import_specifier>} <from>from</from> <string>'./hello/world'</string>;
+
 <function>function</function> <function_name>foo</function_name>() {
   <val>var</val> <local_variable>x</local_variable> = <number>10</number>;
   <this>this</this>.<inst_field>x</inst_field> = <null>null</null>;

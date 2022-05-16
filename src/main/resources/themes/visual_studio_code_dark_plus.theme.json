@@ -11,16 +11,21 @@
       "color": "#323232",
       "ContrastBorderColor": "#323232"
     },
-    "EditorTabs": {
-      "selectedBackground": "#1d1d1d",
-      "underlinedTabBackground": "#1d1d1d",
-      "selectedForeground": "#e6e6e6",
-      "inactiveMaskColor": "#2c2c2c",
-      "inactiveColoredFileBackground": "#2c2c2c",
-      "underlineHeight": 0,
-      "borderColor": "#323232"
+    "Editor": {
+      "Toolbar.borderColor": "#464545",
+      "background": "#323232"
     },
-    "Panel" : {
+    "EditorTabs": {
+      "background": "#323232",
+      "tabInsets": true,
+      "underlinedTabBackground": "#1d1d1d",
+      "inactiveUnderlineColor": "#2c2c2c",
+      "inactiveColoredFileBackground": "#323232",
+      "selectedForeground": "#e6e6e6",
+      "underlineHeight": 2,
+      "borderColor": "#464545"
+    },
+    "Panel": {
       "foreground": "#acacac",
       "background": "#323232"
     },
@@ -48,7 +53,6 @@
       "foreground": "#cbcbc2",
       "selectionBackground": "#094770"
     },
-
     "NavBar": {
       "borderColor": "#323232"
     },
@@ -62,9 +66,16 @@
     "StatusBar": {
       "borderColor": "#323232"
     },
-    "WelcomeScreen" : {
-      "background" : "#313335",
-      "SidePanel.background" : "3c3f41",
+    "ToolWindow": {
+      "Header": {
+        "borderColor": "#464545",
+        "background": "#3b4754",
+        "inactiveBackground": "#323232"
+      }
+    },
+    "WelcomeScreen": {
+      "background": "#313335",
+      "SidePanel.background": "3c3f41",
       "Projects.background": "#313335",
       "Projects.actions.background": "#3c5c86"
     }
