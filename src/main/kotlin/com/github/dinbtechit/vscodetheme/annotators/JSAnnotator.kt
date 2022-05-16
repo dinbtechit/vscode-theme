@@ -24,6 +24,8 @@ class JSAnnotator : BaseAnnotator() {
         val THIS_SUPER: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.THIS_SUPER", JS_KEYWORD)
         val IMPORT_SPECIFIER: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.IMPORT_SPECIFIER", JS_IDENTIFIER)
         val MODULE: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.MODULE_KEYWORD", JS_KEYWORD)
+        val CONDITION_KEYWORD: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.MODULE_KEYWORD", JS_KEYWORD)
+        val LOOP_KEYWORD: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.MODULE_KEYWORD", JS_KEYWORD)
         val FROM_KEYWORD: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.FROM_KEYWORD")
         val DEBUGGER: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.DEBUGGER_STMT", JS_KEYWORD)
         val CONSOLE: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.CONSOLE", JS_KEYWORD)
@@ -37,7 +39,10 @@ class JSAnnotator : BaseAnnotator() {
         var kind: TextAttributesKey? = null
         when (element.text) {
             "this", "super" -> kind = THIS_SUPER
-            "export", "import", "require", "module", "return" -> kind = MODULE
+            "package", "export", "import", "require", "module", "return" -> kind = MODULE
+            "if", "else", "switch", "case", "default", "throw", "catch", "finally",
+            "yield", "break", "continue", "with" -> kind = CONDITION_KEYWORD
+            "for", "while", "do" -> kind = LOOP_KEYWORD
             "from" -> kind = FROM_KEYWORD
             "debugger" -> kind = DEBUGGER
             "null", "undefined" -> kind = NULL

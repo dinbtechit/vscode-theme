@@ -1,8 +1,8 @@
 <!--Suports both JavaScript and TypeScript-->
 <idea-plugin>
     <extensions defaultExtensionNs="com.intellij">
-        <annotator language="JavaScript"
+        <annotator language="JavaScript" order="last"
                    implementationClass="com.github.dinbtechit.vscodetheme.annotators.JSAnnotator"/>
-        <colorSettingsPage implementation="com.github.dinbtechit.vscodetheme.annotators.settings.JSColorSettingsPage"/>
+        <colorSettingsPage order="last" implementation="com.github.dinbtechit.vscodetheme.annotators.settings.JSColorSettingsPage"/>
     </extensions>
 </idea-plugin>

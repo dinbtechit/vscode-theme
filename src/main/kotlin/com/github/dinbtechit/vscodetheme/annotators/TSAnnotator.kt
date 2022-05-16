@@ -3,7 +3,6 @@ package com.github.dinbtechit.vscodetheme.annotators
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
-import com.intellij.psi.util.elementType
 import com.intellij.util.ObjectUtils
 
 
@@ -36,6 +35,7 @@ class TSAnnotator : BaseAnnotator() {
         when (element.text) {
             "this", "super" -> kind = THIS_SUPER
             "export", "import", "require", "default", "module", "return" -> kind = MODULE
+            "from" -> kind = FROM_KEYWORD
             "debugger" -> kind = DEBUGGER
             "null", "undefined" -> kind = NULL
             "true", "false" -> kind = PRIMITIVE
@@ -45,18 +45,6 @@ class TSAnnotator : BaseAnnotator() {
             "public", "protected", "private" -> kind = PRIVATE
             "declare" -> kind = DECLARE
             "type", "alias" -> kind = TYPE_ALIAS
-            else -> {}
-        }
-
-        when (element.elementType?.debugName) {
-            "IMPORT_KEYWORD" -> {
-                println("TSAnnotator -  Kind = Module")
-                kind = MODULE
-            }
-            "FROM_KEYWORD" -> {
-                println("TSAnnotator - Kind = from ${kind}")
-                kind = FROM_KEYWORD
-            }
             else -> {}
         }
 

@@ -513,9 +513,15 @@
         <option name="FOREGROUND" value="39c8b0" />
       </value>
     </option>
-    <option name="JS.FROM_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
+    <option name="JS.KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="499cd5" />
+      </value>
+    </option>
+    <option name="JS.FROM_KEYWORD">
       <value>
         <option name="FOREGROUND" value="ba7c97" />
+        <option name="BACKGROUND" value="1e1e1e" />
       </value>
     </option>
     <option name="JS.MODULE_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
@@ -550,9 +556,10 @@
         <option name="FOREGROUND" value="ba7c97" />
       </value>
     </option>
-    <option name="TS.FROM_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
+    <option name="TS.FROM_KEYWORD">
       <value>
         <option name="FOREGROUND" value="ba7c97" />
+        <option name="BACKGROUND" value="" />
       </value>
     </option>
     <option name="KOTLIN_ANNOTATION" baseAttributes="ANNOTATION_NAME_ATTRIBUTES" />

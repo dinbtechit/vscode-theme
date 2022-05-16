@@ -1,5 +1,6 @@
 package com.github.dinbtechit.vscodetheme.annotators
 
+import com.intellij.codeInspection.InspectionsBundle
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator
 import com.intellij.lang.annotation.HighlightSeverity
@@ -11,7 +12,7 @@ import com.intellij.psi.impl.source.tree.LeafPsiElement
 import com.intellij.psi.util.PsiTreeUtil
 
 
-abstract class BaseAnnotator: Annotator {
+open class BaseAnnotator : Annotator {
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
         if (element is LeafPsiElement) {
             if (PsiTreeUtil.getParentOfType(element, PsiComment::class.java) != null) {
@@ -19,11 +20,28 @@ abstract class BaseAnnotator: Annotator {
             }
             val kind: TextAttributesKey = getKeywordKind(element) ?: return
             val range = TextRange(element.textRange.startOffset, element.textRange.endOffset)
-            holder.newSilentAnnotation(HighlightSeverity.INFORMATION)
-                .range(range)
-                .textAttributes(kind)
-                .create()
+            if (kind.externalName === "JS.FROM_KEYWORD") {
+                holder.newSilentAnnotation(
+                    HighlightSeverity(
+                        "INFORMATION",
+                        500,
+                        InspectionsBundle.messagePointer("information.severity"),
+                        InspectionsBundle.messagePointer("information.severity.capitalized"),
+                        InspectionsBundle.messagePointer("information.severity.capitalized"))
+                )
+                    .range(range)
+                    .textAttributes(kind)
+                    .create()
+            } else {
+                holder.newSilentAnnotation(HighlightSeverity.INFORMATION)
+                    .range(range)
+                    .textAttributes(kind)
+                    .create()
+            }
         }
     }
-    protected abstract fun getKeywordKind(element: PsiElement): TextAttributesKey?
+
+    protected open fun getKeywordKind(element: PsiElement): TextAttributesKey? {
+        return TextAttributesKey.createTextAttributesKey("DEFAULT_TEXT")
+    }
 }

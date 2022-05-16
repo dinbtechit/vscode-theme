@@ -18,45 +18,45 @@ import javax.swing.Icon
 class TSColorSettingsPage : BaseColorSettings() {
 
 
-    private val TS_ATTRIBUTES: Array<out AttributesDescriptor?>
-
-    private val TS_DESCRIPTORS = mutableMapOf<String, TextAttributesKey>()
-
-    private val TS_KEYWORD: TextAttributesKey = TSAnnotator.KEYWORD
-    private val TS_NUMBER: TextAttributesKey = TSAnnotator.NUMBER
-
-    val THIS_SUPER: TextAttributesKey = TSAnnotator.THIS_SUPER
-    private val MODULE: TextAttributesKey = TSAnnotator.MODULE
-    private val DEBUGGER: TextAttributesKey = TSAnnotator.DEBUGGER
-    val CONSOLE: TextAttributesKey = TSAnnotator.CONSOLE
-    private val NULL: TextAttributesKey = TSAnnotator.NULL
-    private val VAL: TextAttributesKey = TSAnnotator.VAL
-    val FUNCTION: TextAttributesKey = TSAnnotator.FUNCTION
-
-    private val PRIVATE: TextAttributesKey = TSAnnotator.PRIVATE
-    private val DECLARE: TextAttributesKey = TSAnnotator.DECLARE
-    private val TYPE_ALIAS: TextAttributesKey = TSAnnotator.TYPE_ALIAS
-    private val PRIMITIVE: TextAttributesKey = TSAnnotator.PRIMITIVE
-    private val FUNCTION_NAME: TextAttributesKey = TSAnnotator.FUNCTION
-    private val VARIABLE: TextAttributesKey = ObjectUtils.notNull(
-        TextAttributesKey.find("JS.LOCAL_VARIABLE"), DefaultLanguageHighlighterColors.LOCAL_VARIABLE
+    private val TS_ATTRIBUTES: Array<out AttributesDescriptor?> = arrayOf(
+        AttributesDescriptor("Keywords//this, super", THIS_SUPER),
+        AttributesDescriptor("Keywords//module, import, export, return", MODULE),
+        AttributesDescriptor("Keywords//from", FROM_KEYWORD),
+        AttributesDescriptor("Keywords//debugger", DEBUGGER),
+        AttributesDescriptor("Primitives//null, undefined", NULL),
+        AttributesDescriptor("Keywords//var, let, const", VAL),
+        AttributesDescriptor("Keywords//console", CONSOLE),
+        AttributesDescriptor("Keywords//function", FUNCTION),
+        AttributesDescriptor("Keywords//private, public, protected", PRIVATE),
+        AttributesDescriptor("Keywords//declare", DECLARE),
+        AttributesDescriptor("Keywords//type, alias", TYPE_ALIAS),
+        AttributesDescriptor("Primitives//true, false", PRIMITIVE)
     )
 
-    init {
-        TS_ATTRIBUTES = arrayOf(
-            AttributesDescriptor("Keywords//this, super", THIS_SUPER),
-            AttributesDescriptor("Keywords//module, import, export, from, return", MODULE),
-            AttributesDescriptor("Keywords//debugger", DEBUGGER),
-            AttributesDescriptor("Primitives//null, undefined", NULL),
-            AttributesDescriptor("Keywords//var, let, const", VAL),
-            AttributesDescriptor("Keywords//console", CONSOLE),
-            AttributesDescriptor("Keywords//function", FUNCTION),
-            AttributesDescriptor("Keywords//private, public, protected", PRIVATE),
-            AttributesDescriptor("Keywords//declare", DECLARE),
-            AttributesDescriptor("Keywords//type, alias", TYPE_ALIAS),
-            AttributesDescriptor("Primitives//true, false", PRIMITIVE)
-        )
+    companion object {
+        val TS_DESCRIPTORS = mutableMapOf<String, TextAttributesKey>()
 
+        val TS_KEYWORD: TextAttributesKey = TSAnnotator.KEYWORD
+        val TS_NUMBER: TextAttributesKey = TSAnnotator.NUMBER
+        val THIS_SUPER: TextAttributesKey = TSAnnotator.THIS_SUPER
+        val MODULE: TextAttributesKey = TSAnnotator.MODULE
+        val FROM_KEYWORD: TextAttributesKey = TSAnnotator.FROM_KEYWORD
+        val DEBUGGER: TextAttributesKey = TSAnnotator.DEBUGGER
+        val CONSOLE: TextAttributesKey = TSAnnotator.CONSOLE
+        val NULL: TextAttributesKey = TSAnnotator.NULL
+        val VAL: TextAttributesKey = TSAnnotator.VAL
+        val FUNCTION: TextAttributesKey = TSAnnotator.FUNCTION
+        val PRIVATE: TextAttributesKey = TSAnnotator.PRIVATE
+        val DECLARE: TextAttributesKey = TSAnnotator.DECLARE
+        val TYPE_ALIAS: TextAttributesKey = TSAnnotator.TYPE_ALIAS
+        val PRIMITIVE: TextAttributesKey = TSAnnotator.PRIMITIVE
+        val FUNCTION_NAME: TextAttributesKey = TSAnnotator.FUNCTION
+        val VARIABLE: TextAttributesKey = ObjectUtils.notNull(
+            TextAttributesKey.find("JS.LOCAL_VARIABLE"), DefaultLanguageHighlighterColors.LOCAL_VARIABLE
+        )
+    }
+
+    init {
         TS_DESCRIPTORS.putAll(createAdditionalHlAttrs())
         TS_DESCRIPTORS.putAll(JSColorSettingsPage.JS_DESCRIPTORS)
     }
@@ -66,6 +66,7 @@ class TSColorSettingsPage : BaseColorSettings() {
         descriptors["string"] = DefaultLanguageHighlighterColors.STRING
         descriptors["private"] = PRIVATE
         descriptors["declare"] = DECLARE
+        descriptors["from"] = FROM_KEYWORD
         descriptors["type"] = TYPE_ALIAS
         descriptors["class"] = DefaultLanguageHighlighterColors.CLASS_NAME
         descriptors["keyword"] = TS_KEYWORD
@@ -89,14 +90,14 @@ class TSColorSettingsPage : BaseColorSettings() {
     }
 
     override fun getHighlighter(): SyntaxHighlighter {
-        val lang: Language = ObjectUtils.notNull(Language.findLanguageByID("JavaScript"), Language.ANY)
+        val lang: Language = ObjectUtils.notNull(Language.findLanguageByID("TypeScript"), Language.ANY)
         return getSyntaxHighlighterWithFallback(lang)
     }
 
     override fun getDemoText(): String {
         return """
-<import>import</import> <local_variable>_</local_variable> <import>from</import> <string>'lodash'</string>;
-<import>import</import> <local_variable>{ }</local_variable> <import>from</import> <string>'../../some/package'</string>;
+<import>import</import> <local_variable>_</local_variable> <from>from</from> <string>'lodash'</string>;
+<import>import</import> <local_variable>{ Some, Item }</local_variable> <from>from</import> <string>'../../some/package'</string>;
 <import>export</import> <declare>declare</declare> <keyword>interface</keyword> <class>MyInterface</class> <import>from</import> <string>'./myClass'</string>;
 <import>export default</import> <class>MyClass</class>;
 
