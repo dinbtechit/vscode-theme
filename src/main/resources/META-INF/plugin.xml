@@ -11,8 +11,7 @@
     <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
 
     <extensions defaultExtensionNs="com.intellij">
-        <themeProvider order="last" id="e843a6a0-d4df-4c2a-b5b6-99dcbb839b8d" path="themes/visual_studio_code_dark_plus.theme.json"/>
-        <bundledColorScheme order="last" path="themes/visual_studio_code_dark_plus"/>
+        <themeProvider order="last" id="e843a6a0-d4df-4c2a-b5b6-99dcbb839b8d" path="themes/vscode_dark.json"/>
         <applicationService serviceImplementation="com.github.dinbtechit.vscodetheme.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.dinbtechit.vscodetheme.services.MyProjectService"/>
     </extensions>

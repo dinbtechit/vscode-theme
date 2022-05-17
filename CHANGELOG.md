@@ -5,7 +5,7 @@
 ## [Unreleased]
 ### Added
 - Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
-- Forked from Colors & Editor themed from Visual Studio Code Dark Plus theme
+
 ### Fixed
 - WelcomeScreen color issues and Toolbar border
 

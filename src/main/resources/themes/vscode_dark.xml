@@ -1,10 +1,7 @@
 <scheme name="VSCode Dark" version="142" parent_scheme="Darcula">
   <metaInfo>
-    <property name="created">2019-07-05T16:51:16</property>
     <property name="ide">Idea</property>
-    <property name="ideVersion">2019.1.2.0.0</property>
-    <property name="modified">2021-03-01T17:55:17</property>
-    <property name="originalScheme">Visual Studio Code Dark Plus</property>
+    <property name="ideVersion">2021.2.3</property>
   </metaInfo>
   <colors>
     <option name="CARET_COLOR" value="adaeac" />
