@@ -1,7 +1,7 @@
 {
   "name": "VSCode Dark",
   "dark": true,
-  "author": "Alexander Makarov/Dinesh Srinivasan",
+  "author": "Dinesh Srinivasan",
   "editorScheme": "/themes/visual_studio_code_dark_plus.xml",
   "ui": {
     "*": {
@@ -21,7 +21,6 @@
       "underlinedTabBackground": "#1d1d1d",
       "inactiveUnderlineColor": "#2c2c2c",
       "inactiveColoredFileBackground": "#323232",
-      "selectedForeground": "#e6e6e6",
       "underlineHeight": 2,
       "borderColor": "#464545"
     },

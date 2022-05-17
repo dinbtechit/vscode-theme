@@ -1,27 +1,28 @@
-# vscode-theme
-
-# Under construction
+# <img src="src/main/resources/META-INF/pluginIcon.svg" alt="drawing" width="75"/> VSCode Theme for Jetbrains IDEs
 
 ![Build](https://github.com/dinbtechit/vscode-theme/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the Plugin ID in the above README badges.
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+Provides VSCode Editor Color Scheme for Jetbrains IDEs (webstorm, Intellij, Rider & many more);
+While Jetbrains IDEs are great for productivity unfortunately the highlighting is not very
+intuitive. This plugin attempts to make the IDE fairly **close** to VSCode Dark+ theme. 
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+> Note - Some text colors might not be accurate due to either Jetbrains does not allow us to override those colors or the default colors were more intuitive. 
+
+### Supported Languages
+JavaScript (Advance), TypeScript (Advance), Java, Kotlin, Php, .Net, Python, C++, Go, Ruby. 
+
+### Supported Platforms
+Webstorm, Intellij, CLion, PhpStorm, Rider, Android Studio, GoLang
+
+<div align="center">
+ <img src="https://i.ibb.co/r7PN3yT/vscodeplugin-demo.png" alt="drawing"/>
+</div>
+
 <!-- Plugin description end -->
 
 ## Installation
