@@ -16,7 +16,7 @@
       "background": "#323232"
     },
     "EditorTabs": {
-      "background": "#252526",
+      "background": "#323232",
       "tabInsets": true,
       "underlinedTabBackground": "#1e1e1e",
       "inactiveUnderlineColor": "#2d2d2d",
@@ -24,6 +24,7 @@
       "underlineHeight": 2,
       "borderColor": "#464545"
     },
+    "DefaultTabs.background": "#252526",
     "Panel": {
       "foreground": "#acacac",
       "background": "#333333"
