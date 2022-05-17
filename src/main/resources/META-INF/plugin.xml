@@ -11,7 +11,7 @@
     <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
 
     <extensions defaultExtensionNs="com.intellij">
-        <themeProvider order="last" id="dinbtechit-e843a6a0-d4df-4c2a-b5b6-99dcbb839b8d" path="themes/vscode_dark.theme.json"/>
+        <themeProvider order="last" id="dinbtechit-7ef0c378d737e162955f3e028dcf9ccb" path="themes/vscode_dark.theme.json"/>
         <applicationService serviceImplementation="com.github.dinbtechit.vscodetheme.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.dinbtechit.vscodetheme.services.MyProjectService"/>
     </extensions>
