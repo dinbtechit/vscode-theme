@@ -1,6 +1,5 @@
 package com.github.dinbtechit.vscodetheme.annotators
 
-import com.intellij.codeInspection.InspectionsBundle
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator
 import com.intellij.lang.annotation.HighlightSeverity
@@ -10,29 +9,20 @@ import com.intellij.psi.PsiComment
 import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.tree.LeafPsiElement
 import com.intellij.psi.util.PsiTreeUtil
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 open class BaseAnnotator : Annotator {
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
-        if (element is LeafPsiElement) {
-            if (PsiTreeUtil.getParentOfType(element, PsiComment::class.java) != null) {
-                return
-            }
-            val kind: TextAttributesKey = getKeywordKind(element) ?: return
-            val range = TextRange(element.textRange.startOffset, element.textRange.endOffset)
-            if (kind.externalName === "JS.FROM_KEYWORD") {
-                holder.newSilentAnnotation(
-                    HighlightSeverity(
-                        "INFORMATION",
-                        500,
-                        InspectionsBundle.messagePointer("information.severity"),
-                        InspectionsBundle.messagePointer("information.severity.capitalized"),
-                        InspectionsBundle.messagePointer("information.severity.capitalized"))
-                )
-                    .range(range)
-                    .textAttributes(kind)
-                    .create()
-            } else {
+        CoroutineScope(Dispatchers.Unconfined).launch {
+            if (element is LeafPsiElement) {
+                if (PsiTreeUtil.getParentOfType(element, PsiComment::class.java) != null) {
+                    return@launch
+                }
+                val kind: TextAttributesKey = getKeywordKind(element) ?: return@launch
+                val range = TextRange(element.textRange.startOffset, element.textRange.endOffset)
                 holder.newSilentAnnotation(HighlightSeverity.INFORMATION)
                     .range(range)
                     .textAttributes(kind)
@@ -41,7 +31,5 @@ open class BaseAnnotator : Annotator {
         }
     }
 
-    protected open fun getKeywordKind(element: PsiElement): TextAttributesKey? {
-        return TextAttributesKey.createTextAttributesKey("DEFAULT_TEXT")
-    }
+    protected open fun getKeywordKind(element: PsiElement): TextAttributesKey? = error("Should be implemented")
 }

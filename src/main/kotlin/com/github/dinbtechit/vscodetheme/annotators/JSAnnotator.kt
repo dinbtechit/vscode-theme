@@ -6,25 +6,25 @@ import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
 import com.intellij.util.ObjectUtils
 
-
 class JSAnnotator : BaseAnnotator() {
     companion object {
         val JS_KEYWORD: TextAttributesKey = ObjectUtils.notNull(
-            TextAttributesKey.find("JS.KEYWORD"),
-            DefaultLanguageHighlighterColors.KEYWORD
+            TextAttributesKey.find("JS.KEYWORD"), DefaultLanguageHighlighterColors.KEYWORD
         )
         val JS_IDENTIFIER: TextAttributesKey = ObjectUtils.notNull(
-            TextAttributesKey.find("JS.PARAMETER"),
-            DefaultLanguageHighlighterColors.INSTANCE_FIELD
+            TextAttributesKey.find("JS.PARAMETER"), DefaultLanguageHighlighterColors.INSTANCE_FIELD
         )
         val JS_NUMBER: TextAttributesKey = ObjectUtils.notNull(
-            TextAttributesKey.find("JS.NUMBER"),
-            DefaultLanguageHighlighterColors.KEYWORD
+            TextAttributesKey.find("JS.NUMBER"), DefaultLanguageHighlighterColors.KEYWORD
         )
         val THIS_SUPER: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.THIS_SUPER", JS_KEYWORD)
-        val IMPORT_SPECIFIER: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.IMPORT_SPECIFIER", JS_IDENTIFIER)
+        val IMPORT_SPECIFIER: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
+            "JS.IMPORT_SPECIFIER", JS_IDENTIFIER
+        )
         val MODULE: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.MODULE_KEYWORD", JS_KEYWORD)
-        val CONDITION_KEYWORD: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.MODULE_KEYWORD", JS_KEYWORD)
+        val CONDITION_KEYWORD: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
+            "JS.MODULE_KEYWORD", JS_KEYWORD
+        )
         val LOOP_KEYWORD: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.MODULE_KEYWORD", JS_KEYWORD)
         val FROM_KEYWORD: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.FROM_KEYWORD")
         val DEBUGGER: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.DEBUGGER_STMT", JS_KEYWORD)
@@ -40,8 +40,8 @@ class JSAnnotator : BaseAnnotator() {
         when (element.text) {
             "this", "super" -> kind = THIS_SUPER
             "package", "export", "import", "require", "module", "return" -> kind = MODULE
-            "if", "else", "switch", "case", "default", "throw", "catch", "finally",
-            "yield", "break", "continue", "with" -> kind = CONDITION_KEYWORD
+            "if", "else", "switch", "case", "default", "throw", "catch", "finally", "yield", "break", "continue", "with" -> kind =
+                CONDITION_KEYWORD
             "for", "while", "do" -> kind = LOOP_KEYWORD
             "from" -> kind = FROM_KEYWORD
             "debugger" -> kind = DEBUGGER
