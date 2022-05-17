@@ -8,25 +8,25 @@
       "background": "#323232"
     },
     "Borders": {
-      "color": "#323232",
-      "ContrastBorderColor": "#323232"
+      "color": "#464545",
+      "ContrastBorderColor": "#464545"
     },
     "Editor": {
       "Toolbar.borderColor": "#464545",
       "background": "#323232"
     },
     "EditorTabs": {
-      "background": "#323232",
+      "background": "#252526",
       "tabInsets": true,
-      "underlinedTabBackground": "#1d1d1d",
-      "inactiveUnderlineColor": "#2c2c2c",
+      "underlinedTabBackground": "#1e1e1e",
+      "inactiveUnderlineColor": "#2d2d2d",
       "inactiveColoredFileBackground": "#323232",
       "underlineHeight": 2,
       "borderColor": "#464545"
     },
     "Panel": {
       "foreground": "#acacac",
-      "background": "#323232"
+      "background": "#333333"
     },
     "Tree": {
       "background": "#242425",
@@ -65,6 +65,7 @@
     "StatusBar": {
       "borderColor": "#323232"
     },
+
     "ToolWindow": {
       "Header": {
         "borderColor": "#464545",
@@ -73,9 +74,9 @@
       }
     },
     "WelcomeScreen": {
-      "background": "#313335",
+      "background": "#333333",
       "SidePanel.background": "3c3f41",
-      "Projects.background": "#313335",
+      "Projects.background": "#333333",
       "Projects.actions.background": "#3c5c86"
     }
   }
