@@ -19,9 +19,10 @@ JavaScript (Advance), TypeScript (Advance), Java, Kotlin, Php, .Net, Python, C++
 ### Supported Platforms
 Webstorm, Intellij, CLion, PhpStorm, Rider, Android Studio, GoLang
 
-<div align="center">
- <img src="https://i.ibb.co/r7PN3yT/vscodeplugin-demo.png" alt="drawing"/>
-</div>
+### Demo - Intellij & VSCode - Typescript
+ 
+![Sample](https://i.ibb.co/r7PN3yT/vscodeplugin-demo.png)
+
 
 <!-- Plugin description end -->
 
@@ -29,7 +30,7 @@ Webstorm, Intellij, CLion, PhpStorm, Rider, Android Studio, GoLang
 
 - Using IDE built-in plugin system:
   
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "vscode-theme"</kbd> >
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "vscode theme"</kbd> >
   <kbd>Install Plugin</kbd>
   
 - Manually:
