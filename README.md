@@ -22,8 +22,6 @@ Webstorm, Intellij, CLion, PhpStorm, Rider, Android Studio, GoLang
 ### Demo - Intellij & VSCode - Typescript
  
 ![Sample](https://i.ibb.co/r7PN3yT/vscodeplugin-demo.png)
-
-
 <!-- Plugin description end -->
 
 ## Installation

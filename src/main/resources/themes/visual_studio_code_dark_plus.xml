@@ -520,13 +520,13 @@
     </option>
     <option name="JS.FROM_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="ff5fd1" />
+        <option name="FOREGROUND" value="CE80B6" />
         <option name="BACKGROUND" value="1e1e1e" />
       </value>
     </option>
     <option name="JS.MODULE_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="ff5fd1" />
+        <option name="FOREGROUND" value="CE80B6" />
       </value>
     </option>
     <option name="JS.IMPORT_SPECIFIER" baseAttributes="DEFAULT_INSTANCE_FIELD">
@@ -553,12 +553,12 @@
     </option>
     <option name="TS.MODULE_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="ff5fd1" />
+        <option name="FOREGROUND" value="CE80B6" />
       </value>
     </option>
     <option name="TS.FROM_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="ff5fd1" />
+        <option name="FOREGROUND" value="CE80B6" />
         <option name="BACKGROUND" value="1e1e1e" />
       </value>
     </option>
