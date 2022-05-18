@@ -1,13 +1,13 @@
 # <img src="src/main/resources/META-INF/pluginIcon.svg" alt="drawing" width="75"/> VSCode Theme for Jetbrains IDEs
 
 ![Build](https://github.com/dinbtechit/vscode-theme/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/19177.svg)](https://plugins.jetbrains.com/plugin/19177)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/19177.svg)](https://plugins.jetbrains.com/plugin/19177)
 
 
 <!-- Plugin description -->
 
-Provides VSCode Editor Color Scheme for Jetbrains IDEs (webstorm, Intellij, Rider & many more);
+Provides Visual Studio Code/VSCode Editor Color Scheme for Jetbrains IDEs (webstorm, Intellij, Rider & many more);
 While Jetbrains IDEs are great for productivity unfortunately the highlighting is not very
 intuitive. This plugin attempts to make the IDE fairly **close** to VSCode Dark+ theme. 
 
