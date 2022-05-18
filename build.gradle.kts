@@ -91,7 +91,11 @@ tasks {
     }
 
     runIde {
-        systemProperty("buildSearchableOptions.enabled", "false")
+        autoReloadPlugins.set(true)
+    }
+
+    buildSearchableOptions {
+        enabled = false;
     }
 
     // Configure UI tests plugin

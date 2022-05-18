@@ -160,7 +160,7 @@
     "Tree.background":  "#252526",
     "WelcomeScreen": {
       "background": "#323333",
-      "SidePanel.background": "3c3f41",
+      "SidePanel.background": "#3c3f41",
       "Projects.background": "#323333",
       "Projects.actions.background": "#225DA1"
     },
