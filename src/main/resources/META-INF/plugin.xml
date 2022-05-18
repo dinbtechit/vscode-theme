@@ -3,16 +3,14 @@
     <id>com.github.dinbtechit.vscodetheme</id>
     <name>VSCode Theme</name>
     <vendor>dinbtechit</vendor>
+
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.modules.lang</depends>
-    <depends>org.jetbrains.kotlin</depends>
 
     <depends config-file="lang-config/dinbtechit-javascript.xml" optional="true">JavaScript</depends>
     <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
 
     <extensions defaultExtensionNs="com.intellij">
         <themeProvider order="last" id="dinbtechit-7ef0c378d737e162955f3e028dcf9ccb" path="themes/vscode_dark.theme.json"/>
-        <bundledColorScheme order="first" path="themes/vscode_dark"/>
         <applicationService serviceImplementation="com.github.dinbtechit.vscodetheme.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.dinbtechit.vscodetheme.services.MyProjectService"/>
     </extensions>

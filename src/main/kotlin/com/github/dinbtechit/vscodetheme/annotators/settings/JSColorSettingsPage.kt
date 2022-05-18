@@ -135,7 +135,7 @@ class JSColorSettingsPage : BaseColorSettings() {
     }
 
     override fun getPriority(): DisplayPriority {
-        return DisplayPriority.LANGUAGE_SETTINGS
+        return DisplayPriority.KEY_LANGUAGE_SETTINGS
     }
 
 }

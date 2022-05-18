@@ -10,7 +10,6 @@ import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.psi.codeStyle.DisplayPriority
 import com.intellij.util.ObjectUtils
-import com.intellij.util.PlatformUtils
 import gnu.trove.THashMap
 import javax.swing.Icon
 
@@ -142,6 +141,6 @@ class TSColorSettingsPage : BaseColorSettings() {
     }
 
     override fun getPriority(): DisplayPriority {
-        return if (PlatformUtils.isWebStorm()) DisplayPriority.KEY_LANGUAGE_SETTINGS else DisplayPriority.LANGUAGE_SETTINGS
+        return DisplayPriority.KEY_LANGUAGE_SETTINGS
     }
 }
