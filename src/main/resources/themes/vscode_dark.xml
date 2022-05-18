@@ -145,12 +145,12 @@
     </option>
     <option name="DEFAULT_CLASS_NAME">
       <value>
-        <option name="FOREGROUND" value="39c8b0" />
+        <option name="FOREGROUND" value="5cefd1" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_REFERENCE">
       <value>
-        <option name="FOREGROUND" value="39c8b0" />
+        <option name="FOREGROUND" value="5cefd1" />
       </value>
     </option>
     <option name="DEFAULT_COMMA">
@@ -221,7 +221,7 @@
     </option>
     <option name="DEFAULT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="DEFAULT_LINE_COMMENT">
@@ -236,7 +236,7 @@
     </option>
     <option name="DEFAULT_METADATA">
       <value>
-        <option name="FOREGROUND" value="39c8b0" />
+        <option name="FOREGROUND" value="5cefd1" />
       </value>
     </option>
     <option name="DEFAULT_NUMBER">
@@ -507,12 +507,12 @@
     <option name="JAVA_KEYWORD" baseAttributes="DEFAULT_KEYWORD" />
     <option name="JS.CLASS">
       <value>
-        <option name="FOREGROUND" value="39c8b0" />
+        <option name="FOREGROUND" value="5cefd1" />
       </value>
     </option>
     <option name="JS.KEYWORD">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="JS.FROM_KEYWORD">
@@ -533,13 +533,13 @@
     </option>
     <option name="JS.DOC_TYPE">
       <value>
-        <option name="FOREGROUND" value="39c8b0" />
+        <option name="FOREGROUND" value="5cefd1" />
       </value>
     </option>
     <option name="JS.GLOBAL_FUNCTION" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
     <option name="JS.GLOBAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="39c8b0" />
+        <option name="FOREGROUND" value="5cefd1" />
       </value>
     </option>
     <option name="JS.INSTANCE_MEMBER_FUNCTION" baseAttributes="DEFAULT_INSTANCE_METHOD" />
@@ -571,7 +571,7 @@
     </option>
     <option name="KOTLIN_LABEL">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="KOTLIN_LOCAL_VARIABLE">
@@ -600,7 +600,7 @@
     </option>
     <option name="MARKDOWN_BOLD">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="MARKDOWN_CODE_BLOCK">
@@ -625,17 +625,17 @@
     </option>
     <option name="MARKDOWN_HEADER_LEVEL_2">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="MARKDOWN_HEADER_LEVEL_3">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="MARKDOWN_HEADER_LEVEL_4">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="MARKDOWN_HEADER_LEVEL_5">
@@ -645,7 +645,7 @@
     </option>
     <option name="MARKDOWN_HEADER_LEVEL_6">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="MARKDOWN_HRULE">
@@ -653,7 +653,7 @@
     </option>
     <option name="MARKDOWN_INLINE_HTML">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
@@ -684,12 +684,12 @@
     </option>
     <option name="MARKDOWN_ORDERED_LIST">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="MARKDOWN_UNORDERED_LIST">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="MATCHED_BRACE_ATTRIBUTES">
@@ -726,7 +726,7 @@
     </option>
     <option name="OC.KEYWORD">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="OC.MACRONAME">
@@ -775,7 +775,7 @@
     </option>
     <option name="PHP_THIS_VAR">
       <value>
-        <option name="FOREGROUND" value="499cd5" />
+        <option name="FOREGROUND" value="397FB7" />
       </value>
     </option>
     <option name="PHP_VAR">
@@ -789,12 +789,12 @@
     <option name="PROPERTIES.VALID_STRING_ESCAPE" baseAttributes="DEFAULT_VALID_STRING_ESCAPE" />
      <option name="PY.BUILTIN_NAME">
       <value>
-        <option name="FOREGROUND" value="39c8b0" />
+        <option name="FOREGROUND" value="5cefd1" />
       </value>
     </option>
     <option name="PY.DECORATOR">
       <value>
-        <option name="FOREGROUND" value="39c8b0" />
+        <option name="FOREGROUND" value="5cefd1" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -876,12 +876,12 @@
     </option>
     <option name="TS.PRIMITIVE.TYPES">
       <value>
-        <option name="FOREGROUND" value="39c8b0" />
+        <option name="FOREGROUND" value="5cefd1" />
       </value>
     </option>
     <option name="TYPE_PARAMETER_NAME_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="39c8b0" />
+        <option name="FOREGROUND" value="5cefd1" />
       </value>
     </option>
     <option name="WARNING_ATTRIBUTES">
