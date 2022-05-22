@@ -13,15 +13,19 @@ intuitive. This plugin attempts to make the IDE fairly **close** to VSCode Dark+
 
 > Note - Some text colors might not be accurate due to either Jetbrains does not allow us to override those colors or the default colors were more intuitive. 
 
+**Author's Choice:** 
+- Plugins: VSCode Theme + Rainbow Brackets
+- For, 2022.X or Higher: Settings -> Editor -> Font: JetBrains Mono, Size - 13.15 -> Typography Settings -> Main Weight -> Medium)
+
 ### Supported Languages
-JavaScript (Advance), TypeScript (Advance), Java, Kotlin, Php, .Net, Python, C++, Go, Ruby. 
+JavaScript (Advance), TypeScript (Advance), Java, Kotlin, Dart, Php, .Net, Python, C++, Go, Ruby and many more. 
 
 ### Supported Platforms
-Webstorm, Intellij, CLion, PhpStorm, Rider, Android Studio, GoLang
+Webstorm, Intellij, CLion, PhpStorm, Rider, Android Studio, GoLang and many more.
 
 ### Demo - Intellij & VSCode - Typescript
  
-![Sample](https://i.ibb.co/r7PN3yT/vscodeplugin-demo.png)
+![](https://plugins.jetbrains.com/files/19177/screenshot_daaff793-8849-44df-ab42-bef712c47c57)
 <!-- Plugin description end -->
 
 ## Installation
