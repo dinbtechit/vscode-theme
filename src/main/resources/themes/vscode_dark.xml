@@ -1,31 +1,32 @@
-<scheme name="VSCode Dark" version="142" parent_scheme="Darcula">
+<scheme name="VSCode Dark copy" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="ide">Idea</property>
-        <property name="ideVersion">2021.2.3</property>
+        <property name="created">2022-05-22T13:40:38</property>
+        <property name="ide">idea</property>
+        <property name="ideVersion">2021.2.3.0.0</property>
+        <property name="modified">2022-05-22T13:40:49</property>
+        <property name="originalScheme">VSCode Dark</property>
     </metaInfo>
     <colors>
         <option name="CARET_COLOR" value="adaeac"/>
         <option name="CARET_ROW_COLOR" value="262626"/>
         <option name="GUTTER_BACKGROUND" value="1d1d1d"/>
         <option name="INDENT_GUIDE" value="3b3b3b"/>
+        <option name="LINE_NUMBERS_COLOR" value="848484"/>
         <option name="RIGHT_MARGIN_COLOR" value="3b3b3b"/>
         <option name="SELECTION_BACKGROUND" value="264e77"/>
-        <option name="LINE_NUMBERS_COLOR" value="848484"/>
-        <option name="VISUAL_INDENT_GUIDE" value="3b3b3b"/>
-
-        <option name="ScrollBar.Mac.trackColor" value="1d1d1d"/>
-        <option name="ScrollBar.Mac.thumbColor" value="414141"/>
-        <option name="ScrollBar.Mac.thumbBorderColor" value="414141"/>
-        <option name="ScrollBar.Mac.hoverTrackColor" value="1d1d1d"/>
-        <option name="ScrollBar.Mac.hoverThumbColor" value="4e4e4e"/>
         <option name="ScrollBar.Mac.hoverThumbBorderColor" value="4e4e4e"/>
-
-        <option name="ScrollBar.Transparent.trackColor" value="1d1d1d"/>
-        <option name="ScrollBar.Transparent.thumbColor" value="414141"/>
-        <option name="ScrollBar.Transparent.thumbBorderColor" value="414141"/>
-        <option name="ScrollBar.Transparent.hoverTrackColor" value="1d1d1d"/>
-        <option name="ScrollBar.Transparent.hoverThumbColor" value="4e4e4e"/>
+        <option name="ScrollBar.Mac.hoverThumbColor" value="4e4e4e"/>
+        <option name="ScrollBar.Mac.hoverTrackColor" value="1d1d1d"/>
+        <option name="ScrollBar.Mac.thumbBorderColor" value="414141"/>
+        <option name="ScrollBar.Mac.thumbColor" value="414141"/>
+        <option name="ScrollBar.Mac.trackColor" value="1d1d1d"/>
         <option name="ScrollBar.Transparent.hoverThumbBorderColor" value="4e4e4e"/>
+        <option name="ScrollBar.Transparent.hoverThumbColor" value="4e4e4e"/>
+        <option name="ScrollBar.Transparent.hoverTrackColor" value="1d1d1d"/>
+        <option name="ScrollBar.Transparent.thumbBorderColor" value="414141"/>
+        <option name="ScrollBar.Transparent.thumbColor" value="414141"/>
+        <option name="ScrollBar.Transparent.trackColor" value="1d1d1d"/>
+        <option name="VISUAL_INDENT_GUIDE" value="3b3b3b"/>
     </colors>
     <attributes>
         <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
@@ -48,7 +49,6 @@
                 <option name="FOREGROUND" value="dcdcaa"/>
             </value>
         </option>
-        <option name="BASH.HERE_DOC" baseAttributes="DEFAULT_STRING"/>
         <option name="BASH.HERE_DOC_END">
             <value>
                 <option name="FOREGROUND" value="c586c0"/>
@@ -145,12 +145,12 @@
         </option>
         <option name="DEFAULT_CLASS_NAME">
             <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="DEFAULT_CLASS_REFERENCE">
             <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="DEFAULT_COMMA">
@@ -221,7 +221,7 @@
         </option>
         <option name="DEFAULT_KEYWORD">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="DEFAULT_LINE_COMMENT">
@@ -236,12 +236,24 @@
         </option>
         <option name="DEFAULT_METADATA">
             <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="DEFAULT_NUMBER">
             <value>
                 <option name="FOREGROUND" value="b4cda8"/>
+            </value>
+        </option>
+        <option name="DEFAULT_PARAMETER">
+            <value>
+                <option name="FOREGROUND" value="94dbfd"/>
+            </value>
+        </option>
+        <option name="DEFAULT_REASSIGNED_PARAMETER">
+            <value>
+                <option name="FOREGROUND" value="94dbfd"/>
+                <option name="EFFECT_COLOR" value="707d95"/>
+                <option name="EFFECT_TYPE" value="1"/>
             </value>
         </option>
         <option name="DEFAULT_SEMICOLON">
@@ -491,12 +503,13 @@
         <option name="IDENTIFIER_UNDER_CARET_ATTRIBUTES">
             <value>
                 <option name="BACKGROUND" value="33393f"/>
-                <option name="ERROR_STRIPE_COLOR" value="A0A0A0"/>
+                <option name="ERROR_STRIPE_COLOR" value="a0a0a0"/>
                 <option name="EFFECT_TYPE" value="1"/>
             </value>
         </option>
         <option name="IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES">
             <value>
+                <option name="FOREGROUND" value="4fc1ff"/>
                 <option name="EFFECT_COLOR" value="b389c5"/>
                 <option name="EFFECT_TYPE" value="1"/>
             </value>
@@ -504,72 +517,70 @@
         <option name="INJECTED_LANGUAGE_FRAGMENT">
             <value/>
         </option>
-        <option name="JAVA_KEYWORD" baseAttributes="DEFAULT_KEYWORD"/>
-        <option name="JAVA.SECONDARY_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
-            <value>
-                <option name="FOREGROUND" value="CE80B6"/>
-            </value>
-        </option>
-        <option name="JAVA.TYPE_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
-            <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
-            </value>
-        </option>
-        <option name="JS.CLASS">
-            <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
-            </value>
-        </option>
-        <option name="JS.KEYWORD">
-            <value>
-                <option name="FOREGROUND" value="397FB7"/>
-            </value>
-        </option>
-        <option name="JS.FROM_KEYWORD">
-            <value>
-                <option name="FOREGROUND" value="CE80B6"/>
-                <option name="BACKGROUND" value="1e1e1e"/>
-            </value>
-        </option>
-        <option name="JS.MODULE_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
-            <value>
-                <option name="FOREGROUND" value="CE80B6"/>
-            </value>
-        </option>
-        <option name="JS.IMPORT_SPECIFIER" baseAttributes="DEFAULT_INSTANCE_FIELD">
+        <option name="INSTANCE_FIELD_ATTRIBUTES">
             <value>
                 <option name="FOREGROUND" value="9cdcfe"/>
             </value>
         </option>
+        <option name="INSTANCE_FINAL_FIELD_ATTRIBUTES">
+            <value>
+                <option name="FOREGROUND" value="4fc1ff"/>
+                <option name="FONT_TYPE" value="2"/>
+            </value>
+        </option>
+        <option name="JAVA.SECONDARY_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="ce80b6"/>
+            </value>
+        </option>
+        <option name="JAVA.TYPE_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
+            </value>
+        </option>
+        <option name="JS.CLASS">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
+            </value>
+        </option>
         <option name="JS.DOC_TYPE">
             <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
+            </value>
+        </option>
+        <option name="JS.FROM_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
         <option name="JS.GLOBAL_FUNCTION" baseAttributes="DEFAULT_FUNCTION_DECLARATION"/>
         <option name="JS.GLOBAL_VARIABLE">
             <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
+            </value>
+        </option>
+        <option name="JS.IMPORT_SPECIFIER">
+            <value>
+                <option name="FOREGROUND" value="9cdcfe"/>
             </value>
         </option>
         <option name="JS.INSTANCE_MEMBER_FUNCTION" baseAttributes="DEFAULT_INSTANCE_METHOD"/>
+        <option name="JS.KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="397fb7"/>
+            </value>
+        </option>
+        <option name="JS.MODULE_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="ce80b6"/>
+            </value>
+        </option>
         <option name="JS.PARAMETER">
             <value>
                 <option name="FOREGROUND" value="9cdcfe"/>
             </value>
         </option>
-        <option name="TS.MODULE_KEYWORD" baseAttributes="DEFAULT_KEYWORD">
-            <value>
-                <option name="FOREGROUND" value="CE80B6"/>
-            </value>
-        </option>
-        <option name="TS.FROM_KEYWORD">
-            <value>
-                <option name="FOREGROUND" value="CE80B6"/>
-                <option name="BACKGROUND" value="1e1e1e"/>
-            </value>
-        </option>
-        <option name="KOTLIN_ANNOTATION" baseAttributes="ANNOTATION_NAME_ATTRIBUTES"/>
         <option name="KOTLIN_BACKING_FIELD_VARIABLE">
             <value/>
         </option>
@@ -581,7 +592,7 @@
         </option>
         <option name="KOTLIN_LABEL">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="KOTLIN_LOCAL_VARIABLE">
@@ -610,7 +621,7 @@
         </option>
         <option name="MARKDOWN_BOLD">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="MARKDOWN_CODE_BLOCK">
@@ -635,17 +646,17 @@
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_2">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_3">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_4">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_5">
@@ -655,7 +666,7 @@
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_6">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="MARKDOWN_HRULE">
@@ -663,7 +674,7 @@
         </option>
         <option name="MARKDOWN_INLINE_HTML">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
                 <option name="EFFECT_TYPE" value="5"/>
             </value>
         </option>
@@ -694,12 +705,12 @@
         </option>
         <option name="MARKDOWN_ORDERED_LIST">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="MARKDOWN_UNORDERED_LIST">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="MATCHED_BRACE_ATTRIBUTES">
@@ -736,7 +747,7 @@
         </option>
         <option name="OC.KEYWORD">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="OC.MACRONAME">
@@ -767,7 +778,6 @@
         <option name="PHP_ALIAS_REFERENCE">
             <value/>
         </option>
-        <option name="PHP_CONSTANT" baseAttributes="DEFAULT_CONSTANT"/>
         <option name="PHP_EXEC_COMMAND_ID">
             <value>
                 <option name="FOREGROUND" value="cd905b"/>
@@ -785,7 +795,7 @@
         </option>
         <option name="PHP_THIS_VAR">
             <value>
-                <option name="FOREGROUND" value="397FB7"/>
+                <option name="FOREGROUND" value="397fb7"/>
             </value>
         </option>
         <option name="PHP_VAR">
@@ -799,16 +809,15 @@
         <option name="PROPERTIES.VALID_STRING_ESCAPE" baseAttributes="DEFAULT_VALID_STRING_ESCAPE"/>
         <option name="PY.BUILTIN_NAME">
             <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="PY.DECORATOR">
             <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
                 <option name="EFFECT_TYPE" value="1"/>
             </value>
         </option>
-        <option name="PY.KEYWORD" baseAttributes="DEFAULT_KEYWORD"/>
         <option name="PY.KEYWORD_ARGUMENT">
             <value>
                 <option name="FOREGROUND" value="94dbfd"/>
@@ -834,6 +843,12 @@
             <value>
                 <option name="FOREGROUND" value="d16969"/>
                 <option name="FONT_TYPE" value="1"/>
+            </value>
+        </option>
+        <option name="ReSharper.ASP_NET_RAZOR_CODE_BLOCK">
+            <value>
+                <option name="BACKGROUND" value="1e1e1e"/>
+                <option name="EFFECT_TYPE" value="5"/>
             </value>
         </option>
         <option name="SEARCH_RESULT_ATTRIBUTES">
@@ -866,8 +881,23 @@
                 <option name="FOREGROUND" value="d3d3c8"/>
             </value>
         </option>
+        <option name="STATIC_FIELD_ATTRIBUTES">
+            <value>
+                <option name="FOREGROUND" value="4fc1ff"/>
+                <option name="FONT_TYPE" value="2"/>
+            </value>
+        </option>
+        <option name="STATIC_FIELD_IMPORTED_ATTRIBUTES">
+            <value>
+                <option name="FOREGROUND" value="4fc1ff"/>
+                <option name="FONT_TYPE" value="2"/>
+            </value>
+        </option>
         <option name="STATIC_METHOD_ATTRIBUTES">
-            <value/>
+            <value>
+                <option name="FOREGROUND" value="dbdbaa"/>
+                <option name="FONT_TYPE" value="2"/>
+            </value>
         </option>
         <option name="Static method access" baseAttributes="STATIC_METHOD_ATTRIBUTES"/>
         <option name="Static property reference ID" baseAttributes="STATIC_FINAL_FIELD_ATTRIBUTES"/>
@@ -884,14 +914,25 @@
                 <option name="ERROR_STRIPE_COLOR" value="977ab"/>
             </value>
         </option>
+        <option name="TS.FROM_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="BACKGROUND" value="1e1e1e"/>
+            </value>
+        </option>
+        <option name="TS.MODULE_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="ce80b6"/>
+            </value>
+        </option>
         <option name="TS.PRIMITIVE.TYPES">
             <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="TYPE_PARAMETER_NAME_ATTRIBUTES">
             <value>
-                <option name="FOREGROUND" value="4EC9B0"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="WARNING_ATTRIBUTES">
@@ -927,16 +968,7 @@
         </option>
         <option name="XML_TAG_DATA" baseAttributes="TEXT"/>
         <option name="XML_TAG_NAME" baseAttributes="DEFAULT_KEYWORD"/>
-        <option name="XPATH.BRACKET">
-            <value/>
-        </option>
         <option name="XPATH.KEYWORD" baseAttributes="DEFAULT_KEYWORD"/>
         <option name="XPATH.XPATH_VARIABLE" baseAttributes="DEFAULT_LOCAL_VARIABLE"/>
-        <option name="ReSharper.ASP_NET_RAZOR_CODE_BLOCK">
-            <value>
-                <option name="BACKGROUND" value="1e1e1e"/>
-                <option name="EFFECT_TYPE" value="5"/>
-            </value>
-        </option>
     </attributes>
 </scheme>

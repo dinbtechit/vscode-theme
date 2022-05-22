@@ -3,10 +3,13 @@
     <id>com.github.dinbtechit.vscodetheme</id>
     <name>VSCode Theme</name>
     <vendor>dinbtechit</vendor>
+    <idea-version since-build="213"/>
 
     <depends>com.intellij.modules.platform</depends>
 
+
     <depends config-file="lang-config/dinbtechit-javascript.xml" optional="true">JavaScript</depends>
+    <depends config-file="lang-config/dinbtechit-java.xml" optional="true">com.intellij.java</depends>
     <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
 
     <extensions defaultExtensionNs="com.intellij">

@@ -35,29 +35,29 @@ class JSAnnotator : BaseAnnotator() {
         val PRIMITIVE: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.PRIMITIVE", JS_NUMBER)
     }
 
-    override fun getKeywordKind(element: PsiElement): TextAttributesKey? {
-        var kind: TextAttributesKey? = null
+    override fun getKeywordType(element: PsiElement): TextAttributesKey? {
+        var type: TextAttributesKey? = null
         when (element.text) {
-            "this", "super" -> kind = THIS_SUPER
-            "package", "export", "import", "require", "module", "return" -> kind = MODULE
-            "if", "else", "switch", "case", "default", "throw", "catch", "finally", "yield", "break", "continue", "with" -> kind =
+            "this", "super" -> type = THIS_SUPER
+            "package", "export", "import", "require", "module", "return" -> type = MODULE
+            "if", "else", "switch", "case", "default", "throw", "catch", "finally", "yield", "break", "continue", "with" -> type =
                 CONDITION_KEYWORD
-            "for", "while", "do" -> kind = LOOP_KEYWORD
-            "from" -> kind = FROM_KEYWORD
-            "debugger" -> kind = DEBUGGER
-            "null", "undefined" -> kind = NULL
-            "true", "false" -> kind = PRIMITIVE
-            "var", "let", "const" -> kind = VAL
-            "function" -> kind = FUNCTION
-            "console" -> kind = CONSOLE
+            "for", "while", "do" -> type = LOOP_KEYWORD
+            "from" -> type = FROM_KEYWORD
+            "debugger" -> type = DEBUGGER
+            "null", "undefined" -> type = NULL
+            "true", "false" -> type = PRIMITIVE
+            "var", "let", "const" -> type = VAL
+            "function" -> type = FUNCTION
+            "console" -> type = CONSOLE
             else -> {}
         }
 
         when (element.parent) {
-            is ES6ImportSpecifier -> kind = IMPORT_SPECIFIER
+            is ES6ImportSpecifier -> type = IMPORT_SPECIFIER
             else -> {}
         }
 
-        return kind
+        return type
     }
 }

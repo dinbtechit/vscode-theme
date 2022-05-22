@@ -30,24 +30,24 @@ class TSAnnotator : BaseAnnotator() {
         val PRIMITIVE = TextAttributesKey.createTextAttributesKey("TS.PRIMITIVE", NUMBER)
     }
 
-    override fun getKeywordKind(element: PsiElement): TextAttributesKey? {
-        var kind: TextAttributesKey? = null
+    override fun getKeywordType(element: PsiElement): TextAttributesKey? {
+        var type: TextAttributesKey? = null
         when (element.text) {
-            "this", "super" -> kind = THIS_SUPER
-            "export", "import", "require", "default", "module", "return" -> kind = MODULE
-            "from" -> kind = FROM_KEYWORD
-            "debugger" -> kind = DEBUGGER
-            "null", "undefined" -> kind = NULL
-            "true", "false" -> kind = PRIMITIVE
-            "var", "let", "const" -> kind = VAL
-            "function" -> kind = FUNCTION
-            "console" -> kind = CONSOLE
-            "public", "protected", "private" -> kind = PRIVATE
-            "declare" -> kind = DECLARE
-            "type", "alias" -> kind = TYPE_ALIAS
+            "this", "super" -> type = THIS_SUPER
+            "export", "import", "require", "default", "module", "return" -> type = MODULE
+            "from" -> type = FROM_KEYWORD
+            "debugger" -> type = DEBUGGER
+            "null", "undefined" -> type = NULL
+            "true", "false" -> type = PRIMITIVE
+            "var", "let", "const" -> type = VAL
+            "function" -> type = FUNCTION
+            "console" -> type = CONSOLE
+            "public", "protected", "private" -> type = PRIVATE
+            "declare" -> type = DECLARE
+            "type", "alias" -> type = TYPE_ALIAS
             else -> {}
         }
 
-        return kind
+        return type
     }
 }
