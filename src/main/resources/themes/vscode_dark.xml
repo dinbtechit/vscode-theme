@@ -1,9 +1,9 @@
-<scheme name="VSCode Dark copy" version="142" parent_scheme="Darcula">
+<scheme name="VSCode Dark" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-05-22T13:40:38</property>
+        <property name="created">2022-05-22T14:06:24</property>
         <property name="ide">idea</property>
         <property name="ideVersion">2021.2.3.0.0</property>
-        <property name="modified">2022-05-22T13:40:49</property>
+        <property name="modified">2022-05-22T14:06:36</property>
         <property name="originalScheme">VSCode Dark</property>
     </metaInfo>
     <colors>
@@ -838,7 +838,13 @@
                 <option name="FOREGROUND" value="569cd5"/>
             </value>
         </option>
-        <option name="PY.STRING.B" baseAttributes="DEFAULT_STRING"/>
+        <option name="REASSIGNED_LOCAL_VARIABLE_ATTRIBUTES">
+            <value>
+                <option name="FOREGROUND" value="94dbfd"/>
+                <option name="EFFECT_COLOR" value="707d95"/>
+                <option name="EFFECT_TYPE" value="1"/>
+            </value>
+        </option>
         <option name="REGEXP.CHAR_CLASS">
             <value>
                 <option name="FOREGROUND" value="d16969"/>
