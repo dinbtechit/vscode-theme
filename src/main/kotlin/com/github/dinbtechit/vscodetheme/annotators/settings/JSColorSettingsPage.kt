@@ -20,7 +20,7 @@ import javax.swing.Icon
 class JSColorSettingsPage : BaseColorSettings() {
 
     private val JS_ATTRIBUTES: Array<AttributesDescriptor?> = arrayOf(
-        AttributesDescriptor("Import specifiers", THIS_SUPER),
+        AttributesDescriptor("Import specifiers", IMPORT_SPECIFIER),
         AttributesDescriptor("Keywords//this, super", THIS_SUPER),
         AttributesDescriptor("Keywords//package, module, import, export, return", MODULE),
         AttributesDescriptor("Keywords//if, else, switch, case, default, throw, catch, finally," +
