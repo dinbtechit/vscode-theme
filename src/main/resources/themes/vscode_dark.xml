@@ -1,10 +1,10 @@
 <scheme name="VSCode Dark" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-05-22T17:32:37</property>
+        <property name="created">2022-05-22T23:16:52</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2021.2.1.14</property>
-        <property name="modified">2022-05-22T17:32:48</property>
-        <property name="originalScheme">VSCode Dark</property>
+        <property name="ideVersion">2022.1.1.0.0</property>
+        <property name="modified">2022-05-22T23:16:57</property>
+        <property name="originalScheme">_@user_VSCode Dark</property>
     </metaInfo>
     <colors>
         <option name="CARET_COLOR" value="adaeac"/>
@@ -153,10 +153,10 @@
                 <option name="FOREGROUND" value="ce80b6"/>
             </value>
         </option>
-        <option name="DART_SECONDARY_KEYWORD_WITH_BG" baseAttributes="DART_SECONDARY_KEYWORD">
+        <option name="DART_SECONDARY_KEYWORD_WITH_BG">
             <value>
                 <option name="FOREGROUND" value="ce80b6"/>
-                <option name="BACKGROUND" value="1E1E1E"/>
+                <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
         <option name="DEFAULT_BLOCK_COMMENT">
@@ -910,19 +910,19 @@
         </option>
         <option name="STATIC_FIELD_ATTRIBUTES">
             <value>
-                <option name="FOREGROUND" value="4fc1ff"/>
+                <option name="FOREGROUND" value="ffc66d"/>
                 <option name="FONT_TYPE" value="2"/>
             </value>
         </option>
-        <option name="STATIC_FIELD_IMPORTED_ATTRIBUTES">
+        <option name="STATIC_FINAL_FIELD_ATTRIBUTES">
             <value>
                 <option name="FOREGROUND" value="4fc1ff"/>
-                <option name="FONT_TYPE" value="2"/>
+                <option name="FONT_TYPE" value="3"/>
             </value>
         </option>
         <option name="STATIC_METHOD_ATTRIBUTES">
             <value>
-                <option name="FOREGROUND" value="dbdbaa"/>
+                <option name="FOREGROUND" value="ffc66d"/>
                 <option name="FONT_TYPE" value="2"/>
             </value>
         </option>
