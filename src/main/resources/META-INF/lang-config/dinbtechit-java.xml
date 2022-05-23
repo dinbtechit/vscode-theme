@@ -1,4 +1,3 @@
-<!--Suports both JavaScript and TypeScript-->
 <idea-plugin>
     <extensions defaultExtensionNs="com.intellij">
         <annotator language="JAVA" order="last"

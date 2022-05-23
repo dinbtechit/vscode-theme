@@ -2,14 +2,18 @@ package com.github.dinbtechit.vscodetheme.annotators.settings
 
 
 import com.github.dinbtechit.vscodetheme.annotators.JavaAnnotator
+import com.intellij.application.options.colors.ColorAndFontOptions
+import com.intellij.application.options.colors.ColorSettingsUtil
 import com.intellij.icons.AllIcons
 import com.intellij.lang.Language
+import com.intellij.openapi.editor.colors.FontPreferences
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.openapi.fileTypes.SyntaxHighlighter
 import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.psi.codeStyle.DisplayPriority
 import com.intellij.util.ObjectUtils
+import com.vladsch.flexmark.ext.typographic.internal.TypographicOptions
 import gnu.trove.THashMap
 import java.util.*
 import javax.swing.Icon
@@ -18,11 +22,7 @@ import javax.swing.Icon
 class JavaColorSettingsPage : BaseColorSettings() {
     companion object {
         private val ATTRIBUTES: Array<AttributesDescriptor?> = arrayOf(
-
-            AttributesDescriptor("Keywords//new, return", JavaAnnotator.SECONDARY_KEYWORD),
-            AttributesDescriptor("Keywords//if, else, switch, case, default, throw, catch, finally," +
-                    "yield, break, continue", JavaAnnotator.SECONDARY_KEYWORD),
-            AttributesDescriptor("Keywords//for, while, do", JavaAnnotator.SECONDARY_KEYWORD),
+            AttributesDescriptor("SecondaryKeywords", JavaAnnotator.SECONDARY_KEYWORD),
         )
         val DESCRIPTORS = mutableMapOf<String, TextAttributesKey>()
     }
@@ -100,5 +100,4 @@ public class JavaClass {
     override fun getPriority(): DisplayPriority {
         return DisplayPriority.KEY_LANGUAGE_SETTINGS
     }
-
 }

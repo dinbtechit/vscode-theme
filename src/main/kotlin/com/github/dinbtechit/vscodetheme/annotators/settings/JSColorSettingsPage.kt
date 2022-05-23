@@ -12,6 +12,7 @@ import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.psi.codeStyle.DisplayPriority
 import com.intellij.util.ObjectUtils
 import gnu.trove.THashMap
+import io.ktor.util.*
 import java.util.*
 import javax.swing.Icon
 
