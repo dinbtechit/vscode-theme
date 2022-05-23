@@ -1,9 +1,9 @@
 <scheme name="VSCode Dark" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-05-22T14:06:24</property>
+        <property name="created">2022-05-22T17:32:37</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2021.2.3.0.0</property>
-        <property name="modified">2022-05-22T14:06:36</property>
+        <property name="ideVersion">2021.2.1.14</property>
+        <property name="modified">2022-05-22T17:32:48</property>
         <property name="originalScheme">VSCode Dark</property>
     </metaInfo>
     <colors>
@@ -138,6 +138,27 @@
                 <option name="EFFECT_TYPE" value="1"/>
             </value>
         </option>
+        <option name="DART_CONSTRUCTOR">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
+            </value>
+        </option>
+        <option name="DART_ENUM_CONSTANT">
+            <value>
+                <option name="FOREGROUND" value="4fc1ff"/>
+            </value>
+        </option>
+        <option name="DART_SECONDARY_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="ce80b6"/>
+            </value>
+        </option>
+        <option name="DART_SECONDARY_KEYWORD_WITH_BG" baseAttributes="DART_SECONDARY_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="BACKGROUND" value="1E1E1E"/>
+            </value>
+        </option>
         <option name="DEFAULT_BLOCK_COMMENT">
             <value>
                 <option name="FOREGROUND" value="699856"/>
@@ -221,7 +242,7 @@
         </option>
         <option name="DEFAULT_KEYWORD">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="DEFAULT_LINE_COMMENT">
@@ -568,7 +589,7 @@
         <option name="JS.INSTANCE_MEMBER_FUNCTION" baseAttributes="DEFAULT_INSTANCE_METHOD"/>
         <option name="JS.KEYWORD">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="JS.MODULE_KEYWORD">
@@ -592,7 +613,7 @@
         </option>
         <option name="KOTLIN_LABEL">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="KOTLIN_LOCAL_VARIABLE">
@@ -621,7 +642,7 @@
         </option>
         <option name="MARKDOWN_BOLD">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="MARKDOWN_CODE_BLOCK">
@@ -646,17 +667,17 @@
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_2">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_3">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_4">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_5">
@@ -666,7 +687,7 @@
         </option>
         <option name="MARKDOWN_HEADER_LEVEL_6">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="MARKDOWN_HRULE">
@@ -674,7 +695,7 @@
         </option>
         <option name="MARKDOWN_INLINE_HTML">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
                 <option name="EFFECT_TYPE" value="5"/>
             </value>
         </option>
@@ -705,12 +726,12 @@
         </option>
         <option name="MARKDOWN_ORDERED_LIST">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="MARKDOWN_UNORDERED_LIST">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="MATCHED_BRACE_ATTRIBUTES">
@@ -747,7 +768,7 @@
         </option>
         <option name="OC.KEYWORD">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="OC.MACRONAME">
@@ -795,7 +816,7 @@
         </option>
         <option name="PHP_THIS_VAR">
             <value>
-                <option name="FOREGROUND" value="397fb7"/>
+                <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
         <option name="PHP_VAR">
