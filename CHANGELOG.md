@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.1.0]
 ### Added
 - Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
 
@@ -19,8 +21,10 @@
 ### Added
 - Added extensive syntax highlighting for Java. (Provides same color)
 - Added extensive syntax highlighting for Dart/Flutter.
+
 ### Fixed
 - (Bug) - Fixed PSIElement font color & Keywords font color to be same as VSCode.
+
 ### Changed
 - start highlight onTyping
 - Documentation on tips for best viewing experience.
