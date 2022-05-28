@@ -54,6 +54,7 @@ jobs:
           # deleting 15GB
           rm -rf /usr/share/dotnet/
           df -h
+
       # Check out current repository
       - name: Fetch Sources
         uses: actions/checkout@v2.4.0
