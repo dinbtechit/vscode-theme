@@ -1,9 +1,9 @@
 <scheme name="VSCode Dark" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-05-22T23:16:52</property>
+        <property name="created">2022-05-28T15:24:05</property>
         <property name="ide">idea</property>
         <property name="ideVersion">2022.1.1.0.0</property>
-        <property name="modified">2022-05-22T23:16:57</property>
+        <property name="modified">2022-05-28T15:24:14</property>
         <property name="originalScheme">_@user_VSCode Dark</property>
     </metaInfo>
     <colors>
@@ -934,6 +934,12 @@
             <value>
                 <option name="FOREGROUND" value="a8c023"/>
                 <option name="ERROR_STRIPE_COLOR" value="977ab"/>
+            </value>
+        </option>
+        <option name="TS.ENUM_MEMBER">
+            <value>
+                <option name="FOREGROUND" value="4fc1ff"/>
+                <option name="FONT_TYPE" value="3"/>
             </value>
         </option>
         <option name="TS.FROM_KEYWORD">
