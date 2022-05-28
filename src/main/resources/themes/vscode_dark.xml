@@ -1,9 +1,9 @@
 <scheme name="VSCode Dark" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-05-28T15:24:05</property>
+        <property name="created">2022-05-28T16:03:09</property>
         <property name="ide">idea</property>
         <property name="ideVersion">2022.1.1.0.0</property>
-        <property name="modified">2022-05-28T15:24:14</property>
+        <property name="modified">2022-05-28T16:03:13</property>
         <property name="originalScheme">_@user_VSCode Dark</property>
     </metaInfo>
     <colors>
@@ -592,9 +592,26 @@
                 <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
+        <option name="JS.PARAMETER">
+            <value>
+                <option name="FOREGROUND" value="9cdcfe"/>
+            </value>
+        </option>
         <option name="JS.SECONDARY_KEYWORDS">
             <value>
                 <option name="FOREGROUND" value="ce80b6"/>
+            </value>
+        </option>
+        <option name="JS.STATIC_MEMBER_FUNCTION">
+            <value>
+                <option name="FOREGROUND" value="ffc66d"/>
+                <option name="FONT_TYPE" value="2"/>
+            </value>
+        </option>
+        <option name="JS.STATIC_MEMBER_VARIABLE">
+            <value>
+                <option name="FOREGROUND" value="ffc66d"/>
+                <option name="FONT_TYPE" value="2"/>
             </value>
         </option>
         <option name="KOTLIN_BACKING_FIELD_VARIABLE">
