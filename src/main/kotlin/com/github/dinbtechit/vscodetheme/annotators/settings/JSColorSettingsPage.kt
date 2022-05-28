@@ -12,7 +12,6 @@ import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.psi.codeStyle.DisplayPriority
 import com.intellij.util.ObjectUtils
 import gnu.trove.THashMap
-import io.ktor.util.*
 import java.util.*
 import javax.swing.Icon
 
@@ -21,18 +20,9 @@ class JSColorSettingsPage : BaseColorSettings() {
 
     private val JS_ATTRIBUTES: Array<AttributesDescriptor?> = arrayOf(
         AttributesDescriptor("Import specifiers", IMPORT_SPECIFIER),
-        AttributesDescriptor("Keywords//this, super", THIS_SUPER),
-        AttributesDescriptor("Keywords//package, module, import, export, return", MODULE),
-        AttributesDescriptor("Keywords//if, else, switch, case, default, throw, catch, finally," +
-                "yield, break, continue, with", CONDITION_KEYWORD),
-        AttributesDescriptor("Keywords//for, while, do", LOOP_KEYWORD),
         AttributesDescriptor("Keywords//from", FROM_KEYWORD),
-        AttributesDescriptor("Keywords//debugger", DEBUGGER),
+        AttributesDescriptor("Secondary keywords", SECONDARY_KEYWORDS ),
         AttributesDescriptor("Primitives//null, undefined", NULL),
-        AttributesDescriptor("Primitives//true, false", PRIMITIVE),
-        AttributesDescriptor("Keywords//var, let, const", VAL),
-        AttributesDescriptor("Keywords//console", CONSOLE),
-        AttributesDescriptor("Keywords//function", FUNCTION)
     )
     companion object {
         val JS_DESCRIPTORS = mutableMapOf<String, TextAttributesKey>()
@@ -42,19 +32,11 @@ class JSColorSettingsPage : BaseColorSettings() {
             TextAttributesKey.find("JS.LOCAL_VARIABLE"),
             DefaultLanguageHighlighterColors.LOCAL_VARIABLE
         )
-        val FUNCTION: TextAttributesKey = JSAnnotator.FUNCTION
-        val THIS_SUPER: TextAttributesKey = JSAnnotator.THIS_SUPER
-        val MODULE: TextAttributesKey = JSAnnotator.MODULE
+
+        val SECONDARY_KEYWORDS: TextAttributesKey = JSAnnotator.SECONDARY_KEYWORDS
         val IMPORT_SPECIFIER: TextAttributesKey = JSAnnotator.IMPORT_SPECIFIER
         val FROM_KEYWORD: TextAttributesKey = JSAnnotator.FROM_KEYWORD
-        val CONDITION_KEYWORD: TextAttributesKey = JSAnnotator.CONDITION_KEYWORD
-        val LOOP_KEYWORD: TextAttributesKey = JSAnnotator.LOOP_KEYWORD
-        val CONSOLE: TextAttributesKey = JSAnnotator.CONSOLE
-        val DEBUGGER: TextAttributesKey = JSAnnotator.DEBUGGER
-        val NULL: TextAttributesKey = JSAnnotator.NULL
-        val PRIMITIVE: TextAttributesKey = JSAnnotator.PRIMITIVE
-        val VAL: TextAttributesKey = JSAnnotator.VAL
-        val FUNCTION_NAME: TextAttributesKey = JSAnnotator.FUNCTION
+        val NULL: TextAttributesKey = JSAnnotator.JS_NULL
     }
 
     init {
@@ -64,23 +46,15 @@ class JSColorSettingsPage : BaseColorSettings() {
     private fun createAdditionalHlAttrs(): MutableMap<String, TextAttributesKey> {
         val descriptors: MutableMap<String, TextAttributesKey> = THashMap()
         descriptors["string"] = DefaultLanguageHighlighterColors.STRING
-        descriptors["condition"] = CONDITION_KEYWORD
-        descriptors["loop"] = LOOP_KEYWORD
+        descriptors["subKeyword"] = SECONDARY_KEYWORDS
         descriptors["from"] = FROM_KEYWORD
         descriptors["import_specifier"] = IMPORT_SPECIFIER
         descriptors["keyword"] = JS_KEYWORD
-        descriptors["function"] = FUNCTION
-        descriptors["function_name"] = FUNCTION_NAME
-        descriptors["val"] = VAL
         descriptors["local_variable"] = VARIABLE
-        descriptors["this"] = THIS_SUPER
         descriptors["null"] = NULL
-        descriptors["primitive"] = PRIMITIVE
-        descriptors["debugger"] = DEBUGGER
-        descriptors["import"] = MODULE
-        descriptors["console"] = CONSOLE
         descriptors["number"] = JS_NUMBER
         descriptors["inst_field"] = DefaultLanguageHighlighterColors.INSTANCE_FIELD
+        descriptors["function_name"] = DefaultLanguageHighlighterColors.FUNCTION_CALL
         return descriptors
     }
 
@@ -95,22 +69,22 @@ class JSColorSettingsPage : BaseColorSettings() {
     }
 
     override fun getDemoText(): String {
-        return """<import>import</import> <local_variable>_</local_variable> <from>from</from> <string>'lodash'</string>;
-<import>import</import> {<import_specifier>Hello</import_specifier>, <import_specifier>World</import_specifier>} <from>from</from> <string>'./hello/world'</string>;
+        return """<subKeyword>import</subKeyword> <local_variable>_</local_variable> <subKeyword>from</subKeyword> <string>'lodash'</string>;
+<subKeyword>import</subKeyword> {<import_specifier>Hello</import_specifier>, <import_specifier>World</import_specifier>} <from>from</from> <string>'./hello/world'</string>;
 
-<function>function</function> <function_name>foo</function_name>() {
-  <val>var</val> <local_variable>x</local_variable> = <number>10</number>;
-  <this>this</this>.<inst_field>x</inst_field> = <null>null</null>;
-  <condition>if</condition> (<local_variable>x</local_variable> === <null>undefined</null>) {
-    <console>console</console>.<function>log</function>(<string>'foo'</string>);
-    <debugger>debugger</debugger>;
-    <keyword>return</keyword> <primitive>false</primitive>;
+function <function_name>foo</function_name() {
+  var <local_variable>x</local_variable> = <number>10</number>;
+  this.<inst_field>x</inst_field> = <null>null</null>;
+  <subKeyword>if</subKeyword> (<local_variable>x</local_variable> === <null>undefined</null>) {
+    <keyword>console</keyword>.<function_name>log</</function_name>(<string>'foo'</string>);
+    <keyword>debugger</keyword>;
+    <subKeyword>return</subKeyword> <keyword>false</keyword>;
   }
-  <keyword>return</keyword> <primitive>true</primitive>;
+  <subKeyword>return</subKeyword> <keyword>true</keyword>;
   
-<import>export</import> <keyword>class</keyword> className {
+<subKeyword>export</subKeyword> <keyword>class</keyword> className {
     <function_name>foo</function_name>() {
-       <loop>for</loop>(<val>const</val> <local_variable>bar</local_variable> in foo) {
+       <subKeyword>for</subKeyword>(<keyword>const</val> <local_variable>bar</local_variable> in foo) {
          
        }
     }
