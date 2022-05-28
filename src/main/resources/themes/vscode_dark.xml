@@ -592,14 +592,9 @@
                 <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
-        <option name="JS.MODULE_KEYWORD">
+        <option name="JS.SECONDARY_KEYWORDS">
             <value>
                 <option name="FOREGROUND" value="ce80b6"/>
-            </value>
-        </option>
-        <option name="JS.PARAMETER">
-            <value>
-                <option name="FOREGROUND" value="9cdcfe"/>
             </value>
         </option>
         <option name="KOTLIN_BACKING_FIELD_VARIABLE">
