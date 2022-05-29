@@ -1,0 +1,7 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="Python" order="last"
+                   implementationClass="com.github.dinbtechit.vscodetheme.annotators.PyAnnotator"/>
+        <colorSettingsPage order="last" implementation="com.github.dinbtechit.vscodetheme.annotators.settings.PyColorSettingsPage"/>
+    </extensions>
+</idea-plugin>

@@ -871,6 +871,11 @@
                 <option name="FOREGROUND" value="569cd5"/>
             </value>
         </option>
+        <option name="PY.SECONDARY_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="ce80b6"/>
+            </value>
+        </option>
         <option name="REASSIGNED_LOCAL_VARIABLE_ATTRIBUTES">
             <value>
                 <option name="FOREGROUND" value="94dbfd"/>
