@@ -18,8 +18,8 @@ class PyAnnotator : BaseAnnotator() {
             DEFAULT_KEYWORD
         )
 
-        val TYPE_KEYWORD: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-            "PY.TYPE_KEYWORD",
+        val SECONDARY_KEYWORD_WITH_BG: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
+            "PY.SECONDARY_KEYWORD_WITH_BG",
             DEFAULT_KEYWORD
         )
     }
@@ -28,9 +28,10 @@ class PyAnnotator : BaseAnnotator() {
         var type: TextAttributesKey? = null
         when (element.text) {
             "import", "as", "in",
-            "async", "continue", "del", "assert", "break", "finally", "for", "from",
+            "continue", "del", "assert", "break", "finally", "for", "from",
             "elif", "else", "if", "except", "pass", "raise", "return", "try", "while",
             "with" -> type = SECONDARY_KEYWORD
+            "async", "await" -> type = SECONDARY_KEYWORD_WITH_BG
             else -> {}
         }
 
