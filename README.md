@@ -22,7 +22,10 @@ intuitive. This plugin attempts to make the IDE fairly **close** to VSCode Dark+
     - Bold Weight -> `Bold`
 
 ### Supported Languages
-JavaScript (Advance), TypeScript (Advance), Java(Advance), Kotlin, Dart(Advance), Php, .Net, Python, C++, Go, Ruby and many more. 
+- Advance Syntax highligting Support: 
+  - JavaScript, TypeScript, Java, Dart/Flutter(
+- Basic Syntax highlighting:
+  - Kotlin, Php, .Net, Python, C++, Go, Ruby and many more. 
 
 ### Supported Platforms
 Webstorm, Intellij, CLion, PhpStorm, Rider, Android Studio, GoLang and many more.

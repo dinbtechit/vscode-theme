@@ -10,7 +10,9 @@ import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.psi.codeStyle.DisplayPriority
 import com.intellij.util.ObjectUtils
-import gnu.trove.THashMap
+import com.jetbrains.lang.dart.DartFileType
+import com.jetbrains.lang.dart.DartLanguage
+import com.jetbrains.lang.dart.psi.DartFile
 import java.util.*
 import javax.swing.Icon
 
@@ -29,14 +31,14 @@ class DartColorSettingsPage : BaseColorSettings() {
     }
 
     private fun createAdditionalHlAttrs(): MutableMap<String, TextAttributesKey> {
-        val descriptors: MutableMap<String, TextAttributesKey> = THashMap()
+        val descriptors: MutableMap<String, TextAttributesKey> = HashMap()
         descriptors["SecondaryKeywords"] = DartAnnotator.SECONDARY_KEYWORD
         descriptors["SecondaryKeywordsWithBg"] = DartAnnotator.SECONDARY_KEYWORD_WITH_BG
         return descriptors
     }
 
     override fun getIcon(): Icon {
-        return AllIcons.FileTypes.Java
+        return DartFileType.INSTANCE.icon
     }
 
 
