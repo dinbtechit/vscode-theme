@@ -16,12 +16,5 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <themeProvider order="last" id="dinbtechit-7ef0c378d737e162955f3e028dcf9ccb" path="themes/vscode_dark.theme.json"/>
-        <applicationService serviceImplementation="com.github.dinbtechit.vscodetheme.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.dinbtechit.vscodetheme.services.MyProjectService"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.dinbtechit.vscodetheme.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
