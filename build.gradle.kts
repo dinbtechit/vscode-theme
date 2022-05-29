@@ -91,13 +91,13 @@ tasks {
     }
 
     runIde {
-        autoReloadPlugins.set(true)
-        systemProperty("jb.vmOptionsFile", "")
+        // autoReloadPlugins.set(true)
+        // systemProperty("jb.vmOptionsFile", "")
     }
 
-    buildSearchableOptions {
+    /*buildSearchableOptions {
         enabled = false;
-    }
+    }*/
 
     // Configure UI tests plugin
     // Read more: https://github.com/JetBrains/intellij-ui-test-robot
