@@ -2,7 +2,7 @@
   "name": "VSCode Dark",
   "dark": true,
   "author": "Dinesh Srinivasan",
-  "editorScheme": "/themes/vscode_dark.xml",
+  "editorScheme": "/themes/vscode_dark_brighter.xml",
   "ui": {
     "*": {
       "background": "#323333",
@@ -116,6 +116,9 @@
       "areaBorderColor": "#414141"
     },
 
+    "Editor": {
+      "background": "#1e1e1e"
+    },
     "EditorTabs": {
       "tabInsets": true,
       "underlinedTabBackground": "#1e1e1e",
