@@ -49,50 +49,50 @@ class DartColorSettingsPage : BaseColorSettings() {
 
     override fun getDemoText(): String {
         return """
-import 'package:greetings/hello.dart' deferred as hello;
-import 'package:lib1/lib1.dart' show foo;
-import 'package:lib2/lib2.dart' hide foo;
-
-typedef IntList = List<int>;
-
-Future<String> lookUpVersion() <SecondaryKeywordsWithBg>async</SecondaryKeywordsWithBg> => '1.0.0';
-
-bool isNoble(int atomicNumber) {
-  <SecondaryKeywords>assert</SecondaryKeywords>(atomicNumber == 1);
-  <SecondaryKeywords>return</SecondaryKeywords> false;
-}
-
-Future<void> checkVersion() <SecondaryKeywordsWithBg>async</SecondaryKeywordsWithBg> {
-  var version = <SecondaryKeywordsWithBg>await</SecondaryKeywordsWithBg> lookUpVersion();
-
-  <SecondaryKeywordsWithBg>await</SecondaryKeywordsWithBg> for (final request in requestServer) {
-    handleRequest(request);
-  }
-  
-  // Do something with version
-}
-
-Iterable<void> checkVersion2() <SecondaryKeywordsWithBg>sync*</SecondaryKeywordsWithBg> {
-  <SecondaryKeywordsWithBg>yield</SecondaryKeywordsWithBg> lookUpVersion();
-}
-
-
-
-void tryExample() {
-
-<SecondaryKeywordsWithBg>await</SecondaryKeywordsWithBg> for (var identifier <SecondaryKeywords>in</SecondaryKeywords> expression) {
-  // Executes each time the stream emits a value.
-}
-
-  <SecondaryKeywords>try</SecondaryKeywords>{
-
-  } <SecondaryKeywordsWithBg>on</SecondaryKeywordsWithBg> Exception <SecondaryKeywords>catch</SecondaryKeywords> (e, s) {
-    <SecondaryKeywords>rethrow</SecondaryKeywords>;
-  } <SecondaryKeywords>finally</SecondaryKeywords> {
-
-  }
-}    
-""".trimIndent()
+        import 'package:greetings/hello.dart' deferred as hello;
+        import 'package:lib1/lib1.dart' show foo;
+        import 'package:lib2/lib2.dart' hide foo;
+        
+        typedef IntList = List<int>;
+        
+        Future<String> lookUpVersion() <SecondaryKeywordsWithBg>async</SecondaryKeywordsWithBg> => '1.0.0';
+        
+        bool isNoble(int atomicNumber) {
+          <SecondaryKeywords>assert</SecondaryKeywords>(atomicNumber == 1);
+          <SecondaryKeywords>return</SecondaryKeywords> false;
+        }
+        
+        Future<void> checkVersion() <SecondaryKeywordsWithBg>async</SecondaryKeywordsWithBg> {
+          var version = <SecondaryKeywordsWithBg>await</SecondaryKeywordsWithBg> lookUpVersion();
+        
+          <SecondaryKeywordsWithBg>await</SecondaryKeywordsWithBg> for (final request in requestServer) {
+            handleRequest(request);
+          }
+          
+          // Do something with version
+        }
+        
+        Iterable<void> checkVersion2() <SecondaryKeywordsWithBg>sync*</SecondaryKeywordsWithBg> {
+          <SecondaryKeywordsWithBg>yield</SecondaryKeywordsWithBg> lookUpVersion();
+        }
+        
+        
+        
+        void tryExample() {
+        
+        <SecondaryKeywordsWithBg>await</SecondaryKeywordsWithBg> for (var identifier <SecondaryKeywords>in</SecondaryKeywords> expression) {
+          // Executes each time the stream emits a value.
+        }
+        
+          <SecondaryKeywords>try</SecondaryKeywords>{
+        
+          } <SecondaryKeywordsWithBg>on</SecondaryKeywordsWithBg> Exception <SecondaryKeywords>catch</SecondaryKeywords> (e, s) {
+            <SecondaryKeywords>rethrow</SecondaryKeywords>;
+          } <SecondaryKeywords>finally</SecondaryKeywords> {
+        
+          }
+        }    
+        """.trimIndent()
     }
 
     override fun getAdditionalHighlightingTagToDescriptorMap(): Map<String?, TextAttributesKey?>? {

@@ -1,0 +1,7 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="kotlin" order="last"
+                   implementationClass="com.github.dinbtechit.vscodetheme.annotators.KotlinAnnotator"/>
+        <colorSettingsPage order="last" implementation="com.github.dinbtechit.vscodetheme.annotators.settings.KtColorSettingsPage"/>
+    </extensions>
+</idea-plugin>
