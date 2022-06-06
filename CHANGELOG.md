@@ -7,7 +7,7 @@
 - Added extensive syntax highlighting for Php
 - Added extensive syntax highlighting for c#
 
-## [1..3.0]
+## [1.3.0]
 ### Added
 - (Experimental) - Introducing adding Code Editor Theme - VSCode Dark Brighter (5% More brighter than the previous theme).
   With option to switch back to older VSCode Dark theme
