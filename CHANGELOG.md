@@ -5,6 +5,13 @@
 ## [Unreleased]
 
 ## [1.3.0]
+Added
+(Experimental) - Introducing adding Code Editor Theme - VSCode Dark Brighter (5% More brighter than the previous theme). With option to switch back to older VSCode Dark theme
+Added extensive syntax highlighting for Kotlin.
+Fixed
+(Bug) - JavaScript - from keyword highlight only when used in import context
+
+## [1.3.0]
 ### Added
 - (Experimental) - Introducing adding Code Editor Theme - VSCode Dark Brighter (5% More brighter than the previous theme).
   With option to switch back to older VSCode Dark theme
@@ -12,7 +19,6 @@
 
 ### Fixed
 - (Bug) - JavaScript - `from` keyword highlight only when used in import context
-
 
 ## [1.2.0]
 ### Added
