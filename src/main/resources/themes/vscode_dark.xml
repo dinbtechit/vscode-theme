@@ -1,9 +1,9 @@
 <scheme name="VSCode Dark" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-05-28T16:03:09</property>
+        <property name="created">2022-06-10T13:13:42</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2022.1.1.0.0</property>
-        <property name="modified">2022-05-28T16:03:13</property>
+        <property name="ideVersion">2022.1.2.0.0</property>
+        <property name="modified">2022-06-10T13:13:48</property>
         <property name="originalScheme">_@user_VSCode Dark</property>
     </metaInfo>
     <colors>
@@ -564,6 +564,11 @@
                 <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
+        <option name="JS.DECORATOR">
+            <value>
+                <option name="FOREGROUND" value="dcdcaa"/>
+            </value>
+        </option>
         <option name="JS.DOC_TYPE">
             <value>
                 <option name="FOREGROUND" value="4ec9b0"/>
@@ -590,6 +595,11 @@
         <option name="JS.KEYWORD">
             <value>
                 <option name="FOREGROUND" value="569cd6"/>
+            </value>
+        </option>
+        <option name="JS.LOCAL_VARIABLE">
+            <value>
+                <option name="FOREGROUND" value="9cdcfe"/>
             </value>
         </option>
         <option name="JS.PARAMETER">
@@ -677,7 +687,6 @@
                 <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
-
         <option name="KOTLIN_PACKAGE_FUNCTION_CALL" baseAttributes="DEFAULT_STATIC_METHOD"/>
         <option name="KOTLIN_TYPE_PARAMETER" baseAttributes="TYPE_PARAMETER_NAME_ATTRIBUTES"/>
         <option name="MARKDOWN_AUTO_LINK">
@@ -910,11 +919,6 @@
                 <option name="FOREGROUND" value="dcdcaa"/>
             </value>
         </option>
-        <option name="PY.SELF_PARAMETER">
-            <value>
-                <option name="FOREGROUND" value="569cd5"/>
-            </value>
-        </option>
         <option name="PY.SECONDARY_KEYWORD">
             <value>
                 <option name="FOREGROUND" value="ce80b6"/>
@@ -924,6 +928,11 @@
             <value>
                 <option name="FOREGROUND" value="ce80b6"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
+            </value>
+        </option>
+        <option name="PY.SELF_PARAMETER">
+            <value>
+                <option name="FOREGROUND" value="569cd5"/>
             </value>
         </option>
         <option name="REASSIGNED_LOCAL_VARIABLE_ATTRIBUTES">
