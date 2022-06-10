@@ -253,11 +253,12 @@
         <option name="DEFAULT_LOCAL_VARIABLE">
             <value>
                 <option name="FOREGROUND" value="e6e6aa"/>
-                <option name="EFFECT_COLOR" value="323333"/>
             </value>
         </option>
         <option name="DEFAULT_METADATA">
-            <value/>
+            <value>
+                <option name="FOREGROUND" value="47ccb1"/>
+            </value>
         </option>
         <option name="DEFAULT_NUMBER">
             <value>
@@ -570,6 +571,11 @@
                 <option name="FOREGROUND" value="47ccb1"/>
             </value>
         </option>
+        <option name="JS.DECORATOR">
+            <value>
+                <option name="FOREGROUND" value="e6e6aa"/>
+            </value>
+        </option>
         <option name="JS.DOC_TYPE">
             <value>
                 <option name="FOREGROUND" value="47ccb1"/>
@@ -596,6 +602,11 @@
         <option name="JS.KEYWORD">
             <value>
                 <option name="FOREGROUND" value="47a2ed"/>
+            </value>
+        </option>
+        <option name="JS.LOCAL_VARIABLE">
+            <value>
+                <option name="FOREGROUND" value="94dbfd"/>
             </value>
         </option>
         <option name="JS.PARAMETER">
