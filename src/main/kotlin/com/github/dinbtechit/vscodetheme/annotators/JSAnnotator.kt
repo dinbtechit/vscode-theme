@@ -38,7 +38,7 @@ class JSAnnotator : BaseAnnotator() {
         var type: TextAttributesKey? = null
         when (element.text) {
             "package", "export", "import", "require", "module", "return" -> type = SECONDARY_KEYWORDS
-            "try", "throw", "catch", "finally", "yield", "break", "continue", "with",
+            "await","try", "throw", "catch", "finally", "yield", "break", "continue", "with",
             "if", "else", "switch", "case", "default" -> type = SECONDARY_KEYWORDS
             "for", "while", "do" -> type = SECONDARY_KEYWORDS
             "from" -> if (element.parent is ES6FromClause) type = FROM_KEYWORD

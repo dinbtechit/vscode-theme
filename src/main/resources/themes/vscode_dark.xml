@@ -277,6 +277,11 @@
                 <option name="EFFECT_TYPE" value="1"/>
             </value>
         </option>
+        <option name="DEFAULT_SECONDARY_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="ce80b6"/>
+            </value>
+        </option>
         <option name="DEFAULT_SEMICOLON">
             <value/>
         </option>
