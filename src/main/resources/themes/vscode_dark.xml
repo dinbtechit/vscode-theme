@@ -179,7 +179,8 @@
         </option>
         <option name="DEFAULT_CONSTANT">
             <value>
-                <option name="FOREGROUND" value="d3d3d3"/>
+                <option name="FOREGROUND" value="4fc1ff"/>
+                <option name="FONT_TYPE" value="1"/>
             </value>
         </option>
         <option name="DEFAULT_DOC_COMMENT">
@@ -268,6 +269,13 @@
         <option name="DEFAULT_PARAMETER">
             <value>
                 <option name="FOREGROUND" value="94dbfd"/>
+            </value>
+        </option>
+        <option name="DEFAULT_REASSIGNED_LOCAL_VARIABLE">
+            <value>
+                <option name="FOREGROUND" value="94dbfd"/>
+                <option name="EFFECT_COLOR" value="707d95"/>
+                <option name="EFFECT_TYPE" value="1"/>
             </value>
         </option>
         <option name="DEFAULT_REASSIGNED_PARAMETER">
@@ -957,6 +965,17 @@
             <value>
                 <option name="BACKGROUND" value="1e1e1e"/>
                 <option name="EFFECT_TYPE" value="5"/>
+            </value>
+        </option>
+        <option name="ReSharper.CSHARP_CONSTANT_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="4fc1ff"/>
+                <option name="FONT_TYPE" value="3"/>
+            </value>
+        </option>
+        <option name="ReSharper.CSHARP_NAMESPACE_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="SEARCH_RESULT_ATTRIBUTES">
