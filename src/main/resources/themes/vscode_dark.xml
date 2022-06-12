@@ -877,6 +877,17 @@
         <option name="PHP_ALIAS_REFERENCE">
             <value/>
         </option>
+        <option name="PHP_CLASS">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
+            </value>
+        </option>
+        <option name="PHP_CONSTANT">
+            <value>
+                <option name="FOREGROUND" value="4fc1ff"/>
+                <option name="FONT_TYPE" value="3"/>
+            </value>
+        </option>
         <option name="PHP_EXEC_COMMAND_ID">
             <value>
                 <option name="FOREGROUND" value="cd905b"/>
@@ -885,6 +896,11 @@
         <option name="PHP_HEREDOC_ID">
             <value>
                 <option name="FOREGROUND" value="d3d3c8"/>
+            </value>
+        </option>
+        <option name="PHP_IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="PHP_PARAMETER">
