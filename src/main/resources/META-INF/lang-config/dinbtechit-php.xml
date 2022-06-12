@@ -1,0 +1,6 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="PHP" order="last"
+                   implementationClass="com.github.dinbtechit.vscodetheme.annotators.PhpAnnotator"/>
+    </extensions>
+</idea-plugin>

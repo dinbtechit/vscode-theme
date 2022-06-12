@@ -4,12 +4,16 @@
 
 ## [Unreleased]
 ### Added
-- Added extensive syntax highlighting for Php
 - Added extensive syntax highlighting for c#
+- Added extensive syntax highlighting for php
+
+### Fixed
+- Javascript/Typescript - decorator and local variable color same as VSCode
+- Javascript/Typescript - await keyword to be same color as VSCode
 
 ## [1.3.0]
 ### Added
-- (Experimental) - Introducing adding Code Editor Theme - VSCode Dark Brighter (5% More brighter than the previous theme).
+- (Experimental) - Introducing Code Editor Theme - VSCode Dark Brighter (5% More brighter than the previous theme).
   With option to switch back to older VSCode Dark theme
 - Added extensive syntax highlighting for Kotlin.
 
