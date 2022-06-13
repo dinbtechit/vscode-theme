@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.4.0]
 ### Added
 - Added extensive syntax highlighting for c#
 - Added extensive syntax highlighting for php
