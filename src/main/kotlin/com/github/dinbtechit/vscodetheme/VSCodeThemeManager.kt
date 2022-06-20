@@ -1,7 +1,6 @@
 package com.github.dinbtechit.vscodetheme
 
 import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
-import com.github.dinbtechit.vscodetheme.startup.VSCodeStartupNotifyActivity
 import com.intellij.ide.ui.LafManager
 
 class VSCodeThemeManager {

@@ -6,7 +6,6 @@ import com.intellij.openapi.project.DumbAwareAction
 
 class DismissNotification: DumbAwareAction("Dismiss") {
     override fun actionPerformed(e: AnActionEvent) {
-        VSCodeStartupNotifyActivity.notification!!.hideBalloon()
         VSCodeStartupNotifyActivity.notification.hideBalloon()
     }
 }

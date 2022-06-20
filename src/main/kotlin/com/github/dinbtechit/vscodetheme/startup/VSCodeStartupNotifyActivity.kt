@@ -12,7 +12,6 @@ import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.ide.ui.LafManager
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationGroupManager
-import com.intellij.notification.NotificationListener
 import com.intellij.notification.NotificationType
 import com.intellij.notification.impl.NotificationsManagerImpl
 import com.intellij.openapi.extensions.PluginId
@@ -77,8 +76,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         notification = createNotification(
             updateMsg(),
             updateContent + (if (!isVSCodeThemeSelected()) switchThemeQuestion else ""),
-            NotificationType.INFORMATION,
-            NotificationListener.UrlOpeningListener(false)
+            NotificationType.INFORMATION
         )
         showFullNotification(project, notification)
     }
@@ -86,8 +84,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     private fun getPlugin(): IdeaPluginDescriptor? = PluginManagerCore.getPlugin(PluginId.getId(pluginId))
 
     private fun createNotification(
-        title: String, content: String, type: NotificationType,
-        listener: NotificationListener
+        title: String, content: String, type: NotificationType
     ): Notification {
         return NotificationGroupManager.getInstance().getNotificationGroup("VSCode Theme Notification Group")
             .createNotification(title, content, type)
@@ -98,7 +95,6 @@ class VSCodeStartupNotifyActivity : StartupActivity {
                 }
             }
             .addAction(DismissNotification())
-            .setListener(listener)
     }
 
     private fun showFullNotification(project: Project, notification: Notification) {
@@ -111,7 +107,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         val target = RelativePoint(frame.component, Point(bounds.x + bounds.width, 20))
 
         try {
-            val balloon = NotificationsManagerImpl.createBalloon(
+            NotificationsManagerImpl.createBalloon(
                 frame,
                 notification,
                 true, // showCallout
