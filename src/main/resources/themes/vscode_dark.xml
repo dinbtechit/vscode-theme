@@ -9,6 +9,7 @@
     <colors>
         <option name="CARET_COLOR" value="adaeac"/>
         <option name="CARET_ROW_COLOR" value="262626"/>
+        <option name="CONSOLE_BACKGROUND_KEY" value="1e1e1e"/>
         <option name="GUTTER_BACKGROUND" value="1d1d1d"/>
         <option name="INDENT_GUIDE" value="3b3b3b"/>
         <option name="LINE_NUMBERS_COLOR" value="848484"/>
@@ -27,7 +28,6 @@
         <option name="ScrollBar.Transparent.thumbColor" value="414141"/>
         <option name="ScrollBar.Transparent.trackColor" value="1d1d1d"/>
         <option name="VISUAL_INDENT_GUIDE" value="3b3b3b"/>
-        <option name="vscode_green" value="843937"/>
     </colors>
     <attributes>
         <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
