@@ -5,7 +5,6 @@ import com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction
 import com.github.dinbtechit.vscodetheme.actions.ApplyThemeAction
 import com.github.dinbtechit.vscodetheme.actions.DismissNotification
 import com.github.dinbtechit.vscodetheme.icons.VSCodeIcons
-import com.github.dinbtechit.vscodetheme.services.ApplicationService
 import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
 import com.intellij.ide.plugins.IdeaPluginDescriptor
 import com.intellij.ide.plugins.PluginManagerCore
@@ -13,13 +12,10 @@ import com.intellij.ide.ui.LafManager
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
-import com.intellij.notification.impl.NotificationsManagerImpl
 import com.intellij.openapi.extensions.PluginId
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.StartupActivity
-import com.intellij.openapi.ui.popup.Balloon
 import com.intellij.openapi.wm.WindowManager
-import com.intellij.ui.BalloonLayoutData
 import com.intellij.ui.awt.RelativePoint
 import java.awt.Point
 
@@ -28,19 +24,14 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     private val updateContent: String by lazy {
         //language=HTML
         """
-        <br/>
-            Thank you for installing <b>VSCode Theme</b>! 
-        <br/>
+          Thank you for installing <b>VSCode Theme</b>! 
         """.trimIndent()
     }
 
     private val switchThemeQuestion: String by lazy {
         //language=HTML
         """
-         <br/>
-          Would you like to switch to <b>VSCode Theme</b>?
-         <br/>   
-         <br/>   
+          Set <b>VSCode Theme</b> as the default
         """.trimIndent()
     }
 
@@ -75,7 +66,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     private fun showUpdate(project: Project) {
         notification = createNotification(
             updateMsg(),
-            updateContent + (if (!isVSCodeThemeSelected()) switchThemeQuestion else ""),
+            if (!isVSCodeThemeSelected()) switchThemeQuestion else updateContent,
             NotificationType.INFORMATION
         )
         showFullNotification(project, notification)
@@ -88,14 +79,15 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     ): Notification {
         return NotificationGroupManager.getInstance()
             .getNotificationGroup("VSCode Theme Notification Group")
-            .createNotification(title, content, type)
+            .createNotification(content, type)
+            .setTitle(title)
             .setIcon(VSCodeIcons.Logo).apply {
                 if (!isVSCodeThemeSelected()) {
                     addAction(AlwaysApplyThemeAction())
                     addAction(ApplyThemeAction())
                 }
             }
-            .addAction(DismissNotification())
+            .addAction(DismissNotification(isVSCodeThemeSelected()))
     }
 
     private fun showFullNotification(project: Project, notification: Notification) {
@@ -106,18 +98,17 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         }
         val bounds = frame.component.bounds
         val target = RelativePoint(frame.component, Point(bounds.x + bounds.width, 20))
+        /*NotificationsManagerImpl.createBalloon(
+            frame,
+            notification,
+            true, // showCallout
+            false, // hideOnClickOutside
+            BalloonLayoutData.fullContent(),
+            ApplicationService.INSTANCE
+        ).show(target, Balloon.Position.atLeft)*/
 
-        try {
-            NotificationsManagerImpl.createBalloon(
-                frame,
-                notification,
-                true, // showCallout
-                false, // hideOnClickOutside
-                BalloonLayoutData.fullContent(),
-                ApplicationService.INSTANCE
-            ).show(target, Balloon.Position.atLeft)
-        } catch (e: Exception) {
-            notification.notify(project)
-        }
+        notification
+            .setCollapseDirection(Notification.CollapseActionsDirection.KEEP_LEFTMOST)
+            .notify(project)
     }
 }

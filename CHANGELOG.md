@@ -11,8 +11,7 @@
 - [Bug] Terminal - Background color to be same as VSCode #5
 
 ### Changed
-- [Improvement] Java - Annotation Attribute to different color.
-- [Breaking] No longer supports 2021.1 or before. 
+- [Improvement] Java - Annotation Attribute to different color. 
 
 ## [1.4.0]
 ### Added
