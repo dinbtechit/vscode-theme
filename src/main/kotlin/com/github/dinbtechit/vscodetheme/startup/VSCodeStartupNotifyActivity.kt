@@ -86,7 +86,8 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     private fun createNotification(
         title: String, content: String, type: NotificationType
     ): Notification {
-        return NotificationGroupManager.getInstance().getNotificationGroup("VSCode Theme Notification Group")
+        return NotificationGroupManager.getInstance()
+            .getNotificationGroup("VSCode Theme Notification Group")
             .createNotification(title, content, type)
             .setIcon(VSCodeIcons.Logo).apply {
                 if (!isVSCodeThemeSelected()) {

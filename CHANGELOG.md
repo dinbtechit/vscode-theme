@@ -12,6 +12,7 @@
 
 ### Changed
 - [Improvement] Java - Annotation Attribute to different color.
+- [Breaking] No longer supports 2021.1 or before. 
 
 ## [1.4.0]
 ### Added
