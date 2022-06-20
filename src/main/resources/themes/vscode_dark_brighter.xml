@@ -1,9 +1,9 @@
 <scheme name="VSCode Dark Brighter" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-06-12T06:56:55</property>
+        <property name="created">2022-06-19T16:21:40</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2022.1.1.0.0</property>
-        <property name="modified">2022-06-12T06:57:00</property>
+        <property name="ideVersion">2022.1.2.0.0</property>
+        <property name="modified">2022-06-19T16:21:43</property>
         <property name="originalScheme">_@user_VSCode Dark Brighter</property>
     </metaInfo>
     <colors>
@@ -27,6 +27,7 @@
         <option name="ScrollBar.Transparent.thumbColor" value="414141"/>
         <option name="ScrollBar.Transparent.trackColor" value="1d1d1d"/>
         <option name="VISUAL_INDENT_GUIDE" value="3b3b3b"/>
+        <option name="vscode_green" value="843937"/>
     </colors>
     <attributes>
         <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
@@ -206,7 +207,7 @@
         </option>
         <option name="DEFAULT_FUNCTION_CALL">
             <value>
-                <option name="FOREGROUND" value="dbdbaa"/>
+                <option name="FOREGROUND" value="e6e6aa"/>
             </value>
         </option>
         <option name="DEFAULT_FUNCTION_DECLARATION">
@@ -286,6 +287,11 @@
             </value>
         </option>
         <option name="DEFAULT_SECONDARY_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="cc85c6"/>
+            </value>
+        </option>
+        <option name="DEFAULT_SECONDARY_KEYWORD_WITH_BG">
             <value>
                 <option name="FOREGROUND" value="cc85c6"/>
             </value>
@@ -831,12 +837,13 @@
         </option>
         <option name="OC.DIRECTIVE">
             <value>
-                <option name="FOREGROUND" value="c586a1"/>
+                <option name="FOREGROUND" value="cc85c6"/>
             </value>
         </option>
         <option name="OC.ENUM_CONST">
             <value>
                 <option name="FOREGROUND" value="4fc1ff"/>
+                <option name="FONT_TYPE" value="3"/>
             </value>
         </option>
         <option name="OC.FUNCTION_DECLARATION">
@@ -862,6 +869,11 @@
         <option name="OC.OVERLOADED_OPERATOR">
             <value>
                 <option name="FOREGROUND" value="e6e6aa"/>
+            </value>
+        </option>
+        <option name="OC.STRUCT_FIELD">
+            <value>
+                <option name="FOREGROUND" value="8cd7ff"/>
             </value>
         </option>
         <option name="OC.STRUCT_LIKE">

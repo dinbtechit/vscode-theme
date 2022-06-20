@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+### Added
+- Added extensive syntax highlighting for C, C++, ObjectiveC
 
 ## [1.4.0]
 ### Added

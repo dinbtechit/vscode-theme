@@ -27,6 +27,7 @@
         <option name="ScrollBar.Transparent.thumbColor" value="414141"/>
         <option name="ScrollBar.Transparent.trackColor" value="1d1d1d"/>
         <option name="VISUAL_INDENT_GUIDE" value="3b3b3b"/>
+        <option name="vscode_green" value="843937"/>
     </colors>
     <attributes>
         <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
@@ -286,6 +287,11 @@
             </value>
         </option>
         <option name="DEFAULT_SECONDARY_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="ce80b6"/>
+            </value>
+        </option>
+        <option name="DEFAULT_SECONDARY_KEYWORD_WITH_BG">
             <value>
                 <option name="FOREGROUND" value="ce80b6"/>
             </value>
@@ -837,6 +843,7 @@
         <option name="OC.ENUM_CONST">
             <value>
                 <option name="FOREGROUND" value="4fc1ff"/>
+                <option name="FONT_TYPE" value="3"/>
             </value>
         </option>
         <option name="OC.FUNCTION_DECLARATION">
@@ -862,6 +869,11 @@
         <option name="OC.OVERLOADED_OPERATOR">
             <value>
                 <option name="FOREGROUND" value="dcdcaa"/>
+            </value>
+        </option>
+        <option name="OC.STRUCT_FIELD">
+            <value>
+                <option name="FOREGROUND" value="94dbfd"/>
             </value>
         </option>
         <option name="OC.STRUCT_LIKE">
