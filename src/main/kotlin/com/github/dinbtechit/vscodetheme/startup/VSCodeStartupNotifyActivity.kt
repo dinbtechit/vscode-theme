@@ -31,7 +31,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     private val switchThemeQuestion: String by lazy {
         //language=HTML
         """
-          Set <b>VSCode Theme</b> as the default
+          Set <b>VSCode Theme</b> as default theme.
         """.trimIndent()
     }
 
