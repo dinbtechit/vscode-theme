@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.5.0]
 ### Added
 - (fixes #4) Added extensive syntax highlighting for C, C++, ObjectiveC
 - Startup Notification to apply VSCode theme as default
@@ -11,7 +13,7 @@
 - [Bug] Terminal - Background color to be same as VSCode #5
 
 ### Changed
-- [Improvement] Java - Annotation Attribute to different color. 
+- [Improvement] Java - Annotation Attribute to different color.
 
 ## [1.4.0]
 ### Added
