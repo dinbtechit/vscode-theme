@@ -26,7 +26,7 @@ class KotlinAnnotator : BaseAnnotator() {
 
     override fun getKeywordType(element: PsiElement): TextAttributesKey? {
         var type: TextAttributesKey? = null
-        if (element.elementType is KtKeywordToken) {
+        if (element.elementType is KtKeywordToken || element.text == "catch" ) {
             when (element.text) {
                 "return", "as" -> type = SECONDARY_KEYWORD
                 "if", "else", "when", "default", "break", "continue" -> type = SECONDARY_KEYWORD

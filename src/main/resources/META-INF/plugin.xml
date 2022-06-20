@@ -21,5 +21,21 @@
         <themeProvider order="last" id="dinbtechit-7ef0c378d737e162955f3e028dcf9ccb" path="themes/vscode_dark.theme.json"/>
         <bundledColorScheme id="dinbtechit-7ef0c378d737e162955f3e028dcf9ccb3" path="themes/vscode_dark"/>
         <bundledColorScheme id="dinbtechit-7ef0c378d737e162955f3e028dcf9ccb4" path="themes/vscode_dark_brighter"/>
+        <postStartupActivity implementation="com.github.dinbtechit.vscodetheme.startup.VSCodeStartupNotifyActivity"/>
+        <applicationService
+                serviceImplementation="com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore"/>
+        <applicationService serviceImplementation="com.github.dinbtechit.vscodetheme.services.ApplicationService"/>
+        <notificationGroup id="VSCode Theme Notification Group" displayType="STICKY_BALLOON"/>
     </extensions>
+    <actions>
+        <action id="AlwaysApplyThemeAction" class="com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction"
+                text="Always Apply" description="Always action">
+        </action>
+        <action id="ApplyThemeAction" class="com.github.dinbtechit.vscodetheme.actions.ApplyThemeAction"
+                text="Apply" description="Switch to theme action">
+        </action>
+        <action id="DismissNotification" class="com.github.dinbtechit.vscodetheme.actions.DismissNotification"
+                text="Dismiss" description="Dismiss notification">
+        </action>
+    </actions>
 </idea-plugin>

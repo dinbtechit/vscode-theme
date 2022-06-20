@@ -4,7 +4,11 @@
 
 ## [Unreleased]
 ### Added
-- Added extensive syntax highlighting for C, C++, ObjectiveC
+- (fixes #4) Added extensive syntax highlighting for C, C++, ObjectiveC
+- Startup Notification to apply VSCode theme as default
+
+### Fixed
+- [Bug] Terminal - Background color to be same as VSCode #5
 
 ## [1.4.0]
 ### Added
