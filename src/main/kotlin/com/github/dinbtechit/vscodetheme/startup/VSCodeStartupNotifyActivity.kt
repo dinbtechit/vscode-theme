@@ -107,8 +107,6 @@ class VSCodeStartupNotifyActivity : StartupActivity {
             ApplicationService.INSTANCE
         ).show(target, Balloon.Position.atLeft)*/
 
-        notification
-            .setCollapseDirection(Notification.CollapseActionsDirection.KEEP_LEFTMOST)
-            .notify(project)
+        notification.notify(project)
     }
 }
