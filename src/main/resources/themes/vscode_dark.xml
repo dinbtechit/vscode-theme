@@ -31,7 +31,9 @@
     </colors>
     <attributes>
         <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
-            <value/>
+            <value>
+                <option name="FOREGROUND" value="9cdcfe"/>
+            </value>
         </option>
         <option name="ANNOTATION_NAME_ATTRIBUTES" baseAttributes="DEFAULT_METADATA"/>
         <option name="BAD_CHARACTER">

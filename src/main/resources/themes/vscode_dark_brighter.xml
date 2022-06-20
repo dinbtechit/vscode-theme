@@ -1,9 +1,9 @@
 <scheme name="VSCode Dark Brighter" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-06-19T19:49:15</property>
+        <property name="created">2022-06-20T10:32:18</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2022.1.1.0.0</property>
-        <property name="modified">2022-06-19T19:49:21</property>
+        <property name="ideVersion">2022.1.2.0.0</property>
+        <property name="modified">2022-06-20T10:32:24</property>
         <property name="originalScheme">_@user_VSCode Dark Brighter</property>
     </metaInfo>
     <colors>
@@ -31,7 +31,9 @@
     </colors>
     <attributes>
         <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
-            <value/>
+            <value>
+                <option name="FOREGROUND" value="8cd7ff"/>
+            </value>
         </option>
         <option name="ANNOTATION_NAME_ATTRIBUTES" baseAttributes="DEFAULT_METADATA"/>
         <option name="BAD_CHARACTER">
