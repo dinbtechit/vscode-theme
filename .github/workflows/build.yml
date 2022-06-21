@@ -19,6 +19,8 @@ on:
     branches: [main]
   # Trigger the workflow on any pull request
   pull_request:
+    branches-ignore:
+      - 'changelog-update-**'
 
 jobs:
 
