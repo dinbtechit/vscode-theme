@@ -42,7 +42,8 @@ class VSCodeStartupNotifyActivity : StartupActivity {
 
     override fun runActivity(project: Project) {
         val settings = VSCodeThemeSettingsStore.instance
-        if (getPlugin()?.version != VSCodeThemeSettingsStore.instance.version) {
+        val isReady = VSCodeThemeManager.getInstance().isVSCodeThemeReady();
+        if (isReady && getPlugin()?.version != VSCodeThemeSettingsStore.instance.version) {
             settings.version = getPlugin()!!.version
             if (settings.alwaysApply) {
                 VSCodeThemeManager.getInstance().switchToVSCodeTheme()

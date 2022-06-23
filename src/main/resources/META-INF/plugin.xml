@@ -1,5 +1,5 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
-<idea-plugin require-restart="false">
+<idea-plugin>
     <id>com.github.dinbtechit.vscodetheme</id>
     <name>VSCode Theme</name>
     <vendor>dinbtechit</vendor>
@@ -14,7 +14,7 @@
     <depends config-file="lang-config/dinbtechit-kotlin.xml" optional="true">org.jetbrains.kotlin</depends>
     <depends config-file="lang-config/dinbtechit-csharp.xml" optional="true">com.intellij.modules.rider</depends>
     <depends config-file="lang-config/dinbtechit-php.xml" optional="true">com.jetbrains.php</depends>
-    <depends config-file="lang-config/dinbtechit-clion.xml"  optional="true">com.intellij.modules.clion</depends>
+    <depends config-file="lang-config/dinbtechit-clion.xml"  optional="true">com.intellij.cidr.lang</depends>
     <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
 
     <extensions defaultExtensionNs="com.intellij">

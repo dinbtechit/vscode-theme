@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+### Fixed 
+- Notification startup issue
 
 ## [1.5.0]
 ### Added
