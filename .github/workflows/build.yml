@@ -19,8 +19,6 @@ on:
     branches: [main]
   # Trigger the workflow on any pull request
   pull_request:
-    branches-ignore:
-      - 'changelog-update-**'
 
 jobs:
 
@@ -29,6 +27,7 @@ jobs:
   # Build plugin and provide the artifact for the next workflow jobs
   build:
     name: Build
+    if: startsWith(github.head_ref, 'changelog-update') == false
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.properties.outputs.version }}
