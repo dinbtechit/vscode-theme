@@ -54,4 +54,16 @@ tasks {
     runIde {
         enabled = false // Don't run CLion as we only need its libraries/dependencies
     }
+
+    runPluginVerifier {
+        enabled = false
+    }
+
+    publishPlugin {
+        enabled = false
+    }
+
+    verifyPlugin {
+        enabled = false
+    }
 }
