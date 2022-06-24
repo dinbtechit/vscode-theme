@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+#### Added
+- When theme is not selected. Popup will be displayed to apply theme. 
 
 ## [1.5.1]
 ### Fixed

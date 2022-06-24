@@ -37,5 +37,8 @@
         <action id="DismissNotification" class="com.github.dinbtechit.vscodetheme.actions.DismissNotification"
                 text="Dismiss" description="Dismiss notification">
         </action>
+        <action id="Support" class="com.github.dinbtechit.vscodetheme.actions.DonateAction"
+                text="Support">
+        </action>
     </actions>
 </idea-plugin>

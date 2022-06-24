@@ -3,7 +3,7 @@ package com.github.dinbtechit.vscodetheme.startup
 import com.github.dinbtechit.vscodetheme.VSCodeThemeManager
 import com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction
 import com.github.dinbtechit.vscodetheme.actions.ApplyThemeAction
-import com.github.dinbtechit.vscodetheme.actions.DismissNotification
+import com.github.dinbtechit.vscodetheme.actions.DonateAction
 import com.github.dinbtechit.vscodetheme.icons.VSCodeIcons
 import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
 import com.intellij.ide.plugins.IdeaPluginDescriptor
@@ -24,7 +24,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     private val updateContent: String by lazy {
         //language=HTML
         """
-          Thank you for installing <b>VSCode Theme</b>! 
+          If you enjoy this plugin support my work by Buying a Coffee. It helps to maintain this plugin and motivates me to add more features.
         """.trimIndent()
     }
 
@@ -32,6 +32,8 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         //language=HTML
         """
           Set <b>VSCode Theme</b> as default theme.
+          <br/>
+          If you enjoy this plugin support my work by Buying a Coffee. It helps to maintain this plugin and motivates me to add more features.
         """.trimIndent()
     }
 
@@ -88,7 +90,8 @@ class VSCodeStartupNotifyActivity : StartupActivity {
                     addAction(ApplyThemeAction())
                 }
             }
-            .addAction(DismissNotification(isVSCodeThemeSelected()))
+            .addAction(DonateAction())
+            // .addAction(DismissNotification(isVSCodeThemeSelected()))
     }
 
     private fun showFullNotification(project: Project, notification: Notification) {

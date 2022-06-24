@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 4.2333332 4.2333335"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="buy-me-coffee.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     units="px"
+     height="16px"
+     inkscape:snap-global="false"
+     inkscape:zoom="22.627417"
+     inkscape:cx="3.4913397"
+     inkscape:cy="16.550718"
+     inkscape:window-width="1920"
+     inkscape:window-height="970"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient12595"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#1c1c1c;stop-opacity:0.5411765;"
+         offset="0"
+         id="stop12593" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="M 3.6496129,0.58385014 A 1.0907317,1.0907565 45 0 0 2.9077183,0.29267578 1.0907317,1.0907565 45 0 0 2.1221256,0.62754771 l -4.503e-4,-4.2899e-4 -4.398e-4,4.2899e-4 A 1.0907317,1.0907565 45 0 0 1.3356556,0.29268757 1.0907317,1.0907565 45 0 0 0.24489909,1.3834446 1.0907317,1.0907565 45 0 0 0.57975914,2.1690247 l -4.504e-4,4.291e-4 1.54231076,1.5423085 1.542435,-1.542436 -1.179e-4,-9.88e-5 A 1.0907317,1.0907565 45 0 0 3.9984605,1.3832855 1.0907317,1.0907565 45 0 0 3.6496235,0.58371619 Z"
+       fill="#ff0000"
+       stroke-width="0.0589183"
+       id="path5645"
+       style="fill:#ff0000;fill-opacity:1" />
+  </g>
+</svg>
