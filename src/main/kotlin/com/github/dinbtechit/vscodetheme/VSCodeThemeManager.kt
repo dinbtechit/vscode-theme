@@ -20,20 +20,26 @@ class VSCodeThemeManager {
 
     private fun getPlugin(): IdeaPluginDescriptor? = PluginManagerCore.getPlugin(PluginId.getId(pluginId))
     fun isVSCodeThemeReady(): Boolean {
-        val vscodeTheme = LafManager.getInstance().installedLookAndFeels.first { it.name == "VSCode Dark" }
-        if (vscodeTheme != null && getPlugin()?.isEnabled != null) {
-            return true
+        try {
+
+            if (getPlugin()?.isEnabled != null) {
+                val vscodeTheme = LafManager.getInstance().installedLookAndFeels.first { it.name == "VSCode Dark" }
+                return vscodeTheme != null
+            }
+            return false
+        } catch (e: Exception) {
+            return false;
         }
-        return false
     }
 
     fun switchToVSCodeTheme(always: Boolean = false) {
-        val vscodeTheme = LafManager.getInstance().installedLookAndFeels.first { it.name == "VSCode Dark" }
-        LafManager.getInstance().currentLookAndFeel = vscodeTheme
-        if (always) {
-            val settings = VSCodeThemeSettingsStore.instance
-            settings.alwaysApply = true
-            settings.showNotificationOnUpdate = false
+        if (isVSCodeThemeReady()) {
+            val vscodeTheme = LafManager.getInstance().installedLookAndFeels.first { it.name == "VSCode Dark" }
+            LafManager.getInstance().currentLookAndFeel = vscodeTheme
+            if (always) {
+                val settings = VSCodeThemeSettingsStore.instance
+                settings.alwaysApply = true
+            }
         }
     }
 }

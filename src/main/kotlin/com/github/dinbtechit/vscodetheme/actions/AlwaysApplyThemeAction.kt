@@ -6,7 +6,7 @@ import com.intellij.notification.impl.NotificationsManagerImpl
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.project.DumbAwareAction
 
-class AlwaysApplyThemeAction: DumbAwareAction("Always") {
+class AlwaysApplyThemeAction: DumbAwareAction("Set as Default") {
 
     override fun actionPerformed(e: AnActionEvent) {
         VSCodeThemeManager.getInstance().switchToVSCodeTheme(true)
