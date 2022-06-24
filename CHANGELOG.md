@@ -3,8 +3,10 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.5.3]
 ### Fixed
-- [Bug] - Kotlin - Removing incorrect highlighting for catch 
+- [Bug] - Kotlin - Removing incorrect highlighting for catch
 
 ## [1.5.2]
 - When theme is not selected. Popup will be displayed to apply theme.
