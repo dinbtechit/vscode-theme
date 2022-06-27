@@ -6,7 +6,7 @@
 
 
 <!-- Plugin description -->
-> If you enjoy this plugin support my work - <a href="https://www.buymeacoffee.com/dinbtechit" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 25px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>. It helps to maintain this plugin and motivates me to add more great features.
+> If you find this plugin useful consider sponsoring its development to ensure that the project is actively maintained and improved. [Buy me a Coffee](https://www.buymeacoffee.com/dinbtechit) <a href="https://www.buymeacoffee.com/dinbtechit" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 25px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>.
 
 
 Provides Visual Studio Code/VSCode Editor Color Scheme for Jetbrains IDEs (webstorm, Intellij, Rider & many more);
@@ -51,8 +51,15 @@ Intellij, Webstorm, Android Studio, CLion, PhpStorm, Rider, GoLang and many more
   Download the [latest release](https://github.com/dinbtechit/vscode-theme/releases/latest) and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
-
 ---
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+## Roadmap
+- [ ] Enhnaced syntax highlighting for GoLang & Ruby 
+- [ ] File icons to match VSCode
+- [ ] Rainbow brackets (with 3 colors)
+- and many more. . .
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
+## How can I contribute?
+
+- By submitting pull requests for above roadmap items.
+- By sponsoring its development to ensure that the project is actively maintained and improved. 
+- By [Buying me a Coffee](https://www.buymeacoffee.com/dinbtechit)
