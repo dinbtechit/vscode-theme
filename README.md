@@ -60,6 +60,7 @@ Intellij, Webstorm, Android Studio, CLion, PhpStorm, Rider, GoLang and many more
 
 ## How can I contribute?
 
+- By starring this Github project and rating the [VSCode plugin](https://plugins.jetbrains.com/plugin/19177-vscode-theme).
 - By submitting pull requests for above roadmap items.
 - By sponsoring its development to ensure that the project is actively maintained and improved. 
-- By [Buying me a Coffee](https://www.buymeacoffee.com/dinbtechit)
+- Donate to [Buying me a Coffee](https://www.buymeacoffee.com/dinbtechit)
