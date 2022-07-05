@@ -3,8 +3,10 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.5.4]
 ### Fixed
-- [Bug #11] - Scroll bar opaque - Hides warning and erros in the right-side gutter 
+- [Bug #11] - Scroll bar opaque - Hides warning and erros in the right-side gutter
 
 ## [1.5.3]
 ### Fixed
