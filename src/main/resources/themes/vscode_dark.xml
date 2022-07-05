@@ -15,18 +15,6 @@
         <option name="LINE_NUMBERS_COLOR" value="848484"/>
         <option name="RIGHT_MARGIN_COLOR" value="3b3b3b"/>
         <option name="SELECTION_BACKGROUND" value="264e77"/>
-        <option name="ScrollBar.Mac.hoverThumbBorderColor" value="4e4e4e"/>
-        <option name="ScrollBar.Mac.hoverThumbColor" value="4e4e4e"/>
-        <option name="ScrollBar.Mac.hoverTrackColor" value="1d1d1d"/>
-        <option name="ScrollBar.Mac.thumbBorderColor" value="414141"/>
-        <option name="ScrollBar.Mac.thumbColor" value="414141"/>
-        <option name="ScrollBar.Mac.trackColor" value="1d1d1d"/>
-        <option name="ScrollBar.Transparent.hoverThumbBorderColor" value="4e4e4e"/>
-        <option name="ScrollBar.Transparent.hoverThumbColor" value="4e4e4e"/>
-        <option name="ScrollBar.Transparent.hoverTrackColor" value="1d1d1d"/>
-        <option name="ScrollBar.Transparent.thumbBorderColor" value="414141"/>
-        <option name="ScrollBar.Transparent.thumbColor" value="414141"/>
-        <option name="ScrollBar.Transparent.trackColor" value="1d1d1d"/>
         <option name="VISUAL_INDENT_GUIDE" value="3b3b3b"/>
     </colors>
     <attributes>
