@@ -523,6 +523,11 @@
                 <option name="FOREGROUND" value="569cd6"/>
             </value>
         </option>
+        <option name="HTML_CUSTOM_TAG_NAME">
+            <value>
+                <option name="FOREGROUND" value="40c8ae"/>
+            </value>
+        </option>
         <option name="HYPERLINK_ATTRIBUTES">
             <value>
                 <option name="FOREGROUND" value="569cd6"/>
@@ -1120,6 +1125,11 @@
                 <option name="FOREGROUND" value="d4d4d4"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
                 <option name="EFFECT_TYPE" value="5"/>
+            </value>
+        </option>
+        <option name="XML_CUSTOM_TAG_NAME">
+            <value>
+                <option name="FOREGROUND" value="40c8ae"/>
             </value>
         </option>
         <option name="XML_TAG_DATA" baseAttributes="TEXT"/>
