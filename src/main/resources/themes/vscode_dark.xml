@@ -1001,6 +1001,7 @@
                 <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
+        <option name="SASS_COMMENT" baseAttributes="CSS.COMMENT"/>
         <option name="SEARCH_RESULT_ATTRIBUTES">
             <value>
                 <option name="FOREGROUND" value="dcdcaa"/>
