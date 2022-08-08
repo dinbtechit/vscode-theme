@@ -37,7 +37,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         """
           Set <b>VSCode Theme</b> as default theme.
           <br/>
-          If you enjoy this plugin support my work by Buying a Coffee. It helps to maintain this plugin and motivates me to add more features.
+          If you find this plugin useful support my work by Buying a Coffee. It helps to maintain this plugin and motivates me to add more features.
         """.trimIndent()
     }
 
