@@ -15,7 +15,6 @@
     <depends config-file="lang-config/dinbtechit-csharp.xml" optional="true">com.intellij.modules.rider</depends>
     <depends config-file="lang-config/dinbtechit-php.xml" optional="true">com.jetbrains.php</depends>
     <depends config-file="lang-config/dinbtechit-clion.xml"  optional="true">com.intellij.cidr.lang</depends>
-    <depends config-file="lang-config/dinbtechit-go.xml" optional="true">org.jetbrains.plugins.go</depends>
     <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
 
     <extensions defaultExtensionNs="com.intellij">

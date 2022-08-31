@@ -1,6 +1,0 @@
-<idea-plugin>
-    <extensions defaultExtensionNs="com.intellij">
-        <annotator language="go" order="last"
-                   implementationClass="com.github.dinbtechit.vscodetheme.annotators.GoAnnotator"/>
-    </extensions>
-</idea-plugin>
