@@ -25,10 +25,10 @@ intuitive. This plugin attempts to make the IDE fairly **close** to VSCode Dark+
 
 ### Supported Languages
 - Advance Syntax highlighting Support: 
-  - JavaScript, TypeScript, Java, Dart/Flutter, Python, Kotlin, C#/F#, Php, Go
+  - JavaScript, TypeScript, Java, Dart/Flutter, Python, Kotlin, C#/F#, Php
   - C, C++ and ObjectiveC
 - Basic Syntax highlighting:
-  - Ruby and many more. 
+  - Go, Ruby and many more. 
 
 ### Supported Platforms
 Intellij, Webstorm, Android Studio, CLion, PhpStorm, Rider, GoLang and many more.
@@ -53,7 +53,7 @@ Intellij, Webstorm, Android Studio, CLion, PhpStorm, Rider, GoLang and many more
 
 ---
 ## Roadmap
-- [ ] Enhnaced syntax highlighting for Ruby 
+- [ ] Enhnaced syntax highlighting for GoLang & Ruby 
 - [ ] File icons to match VSCode
 - [ ] Rainbow brackets (with 3 colors)
 - and many more. . .

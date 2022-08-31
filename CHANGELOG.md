@@ -3,8 +3,6 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
-### Added
-- (feature #15) Added extensive syntax highlighting for Go
 
 ## [1.5.4]
 ### Fixed
