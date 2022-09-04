@@ -1,9 +1,9 @@
 <scheme name="VSCode Dark Brighter" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-06-20T10:32:18</property>
+        <property name="created">2022-09-04T11:58:12</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2022.1.2.0.0</property>
-        <property name="modified">2022-06-20T10:32:24</property>
+        <property name="ideVersion">2022.2.1.0.0</property>
+        <property name="modified">2022-09-04T11:58:17</property>
         <property name="originalScheme">_@user_VSCode Dark Brighter</property>
     </metaInfo>
     <colors>
@@ -376,11 +376,6 @@
         <option name="GO_FUNCTION_PARAMETER">
             <value>
                 <option name="FOREGROUND" value="c8c8c8"/>
-            </value>
-        </option>
-        <option name="GO_KEYWORD">
-            <value>
-                <option name="FOREGROUND" value="c586c0"/>
             </value>
         </option>
         <option name="GO_LABEL">
