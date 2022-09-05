@@ -3,8 +3,10 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.6.1]
 ### Fixed
-- (Bug #21) GoLang all keywords are purple not same as VScode 
+- (Bug #21) GoLang all keywords are purple not same as VScode
 
 ## [1.6.0]
 ### Added
