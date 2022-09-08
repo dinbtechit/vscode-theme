@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.6.2]
 ### Added
 - (Feature #16) - Add proper highlighting for react templates (jsx and tsx)
 
