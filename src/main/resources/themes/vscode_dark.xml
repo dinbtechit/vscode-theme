@@ -525,7 +525,7 @@
         </option>
         <option name="HTML_CUSTOM_TAG_NAME">
             <value>
-                <option name="FOREGROUND" value="40c8ae"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="HYPERLINK_ATTRIBUTES">
@@ -1130,7 +1130,7 @@
         </option>
         <option name="XML_CUSTOM_TAG_NAME">
             <value>
-                <option name="FOREGROUND" value="40c8ae"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="XML_TAG_DATA" baseAttributes="TEXT"/>
