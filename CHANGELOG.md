@@ -3,6 +3,11 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+### Fixed
+- Compatibility issues with 2022.3 EAP
+### Changed
+- Syncing up with the template changes
+- Update popup wording changes
 
 ## [1.6.2]
 ### Added
