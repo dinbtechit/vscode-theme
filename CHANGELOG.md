@@ -5,6 +5,8 @@
 ## [Unreleased]
 ### Fixed
 - Compatibility issues with 2022.3 EAP
+- Dart - Required & Function keyword syntax highlighting
+- Dart - Skipping syntax highlighting when used within a string literal.
 ### Changed
 - Syncing up with the template changes
 - Update popup wording changes
