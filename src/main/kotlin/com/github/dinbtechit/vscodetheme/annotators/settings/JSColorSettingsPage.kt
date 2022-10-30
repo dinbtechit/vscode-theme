@@ -11,7 +11,6 @@ import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.psi.codeStyle.DisplayPriority
 import com.intellij.util.ObjectUtils
-import gnu.trove.THashMap
 import java.util.*
 import javax.swing.Icon
 
@@ -44,7 +43,7 @@ class JSColorSettingsPage : BaseColorSettings() {
     }
 
     private fun createAdditionalHlAttrs(): MutableMap<String, TextAttributesKey> {
-        val descriptors: MutableMap<String, TextAttributesKey> = THashMap()
+        val descriptors: MutableMap<String, TextAttributesKey> = HashMap()
         descriptors["string"] = DefaultLanguageHighlighterColors.STRING
         descriptors["subKeyword"] = SECONDARY_KEYWORDS
         descriptors["from"] = FROM_KEYWORD

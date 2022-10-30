@@ -9,7 +9,6 @@ import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.psi.codeStyle.DisplayPriority
 import com.intellij.util.ObjectUtils
-import gnu.trove.THashMap
 import org.jetbrains.kotlin.idea.KotlinFileType
 import org.jetbrains.kotlin.idea.KotlinLanguage
 import org.jetbrains.kotlin.idea.highlighter.KotlinColorSettingsPage
@@ -33,7 +32,7 @@ class KtColorSettingsPage : BaseColorSettings() {
     }
 
     private fun createAdditionalHlAttrs(): MutableMap<String, TextAttributesKey> {
-        val descriptors: MutableMap<String, TextAttributesKey> = THashMap()
+        val descriptors: MutableMap<String, TextAttributesKey> = HashMap()
         descriptors["secondaryKeyword"] = JavaAnnotator.SECONDARY_KEYWORD
         return descriptors
     }

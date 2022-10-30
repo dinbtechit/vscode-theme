@@ -5,7 +5,6 @@ import com.github.dinbtechit.vscodetheme.annotators.PyAnnotator
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.jetbrains.python.highlighting.PythonColorsPage
-import gnu.trove.THashMap
 import java.util.*
 
 
@@ -23,7 +22,7 @@ class PyColorSettingsPage : PythonColorsPage() {
     }
 
     private fun createAdditionalHlAttrs(): MutableMap<String, TextAttributesKey> {
-        val descriptors: MutableMap<String, TextAttributesKey> = THashMap()
+        val descriptors: MutableMap<String, TextAttributesKey> = HashMap()
         descriptors["secondaryKeyword"] = PyAnnotator.SECONDARY_KEYWORD
         descriptors["secondaryKeywordBg"] = PyAnnotator.SECONDARY_KEYWORD_WITH_BG
         return descriptors

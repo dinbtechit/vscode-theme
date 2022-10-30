@@ -2,19 +2,14 @@ package com.github.dinbtechit.vscodetheme.annotators.settings
 
 
 import com.github.dinbtechit.vscodetheme.annotators.JavaAnnotator
-import com.intellij.application.options.colors.ColorAndFontOptions
-import com.intellij.application.options.colors.ColorSettingsUtil
 import com.intellij.icons.AllIcons
 import com.intellij.lang.Language
-import com.intellij.openapi.editor.colors.FontPreferences
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.openapi.fileTypes.SyntaxHighlighter
 import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.psi.codeStyle.DisplayPriority
 import com.intellij.util.ObjectUtils
-import com.vladsch.flexmark.ext.typographic.internal.TypographicOptions
-import gnu.trove.THashMap
 import java.util.*
 import javax.swing.Icon
 
@@ -32,7 +27,7 @@ class JavaColorSettingsPage : BaseColorSettings() {
     }
 
     private fun createAdditionalHlAttrs(): MutableMap<String, TextAttributesKey> {
-        val descriptors: MutableMap<String, TextAttributesKey> = THashMap()
+        val descriptors: MutableMap<String, TextAttributesKey> = HashMap()
         descriptors["secondaryKeyword"] = JavaAnnotator.SECONDARY_KEYWORD
         return descriptors
     }
