@@ -1,15 +1,15 @@
 <scheme name="VSCode Dark Brighter" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-09-04T11:58:12</property>
+        <property name="created">2022-11-07T10:14:49</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2022.2.1.0.0</property>
-        <property name="modified">2022-09-04T11:58:17</property>
+        <property name="ideVersion">2022.2.3.0.0</property>
+        <property name="modified">2022-11-07T10:14:58</property>
         <property name="originalScheme">_@user_VSCode Dark Brighter</property>
     </metaInfo>
     <colors>
         <option name="CARET_COLOR" value="adaeac"/>
         <option name="CARET_ROW_COLOR" value="262626"/>
-        <option name="CONSOLE_BACKGROUND_KEY" value="1e1e1e"/>
+        <option name="CONSOLE_BACKGROUND_KEY" value="171616"/>
         <option name="GUTTER_BACKGROUND" value="1d1d1d"/>
         <option name="INDENT_GUIDE" value="3b3b3b"/>
         <option name="LINE_NUMBERS_COLOR" value="848484"/>
@@ -74,6 +74,96 @@
         <option name="CMD_LABEL_REFERENCE">
             <value>
                 <option name="FOREGROUND" value="d3d3c8"/>
+            </value>
+        </option>
+        <option name="CONSOLE_BLACK_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="0"/>
+            </value>
+        </option>
+        <option name="CONSOLE_BLUE_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="6871ff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_BLUE_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="5cbb"/>
+            </value>
+        </option>
+        <option name="CONSOLE_CYAN_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="60fdff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_CYAN_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="60fdff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_DARKGRAY_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="686868"/>
+            </value>
+        </option>
+        <option name="CONSOLE_GRAY_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="c9c9c9"/>
+            </value>
+        </option>
+        <option name="CONSOLE_GREEN_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="5ffa68"/>
+            </value>
+        </option>
+        <option name="CONSOLE_GREEN_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="48d53b"/>
+            </value>
+        </option>
+        <option name="CONSOLE_MAGENTA_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ff77ff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_MAGENTA_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="c930c7"/>
+            </value>
+        </option>
+        <option name="CONSOLE_NORMAL_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ffffff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_RED_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ff4050"/>
+            </value>
+        </option>
+        <option name="CONSOLE_RED_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="c91b00"/>
+            </value>
+        </option>
+        <option name="CONSOLE_SYSTEM_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ffffff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_WHITE_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ffffff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_YELLOW_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="fffc67"/>
+            </value>
+        </option>
+        <option name="CONSOLE_YELLOW_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="c7c400"/>
             </value>
         </option>
         <option name="CSS.ATTRIBUTE_NAME">
@@ -508,6 +598,11 @@
                 <option name="FOREGROUND" value="de967a"/>
             </value>
         </option>
+        <option name="HTML_CUSTOM_TAG_NAME">
+            <value>
+                <option name="FOREGROUND" value="47ccb1"/>
+            </value>
+        </option>
         <option name="HTML_TAG">
             <value>
                 <option name="FOREGROUND" value="808080"/>
@@ -516,11 +611,6 @@
         <option name="HTML_TAG_NAME">
             <value>
                 <option name="FOREGROUND" value="47a2ed"/>
-            </value>
-        </option>
-        <option name="HTML_CUSTOM_TAG_NAME">
-            <value>
-                <option name="FOREGROUND" value="47ccb1"/>
             </value>
         </option>
         <option name="HYPERLINK_ATTRIBUTES">
@@ -1104,6 +1194,11 @@
                 <option name="FOREGROUND" value="8cd7ff"/>
             </value>
         </option>
+        <option name="XML_CUSTOM_TAG_NAME">
+            <value>
+                <option name="FOREGROUND" value="47ccb1"/>
+            </value>
+        </option>
         <option name="XML_ENTITY_REFERENCE">
             <value>
                 <option name="FOREGROUND" value="47ccb1"/>
@@ -1121,11 +1216,6 @@
                 <option name="FOREGROUND" value="d4d4d4"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
                 <option name="EFFECT_TYPE" value="5"/>
-            </value>
-        </option>
-        <option name="XML_CUSTOM_TAG_NAME">
-            <value>
-                <option name="FOREGROUND" value="47ccb1"/>
             </value>
         </option>
         <option name="XML_TAG_DATA" baseAttributes="TEXT"/>
