@@ -76,6 +76,96 @@
                 <option name="FOREGROUND" value="d3d3c8"/>
             </value>
         </option>
+        <option name="CONSOLE_BLACK_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="0"/>
+            </value>
+        </option>
+        <option name="CONSOLE_BLUE_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="6871ff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_BLUE_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="5cbb"/>
+            </value>
+        </option>
+        <option name="CONSOLE_CYAN_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="60fdff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_CYAN_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="60fdff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_DARKGRAY_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="686868"/>
+            </value>
+        </option>
+        <option name="CONSOLE_GRAY_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="c9c9c9"/>
+            </value>
+        </option>
+        <option name="CONSOLE_GREEN_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="5ffa68"/>
+            </value>
+        </option>
+        <option name="CONSOLE_GREEN_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="48d53b"/>
+            </value>
+        </option>
+        <option name="CONSOLE_MAGENTA_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ff77ff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_MAGENTA_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="c930c7"/>
+            </value>
+        </option>
+        <option name="CONSOLE_NORMAL_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ffffff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_RED_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ff4050"/>
+            </value>
+        </option>
+        <option name="CONSOLE_RED_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="c91b00"/>
+            </value>
+        </option>
+        <option name="CONSOLE_SYSTEM_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ffffff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_WHITE_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ffffff"/>
+            </value>
+        </option>
+        <option name="CONSOLE_YELLOW_BRIGHT_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="fffc67"/>
+            </value>
+        </option>
+        <option name="CONSOLE_YELLOW_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="c7c400"/>
+            </value>
+        </option>
         <option name="CSS.ATTRIBUTE_NAME">
             <value>
                 <option name="FOREGROUND" value="9cdcfe"/>
