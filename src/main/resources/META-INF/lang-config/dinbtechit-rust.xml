@@ -1,0 +1,7 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="Rust" order="last"
+                   implementationClass="com.github.dinbtechit.vscodetheme.annotators.RustAnnotator"/>
+        <!--<colorSettingsPage order="last" implementation="com.github.dinbtechit.vscodetheme.annotators.settings.DartColorSettingsPage"/>-->
+    </extensions>
+</idea-plugin>

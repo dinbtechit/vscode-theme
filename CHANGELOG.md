@@ -6,6 +6,9 @@
 ### Fixed
 - Bug #31 - Inconsistent ANSI Console Colors 
 
+### Added
+- Adding Default syntax highlighting for base control statements to match vscode
+- Adding a basic version of Rust specific syntax highlighting.
 
 ## [1.7.1]
 ### Fixed
