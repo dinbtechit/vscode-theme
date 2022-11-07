@@ -16,6 +16,7 @@
     <depends config-file="lang-config/dinbtechit-php.xml" optional="true">com.jetbrains.php</depends>
     <depends config-file="lang-config/dinbtechit-clion.xml"  optional="true">com.intellij.cidr.lang</depends>
     <depends config-file="lang-config/dinbtechit-go.xml" optional="true">org.jetbrains.plugins.go</depends>
+    <depends config-file="lang-config/dinbtechit-rust.xml" optional="true">org.rust.lang</depends>
     <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
 
     <extensions defaultExtensionNs="com.intellij">
@@ -27,6 +28,7 @@
                 serviceImplementation="com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore"/>
         <applicationService serviceImplementation="com.github.dinbtechit.vscodetheme.services.ApplicationService"/>
         <notificationGroup id="VSCode Theme Notification Group" displayType="STICKY_BALLOON"/>
+        <annotator language="" order="last" implementationClass="com.github.dinbtechit.vscodetheme.annotators.DefaultAnnotator"/>
     </extensions>
     <actions>
         <action id="AlwaysApplyThemeAction" class="com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction"
