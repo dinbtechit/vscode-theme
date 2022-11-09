@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.7.2]
 ### Fixed
 - Bug #31 - Inconsistent ANSI Console Colors 
 
