@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.7.3]
 ### Fixed
 - Go - improve syntax highlighting
 
