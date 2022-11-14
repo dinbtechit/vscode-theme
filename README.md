@@ -6,7 +6,9 @@
 
 
 <!-- Plugin description -->
-> If you find this plugin useful consider sponsoring its development to ensure that the project is actively maintained and improved. [Buy me a Coffee](https://www.buymeacoffee.com/dinbtechit) <a href="https://www.buymeacoffee.com/dinbtechit" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 25px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>.
+> If you find this plugin useful consider sponsoring its development to ensure that the project is actively maintained and improved. [Buy me a Coffee](https://www.buymeacoffee.com/dinbtechit) 
+
+[![image](https://user-images.githubusercontent.com/17984781/201556781-ed055fea-3217-421c-a4b6-296af779c1ce.png)](https://www.buymeacoffee.com/dinbtechit)
 
 
 Provides Visual Studio Code/VSCode Editor Color Scheme for Jetbrains IDEs (webstorm, Intellij, Rider & many more);
