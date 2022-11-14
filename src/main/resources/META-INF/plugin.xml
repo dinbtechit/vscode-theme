@@ -43,5 +43,8 @@
         <action id="Support" class="com.github.dinbtechit.vscodetheme.actions.DonateAction"
                 text="Support">
         </action>
+        <action id="StarGithub" class="com.github.dinbtechit.vscodetheme.actions.StarGithubRepoAction"
+                text="Star Github Repo">
+        </action>
     </actions>
 </idea-plugin>

@@ -8,17 +8,18 @@ import com.intellij.util.ObjectUtils
 class GoAnnotator : BaseAnnotator() {
     companion object {
         val DEFAULT_KEYWORD: TextAttributesKey = ObjectUtils.notNull(
-                TextAttributesKey.find("DEFAULT_KEYWORD"), DefaultLanguageHighlighterColors.KEYWORD
+            TextAttributesKey.find("DEFAULT_KEYWORD"), DefaultLanguageHighlighterColors.KEYWORD
         )
         val SECONDARY_KEYWORD: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-                "DEFAULT_SECONDARY_KEYWORD",
-                DEFAULT_KEYWORD
+            "DEFAULT_SECONDARY_KEYWORD",
+            DEFAULT_KEYWORD
         )
         val SECONDARY_KEYWORD_BG: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-                "DEFAULT_SECONDARY_KEYWORD_WITH_BG",
-                DEFAULT_KEYWORD
+            "DEFAULT_SECONDARY_KEYWORD_WITH_BG",
+            DEFAULT_KEYWORD
         )
     }
+
     override fun getKeywordType(element: PsiElement): TextAttributesKey? {
         var type: TextAttributesKey? = null
         when (element.text) {
