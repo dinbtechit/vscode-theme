@@ -3,6 +3,11 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+### Fixed
+- Go - improve syntax highlighting
+
+### Changed
+- Option to star the github repo
 
 ## [1.7.2]
 ### Fixed

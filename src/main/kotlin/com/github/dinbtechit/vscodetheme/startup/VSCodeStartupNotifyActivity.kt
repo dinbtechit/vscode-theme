@@ -4,6 +4,7 @@ import com.github.dinbtechit.vscodetheme.VSCodeThemeManager
 import com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction
 import com.github.dinbtechit.vscodetheme.actions.ApplyThemeAction
 import com.github.dinbtechit.vscodetheme.actions.DonateAction
+import com.github.dinbtechit.vscodetheme.actions.StarGithubRepoAction
 import com.github.dinbtechit.vscodetheme.icons.VSCodeIcons
 import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
 import com.intellij.ide.plugins.IdeaPluginDescriptor
@@ -88,6 +89,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
                 }
             }
             .addAction(DonateAction())
+            .addAction(StarGithubRepoAction())
             // .addAction(DismissNotification(isVSCodeThemeSelected()))
     }
 
