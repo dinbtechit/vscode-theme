@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+### Changed
+- Default Annotation - optimizations only when it is unsupported language.
 
 ## [1.7.3]
 ### Fixed
