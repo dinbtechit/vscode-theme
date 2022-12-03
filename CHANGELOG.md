@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.7.4]
 ### Changed
 - Default Annotation - Decommissioning Default Annotator due to Issue #38
 - Typescript await keyword inconsistency.
