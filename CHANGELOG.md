@@ -5,6 +5,7 @@
 ## [Unreleased]
 ### Changed
 - Default Annotation - Decommissioning Default Annotator due to Issue #38
+- Typescript await keyword inconsistency.
 
 ## [1.7.3]
 ### Fixed
