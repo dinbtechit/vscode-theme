@@ -374,6 +374,7 @@
         <option name="DEFAULT_SECONDARY_KEYWORD_WITH_BG">
             <value>
                 <option name="FOREGROUND" value="ce80b6"/>
+                <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
         <option name="DEFAULT_SEMICOLON">
