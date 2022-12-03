@@ -4,7 +4,7 @@
 
 ## [Unreleased]
 ### Changed
-- Default Annotation - optimizations only when it is unsupported language.
+- Default Annotation - Decommissioning Default Annotator due to Issue #38
 
 ## [1.7.3]
 ### Fixed
