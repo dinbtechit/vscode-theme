@@ -3,6 +3,7 @@ package com.github.dinbtechit.vscodetheme.annotators
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
+import com.intellij.util.ObjectUtils
 
 
 class RustAnnotator : BaseAnnotator() {
@@ -13,9 +14,8 @@ class RustAnnotator : BaseAnnotator() {
             "DEFAULT_SECONDARY_KEYWORD",
             DEFAULT_KEYWORD
         )
-        val SECONDARY_KEYWORD_BG: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-            "DEFAULT_SECONDARY_KEYWORD_WITH_BG",
-            DEFAULT_KEYWORD
+        val SECONDARY_KEYWORD_BG: TextAttributesKey = ObjectUtils.notNull(
+            TextAttributesKey.find("DEFAULT_SECONDARY_KEYWORD_WITH_BG"), DefaultLanguageHighlighterColors.KEYWORD
         )
     }
 
