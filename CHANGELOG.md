@@ -3,6 +3,11 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+### Changed
+- GoLang - Package identifier blue instead of white. Maybe slightly off. 
+
+### Fixed
+- #42 - Fix Startup errors.
 
 ## [1.7.4]
 ### Changed

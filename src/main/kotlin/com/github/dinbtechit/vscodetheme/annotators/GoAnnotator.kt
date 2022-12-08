@@ -14,9 +14,8 @@ class GoAnnotator : BaseAnnotator() {
             "DEFAULT_SECONDARY_KEYWORD",
             DEFAULT_KEYWORD
         )
-        val SECONDARY_KEYWORD_BG: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-            "DEFAULT_SECONDARY_KEYWORD_WITH_BG",
-            DEFAULT_KEYWORD
+        val SECONDARY_KEYWORD_BG: TextAttributesKey = ObjectUtils.notNull(
+            TextAttributesKey.find("DEFAULT_SECONDARY_KEYWORD_WITH_BG"), DefaultLanguageHighlighterColors.KEYWORD
         )
     }
 

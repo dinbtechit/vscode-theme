@@ -1,18 +1,12 @@
 package com.github.dinbtechit.vscodetheme.annotators
 
 import com.intellij.lang.ecmascript6.psi.ES6FromClause
-import com.intellij.lang.ecmascript6.psi.ES6ImportDeclaration
 import com.intellij.lang.ecmascript6.psi.ES6ImportSpecifier
 import com.intellij.lang.ecmascript6.psi.ES6ImportedBinding
-import com.intellij.lang.ecmascript6.types.ES6ImportDeclarationElementType
-import com.intellij.lang.javascript.JSElementType
 import com.intellij.lang.javascript.psi.JSLoopStatement
-import com.intellij.lang.javascript.psi.JSReferenceExpression
-import com.intellij.lang.javascript.psi.JSStatement
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
-import com.intellij.psi.impl.source.tree.LeafPsiElement
 import com.intellij.util.ObjectUtils
 
 class JSAnnotator : BaseAnnotator() {
@@ -35,8 +29,8 @@ class JSAnnotator : BaseAnnotator() {
             "JS.SECONDARY_KEYWORDS", JS_KEYWORD
         )
 
-        val SECONDARY_KEYWORDS_WITH_BG: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-            "DEFAULT_SECONDARY_KEYWORD_WITH_BG", JS_KEYWORD
+        val SECONDARY_KEYWORDS_WITH_BG: TextAttributesKey = ObjectUtils.notNull(
+            TextAttributesKey.find("DEFAULT_SECONDARY_KEYWORD_WITH_BG"), JS_KEYWORD
         )
 
         val FROM_KEYWORD: TextAttributesKey = TextAttributesKey.createTextAttributesKey(

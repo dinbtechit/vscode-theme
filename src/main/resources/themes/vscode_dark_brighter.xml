@@ -1,9 +1,9 @@
 <scheme name="VSCode Dark Brighter" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-11-07T10:14:49</property>
+        <property name="created">2022-12-08T18:02:31</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2022.2.3.0.0</property>
-        <property name="modified">2022-11-07T10:14:58</property>
+        <property name="ideVersion">2022.1.1.0.0</property>
+        <property name="modified">2022-12-08T18:02:39</property>
         <property name="originalScheme">_@user_VSCode Dark Brighter</property>
     </metaInfo>
     <colors>
@@ -302,7 +302,7 @@
         </option>
         <option name="DEFAULT_IDENTIFIER">
             <value>
-                <option name="FOREGROUND" value="e6e6aa"/>
+                <option name="FOREGROUND" value="94dbfd"/>
             </value>
         </option>
         <option name="DEFAULT_INSTANCE_FIELD">
@@ -478,11 +478,7 @@
             </value>
         </option>
         <option name="GO_METHOD_RECEIVER" baseAttributes="DEFAULT_LOCAL_VARIABLE"/>
-        <option name="GO_PACKAGE">
-            <value>
-                <option name="FOREGROUND" value="d4d4d4"/>
-            </value>
-        </option>
+        <option name="GO_PACKAGE" baseAttributes="DEFAULT_IDENTIFIER"/>
         <option name="GO_PACKAGE_EXPORTED_CONSTANT">
             <value>
                 <option name="FOREGROUND" value="8cd7ff"/>

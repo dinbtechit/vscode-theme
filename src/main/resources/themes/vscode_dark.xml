@@ -302,7 +302,7 @@
         </option>
         <option name="DEFAULT_IDENTIFIER">
             <value>
-                <option name="FOREGROUND" value="dcdcaa"/>
+                <option name="FOREGROUND" value="94dbfd"/>
             </value>
         </option>
         <option name="DEFAULT_INSTANCE_FIELD">
@@ -478,11 +478,7 @@
             </value>
         </option>
         <option name="GO_METHOD_RECEIVER" baseAttributes="DEFAULT_LOCAL_VARIABLE"/>
-        <option name="GO_PACKAGE">
-            <value>
-                <option name="FOREGROUND" value="d4d4d4"/>
-            </value>
-        </option>
+        <option name="GO_PACKAGE" baseAttributes="DEFAULT_IDENTIFIER"/>
         <option name="GO_PACKAGE_EXPORTED_CONSTANT">
             <value>
                 <option name="FOREGROUND" value="9cdcfe"/>

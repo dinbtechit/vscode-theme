@@ -1,21 +1,12 @@
 package com.github.dinbtechit.vscodetheme.annotators
 
-import com.intellij.lang.ParserDefinition
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiTypeElement
 import com.intellij.psi.impl.source.tree.LeafPsiElement
-import com.intellij.psi.util.elementType
 import com.intellij.util.ObjectUtils
-import org.jetbrains.kotlin.idea.editor.wordSelection.KotlinStringLiteralSelectioner
-import org.jetbrains.kotlin.lexer.KtKeywordToken
 import org.jetbrains.kotlin.lexer.KtTokens
-import org.jetbrains.kotlin.parsing.KotlinParserDefinition
-import org.jetbrains.kotlin.psi.KtElement
-import org.jetbrains.kotlin.psi.KtLiteralStringTemplateEntry
-import org.jetbrains.kotlin.psi.KtStringTemplateEntry
-import org.jetbrains.uast.kotlin.KotlinStringULiteralExpression
 
 class KotlinAnnotator : BaseAnnotator() {
     companion object {
@@ -31,9 +22,8 @@ class KotlinAnnotator : BaseAnnotator() {
             "JAVA.TYPE_KEYWORD",
             DEFAULT_KEYWORD
         )
-        val SECONDARY_KEYWORD_BG: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-            "DEFAULT_SECONDARY_KEYWORD_WITH_BG",
-            DEFAULT_KEYWORD
+        val SECONDARY_KEYWORD_BG: TextAttributesKey = ObjectUtils.notNull(
+            TextAttributesKey.find("DEFAULT_SECONDARY_KEYWORD_WITH_BG"), DefaultLanguageHighlighterColors.KEYWORD
         )
     }
 
