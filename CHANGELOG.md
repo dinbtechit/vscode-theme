@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.7.5]
 ### Changed
 - GoLang - Package identifier blue instead of white. Maybe slightly off. 
 
