@@ -1,9 +1,9 @@
 <scheme name="VSCode Dark" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2022-09-04T11:57:57</property>
+        <property name="created">2022-12-08T18:02:31</property>
         <property name="ide">idea</property>
-        <property name="ideVersion">2022.2.1.0.0</property>
-        <property name="modified">2022-09-04T11:58:05</property>
+        <property name="ideVersion">2022.1.1.0.0</property>
+        <property name="modified">2022-12-08T18:02:39</property>
         <property name="originalScheme">_@user_VSCode Dark</property>
     </metaInfo>
     <colors>
@@ -823,6 +823,11 @@
                 <option name="EFFECT_COLOR" value="878787"/>
             </value>
         </option>
+        <option name="OC.CLASS_REFERENCE">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
+            </value>
+        </option>
         <option name="OC.CONCEPT">
             <value>
                 <option name="FOREGROUND" value="d4d4d4"/>
@@ -859,14 +864,40 @@
                 <option name="FOREGROUND" value="358cd6"/>
             </value>
         </option>
+        <option name="OC.MACRO_PARAMETER">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
+            </value>
+        </option>
+        <option name="OC.MESSAGE_ARGUMENT">
+            <value>
+                <option name="FOREGROUND" value="dcdcaa"/>
+            </value>
+        </option>
+        <option name="OC.METHOD_DECLARATION">
+            <value>
+                <option name="FOREGROUND" value="dcdcaa"/>
+            </value>
+        </option>
         <option name="OC.NAMESPACE_LIKE">
             <value>
-                <option name="FOREGROUND" value="4cc9b0"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="OC.OVERLOADED_OPERATOR">
             <value>
                 <option name="FOREGROUND" value="dcdcaa"/>
+            </value>
+        </option>
+        <option name="OC.PROPERTY_ATTRIBUTE">
+            <value>
+                <option name="FOREGROUND" value="94dbfd"/>
+                <option name="EFFECT_TYPE" value="5"/>
+            </value>
+        </option>
+        <option name="OC.PROTOCOL_REFERENCE">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="OC.STRUCT_FIELD">
