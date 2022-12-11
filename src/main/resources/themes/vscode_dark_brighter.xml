@@ -823,6 +823,11 @@
                 <option name="EFFECT_COLOR" value="878787"/>
             </value>
         </option>
+        <option name="OC.CLASS_REFERENCE">
+            <value>
+                <option name="FOREGROUND" value="4cc9b0"/>
+            </value>
+        </option>
         <option name="OC.CONCEPT">
             <value>
                 <option name="FOREGROUND" value="d4d4d4"/>
@@ -859,6 +864,21 @@
                 <option name="FOREGROUND" value="358cd6"/>
             </value>
         </option>
+        <option name="OC.MACRO_PARAMETER">
+            <value>
+                <option name="FOREGROUND" value="4cc9b0"/>
+            </value>
+        </option>
+        <option name="OC.MESSAGE_ARGUMENT">
+            <value>
+                <option name="FOREGROUND" value="e6e6aa"/>
+            </value>
+        </option>
+        <option name="OC.METHOD_DECLARATION">
+            <value>
+                <option name="FOREGROUND" value="e6e6aa"/>
+            </value>
+        </option>
         <option name="OC.NAMESPACE_LIKE">
             <value>
                 <option name="FOREGROUND" value="4cc9b0"/>
@@ -869,9 +889,20 @@
                 <option name="FOREGROUND" value="e6e6aa"/>
             </value>
         </option>
+        <option name="OC.PROPERTY_ATTRIBUTE">
+            <value>
+                <option name="FOREGROUND" value="47a2ed"/>
+                <option name="EFFECT_TYPE" value="5"/>
+            </value>
+        </option>
+        <option name="OC.PROTOCOL_REFERENCE">
+            <value>
+                <option name="FOREGROUND" value="4cc9b0"/>
+            </value>
+        </option>
         <option name="OC.STRUCT_FIELD">
             <value>
-                <option name="FOREGROUND" value="8cd7ff"/>
+                <option name="FOREGROUND" value="47a2ed"/>
             </value>
         </option>
         <option name="OC.STRUCT_LIKE">
@@ -1053,8 +1084,22 @@
                 <option name="FONT_TYPE" value="2"/>
             </value>
         </option>
-        <option name="Static method access" baseAttributes="STATIC_METHOD_ATTRIBUTES"/>
-        <option name="Static property reference ID" baseAttributes="STATIC_FINAL_FIELD_ATTRIBUTES"/>
+        <option name="SWIFT_PROPERTY">
+            <value>
+                <option name="FOREGROUND" value="8cd7ff"/>
+            </value>
+        </option>
+        <option name="SWIFT_TUPLE_LABEL">
+            <value>
+                <option name="FOREGROUND" value="8cd7ff"/>
+            </value>
+        </option>
+        <option name="SWIFT_WILDCARD">
+            <value>
+                <option name="FOREGROUND" value="8cd7ff"/>
+            </value>
+        </option>
+        <option name="Static method access" baseAttributes=""/>
         <option name="TERMINAL_COMMAND_TO_RUN_USING_IDE">
             <value>
                 <option name="BACKGROUND" value="323333"/>
@@ -1112,11 +1157,6 @@
                 <option name="FOREGROUND" value="8cd7ff"/>
             </value>
         </option>
-        <option name="XML_CUSTOM_TAG_NAME">
-            <value>
-                <option name="FOREGROUND" value="47ccb1"/>
-            </value>
-        </option>
         <option name="XML_ENTITY_REFERENCE">
             <value>
                 <option name="FOREGROUND" value="47ccb1"/>
@@ -1134,6 +1174,11 @@
                 <option name="FOREGROUND" value="d4d4d4"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
                 <option name="EFFECT_TYPE" value="5"/>
+            </value>
+        </option>
+        <option name="XML_CUSTOM_TAG_NAME">
+            <value>
+                <option name="FOREGROUND" value="47ccb1"/>
             </value>
         </option>
         <option name="XML_TAG_DATA" baseAttributes="TEXT"/>
