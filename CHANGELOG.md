@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+
+## [1.7.6]
 ### Fixed
 - AppCode colors to be consistent with VSCode.
 
