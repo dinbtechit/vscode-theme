@@ -8,17 +8,20 @@ assignees: ''
 ---
 
 ## Describe the bug
-A clear and concise description of what the bug is.
 
-## Platform & Language Details (please complete the following information):
-- Platform: [e.g. IntelliJ, PyCharm, PhpStorm, Rider, Webstorm, GoLand, Android Studio, etc]
-- Platform Version: XXXX.XX.XX [e.g. 2022.1.1] 
-- Language: [e.g. Java, Kotlin, Dart, .NET, Go, C#, C++, PHP, Python, Ruby, etc] 
-- Version [e.g. 22]
+<!-- A clear and concise description of what the bug is.) -->
+
+## Platform & Language Details 
+- Language: [e.g. Java, Kotlin, Dart, .NET, Go, C#, C++, PHP, Python, Ruby, etc]
+- IDE Details:  
+  ```
+  1. Double press the shift key (to bring the Search everywhere window)
+  2. Search for "About" -> Click the "Copy" and Paste the details here.
+  ```
 
 ## Jetbrains Screenshot
 
 ## VSCode Screenshot
 
 ## Additional context/Logs
-Add any other context about the problem here.
+<!-- Add any other context about the problem here. -->
