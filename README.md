@@ -55,9 +55,9 @@ Intellij, Webstorm, Android Studio, CLion, PhpStorm, Rider, GoLang and many more
 
 ---
 ## Roadmap
-- [ ] Enhnaced syntax highlighting for Ruby 
-- [ ] File icons to match VSCode
 - [ ] Rainbow brackets (with 3 colors)
+- [ ] File icons to match VSCode
+- [ ] Enhanced syntax highlighting for Ruby
 - and many more. . .
 
 ## How can I contribute?
