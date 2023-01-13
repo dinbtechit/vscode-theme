@@ -231,12 +231,12 @@
         </option>
         <option name="DART_SECONDARY_KEYWORD">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
             </value>
         </option>
         <option name="DART_SECONDARY_KEYWORD_WITH_BG">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
@@ -368,12 +368,12 @@
         </option>
         <option name="DEFAULT_SECONDARY_KEYWORD">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
             </value>
         </option>
         <option name="DEFAULT_SECONDARY_KEYWORD_WITH_BG">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
@@ -568,7 +568,7 @@
         </option>
         <option name="JAVA.SECONDARY_KEYWORD">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
             </value>
         </option>
         <option name="JAVA.TYPE_KEYWORD">
@@ -593,7 +593,7 @@
         </option>
         <option name="JS.FROM_KEYWORD">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
@@ -626,7 +626,7 @@
         </option>
         <option name="JS.SECONDARY_KEYWORDS">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
             </value>
         </option>
         <option name="JS.STATIC_MEMBER_FUNCTION">
@@ -806,14 +806,25 @@
                 <option name="FOREGROUND" value="cd905b"/>
             </value>
         </option>
+        <option name="MARKDOWN_LIST_ITEM">
+            <value>
+                <option name="FOREGROUND" value="f3f1f1"/>
+            </value>
+        </option>
         <option name="MARKDOWN_ORDERED_LIST">
             <value>
-                <option name="FOREGROUND" value="569cd6"/>
+                <option name="FOREGROUND" value="f3f1f1"/>
+            </value>
+        </option>
+        <option name="MARKDOWN_TEXT">
+            <value>
+                <option name="FOREGROUND" value="f3f1f1"/>
+                <option name="EFFECT_TYPE" value="5"/>
             </value>
         </option>
         <option name="MARKDOWN_UNORDERED_LIST">
             <value>
-                <option name="FOREGROUND" value="569cd6"/>
+                <option name="FOREGROUND" value="f3f1f1"/>
             </value>
         </option>
         <option name="MATCHED_BRACE_ATTRIBUTES">
@@ -991,12 +1002,12 @@
         </option>
         <option name="PY.SECONDARY_KEYWORD">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
             </value>
         </option>
         <option name="PY.SECONDARY_KEYWORD_WITH_BG">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
@@ -1084,6 +1095,21 @@
                 <option name="FONT_TYPE" value="2"/>
             </value>
         </option>
+        <option name="SWIFT_PROPERTY">
+            <value>
+                <option name="FOREGROUND" value="94dbfd"/>
+            </value>
+        </option>
+        <option name="SWIFT_TUPLE_LABEL">
+            <value>
+                <option name="FOREGROUND" value="94dbfd"/>
+            </value>
+        </option>
+        <option name="SWIFT_WILDCARD">
+            <value>
+                <option name="FOREGROUND" value="94dbfd"/>
+            </value>
+        </option>
         <option name="Static method access" baseAttributes="STATIC_METHOD_ATTRIBUTES"/>
         <option name="Static property reference ID" baseAttributes="STATIC_FINAL_FIELD_ATTRIBUTES"/>
         <option name="TERMINAL_COMMAND_TO_RUN_USING_IDE">
@@ -1112,13 +1138,13 @@
         </option>
         <option name="TS.FROM_KEYWORD">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
         <option name="TS.MODULE_KEYWORD">
             <value>
-                <option name="FOREGROUND" value="ce80b6"/>
+                <option name="FOREGROUND" value="c586C0"/>
             </value>
         </option>
         <option name="TS.PRIMITIVE.TYPES">
@@ -1143,6 +1169,11 @@
                 <option name="FOREGROUND" value="9cdcfe"/>
             </value>
         </option>
+        <option name="XML_CUSTOM_TAG_NAME">
+            <value>
+                <option name="FOREGROUND" value="47ccb1"/>
+            </value>
+        </option>
         <option name="XML_ENTITY_REFERENCE">
             <value>
                 <option name="FOREGROUND" value="4ec9b0"/>
@@ -1160,11 +1191,6 @@
                 <option name="FOREGROUND" value="d4d4d4"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
                 <option name="EFFECT_TYPE" value="5"/>
-            </value>
-        </option>
-        <option name="XML_CUSTOM_TAG_NAME">
-            <value>
-                <option name="FOREGROUND" value="4ec9b0"/>
             </value>
         </option>
         <option name="XML_TAG_DATA" baseAttributes="TEXT"/>
