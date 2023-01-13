@@ -5,7 +5,7 @@
 ## [Unreleased]
 # Fixed
 - #47 - Purple color is inconsistent - Fixed only in VSCode theme. Not affects Brighter theme.
-- #49 - Markdown color inconsistencies
+- #49 - Markdown color inconsistencies - ordered and unordered List Text colors
 
 ## [1.7.6]
 ### Fixed
