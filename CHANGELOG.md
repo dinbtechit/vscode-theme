@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## [Unreleased]
+- [Experimental] Apply highlighting when indexing.
+- Syncing with Template changes.
 
 ## [1.7.7]
 - #47 - Purple color is inconsistent - Fixed only in VSCode theme. Not affects Brighter theme.
