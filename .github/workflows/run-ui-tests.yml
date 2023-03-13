@@ -33,15 +33,14 @@ jobs:
 
       # Check out current repository
       - name: Fetch Sources
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v3
 
       # Setup Java 11 environment for the next steps
       - name: Setup Java
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           distribution: zulu
           java-version: 11
-          cache: gradle
 
       # Run IDEA prepared for UI testing
       - name: Run IDE
@@ -49,7 +48,7 @@ jobs:
 
       # Wait for IDEA to be started
       - name: Health Check
-        uses: jtalk/url-health-check-action@v2
+        uses: jtalk/url-health-check-action@v3
         with:
           url: http://127.0.0.1:8082
           max-attempts: 15
