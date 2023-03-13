@@ -108,7 +108,7 @@ tasks {
     }
 
     signPlugin {
-        certificateChain.set(environment("CERTIFICATE_CHAIN"))
+        certificateChain.set(File(environment("CERTIFICATE_CHAIN").toString()).readText(Charsets.UTF_8))
         privateKey.set(environment("PRIVATE_KEY"))
         password.set(environment("PRIVATE_KEY_PASSWORD"))
     }
