@@ -16,12 +16,15 @@ class ShAnnotator : BaseAnnotator() {
 
     override fun getKeywordType(element: PsiElement): TextAttributesKey? {
         var type: TextAttributesKey? = null
-        val parent = PsiTreeUtil.findFirstContext(element,false) {
-            it.elementType == ARITHMETIC_EXPANSION
-        }
 
-        if (parent != null && element.elementType == WORD ) {
-            type = VARIBLE
+        if (element.elementType == WORD) {
+            val parent = PsiTreeUtil.findFirstContext(element, false) {
+                it.elementType == ARITHMETIC_EXPANSION
+            }
+            if (parent != null) {
+                type = VARIBLE
+            }
+
         }
 
         return type
