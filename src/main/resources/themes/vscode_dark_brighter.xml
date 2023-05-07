@@ -51,11 +51,6 @@
             </value>
         </option>
         <option name="BASH.SHEBANG" baseAttributes="BASH.LINE_COMMENT"/>
-        <option name="BASH.VAR_DEF">
-            <value>
-                <option name="FOREGROUND" value="d3d3c8"/>
-            </value>
-        </option>
         <option name="BASH.VAR_USE">
             <value>
                 <option name="FOREGROUND" value="8cd7ff"/>
