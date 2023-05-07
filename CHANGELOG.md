@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.7.9 - 2023-05-07
 - #55 - Syntax highlighting for shell scripts (For local variables explicitly)
 
 ## 1.7.8 - 2023-03-26
