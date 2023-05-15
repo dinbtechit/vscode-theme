@@ -21,6 +21,7 @@
     <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
 
     <extensions defaultExtensionNs="com.intellij">
+        <themeProvider order="first" id="dinbtechit-2179230b863b9b1d9f1eeb27ca4a3a70" path="themes/vscode_dark_modern.theme.json"/>
         <themeProvider order="last" id="dinbtechit-7ef0c378d737e162955f3e028dcf9ccb" path="themes/vscode_dark.theme.json"/>
         <bundledColorScheme id="dinbtechit-7ef0c378d737e162955f3e028dcf9ccb3" path="themes/vscode_dark"/>
         <bundledColorScheme id="dinbtechit-7ef0c378d737e162955f3e028dcf9ccb4" path="themes/vscode_dark_brighter"/>
