@@ -8,7 +8,7 @@ import com.intellij.openapi.project.DumbAwareAction
 class StarGithubRepoAction: DumbAwareAction("Star Repo", "", VSCodeIcons.GitHub) {
 
     override fun actionPerformed(e: AnActionEvent) {
-        BrowserUtil.open("https://github.com/dinbtechit/vscode-theme/blob/main/README.md")
+        BrowserUtil.open("https://github.com/dinbtechit/vscode-theme")
     }
 
 }

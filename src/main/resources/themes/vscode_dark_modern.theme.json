@@ -85,6 +85,8 @@
       }
     },
     "ComboPopup.border": "1,1,1,1,#FFFFFF12",
+
+
     "Component": {
       "errorFocusColor": "#843937",
       "inactiveErrorFocusColor": "#433239",
@@ -114,11 +116,12 @@
     "DragAndDrop": {
       "areaForeground": "#DFDFE0",
       "areaBackground": "#363737",
-      "areaBorderColor": "#414141"
+      "borderColor": "#414141"
     },
 
     "Editor": {
-      "background": "#1f1f1f"
+      "background": "#1f1f1f",
+      "SearchField.background": "#1f1f1f"
     },
     "EditorTabs": {
       "tabInsets": true,
@@ -134,9 +137,19 @@
       "Orange": "#3D3A36",
       "Rose": "#3D383B"
     },
+
+    "Toolbar.Floating.borderColor": "#393A3B",
+    "ToolWindow.Header": {
+      "borderColor": "#393A3B"
+    },
+
     "Notification": {
       "background": "#1f1f1f",
       "borderColor": "#393A3B"
+    },
+
+    "NotificationsToolwindow": {
+      "newNotification.background": "#393A3B"
     },
 
     "SearchMatch": {
@@ -152,7 +165,7 @@
     },
     "Popup": {
       "Header": {
-        "activeBackground": "#4A4E52",
+        "activeBackground": "#1f1f1f",
         "inactiveBackground": "#4A4E52"
       }
     },
@@ -164,12 +177,13 @@
       }
     },
     "ToolWindow": {
-      "background": "#181818"
-
+      "background": "#181818",
+      "Header.borderColor": "#ffffff12"
     },
     "Tree": {
       "background": "#181818"
     },
+
 
     "Plugins":{
       "borderColor": "#ffffff12"
