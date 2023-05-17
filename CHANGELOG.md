@@ -5,6 +5,7 @@
 ## Unreleased
 - #59 - VSCode Dark Modern Theme Initial
 - [Chores] - Updating links
+- [Chores] - syncing with Intellij Templates
 
 ## 1.7.9 - 2023-05-07
 - #55 - Syntax highlighting for shell scripts (For local variables explicitly)
