@@ -37,9 +37,6 @@
         <action id="AlwaysApplyThemeAction" class="com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction"
                 text="Always Apply" description="Always action">
         </action>
-        <action id="ApplyThemeAction" class="com.github.dinbtechit.vscodetheme.actions.ApplyThemeAction"
-                text="Apply" description="Switch to theme action">
-        </action>
         <action id="DismissNotification" class="com.github.dinbtechit.vscodetheme.actions.DismissNotification"
                 text="Dismiss" description="Dismiss notification">
         </action>
