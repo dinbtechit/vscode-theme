@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.8.0 - 2023-05-17
 - #59 - VSCode Dark Modern Theme Initial
 - [Chores] - Updating links
 - [Chores] - syncing with Intellij Templates
