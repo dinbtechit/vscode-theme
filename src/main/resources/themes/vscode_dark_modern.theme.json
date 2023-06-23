@@ -10,12 +10,12 @@
 
       "infoForeground": "#A9A9AA",
 
-      "selectionInactiveBackground": "#555657",
-      "selectionBackgroundInactive": "#555657",
+      "selectionInactiveBackground": "#37373d",
+      "selectionBackgroundInactive": "#37373d",
 
       "lightSelectionBackground": "#2B4059",
       "lightSelectionForeground": "#FFFFFF",
-      "lightSelectionInactiveBackground": "#555657",
+      "lightSelectionInactiveBackground": "#37373d",
       "lightSelectionInactiveForeground": "#DFDFE0",
 
       "disabledBackground": "#181818",
