@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.8.1 - 2023-06-25
 - #67 - Fix inactive selection color in Dark Modern theme
 
 ## 1.8.0 - 2023-05-17
