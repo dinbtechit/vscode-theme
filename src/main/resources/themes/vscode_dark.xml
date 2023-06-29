@@ -982,8 +982,36 @@
         </option>
         <option name="PY.DECORATOR">
             <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
+                <option name="EFFECT_TYPE" value="1"/>
+            </value>
+        </option>
+        <option name="PY.DOC_COMMENT">
+            <value>
+                <option name="FOREGROUND" value="cd9069"/>
+            </value>
+        </option>
+        <option name="PY.CLASS_REFERENCE">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
+                <option name="BACKGROUND" value="1e1e1e"/>
+            </value>
+        </option>
+        <option name="PY.DECORATOR">
+            <value>
                 <option name="FOREGROUND" value="47ccb1"/>
                 <option name="EFFECT_TYPE" value="1"/>
+            </value>
+        </option>
+        <option name="PY.DOC_COMMENT">
+            <value>
+                <option name="FOREGROUND" value="cd9069"/>
+            </value>
+        </option>
+        <option name="PY.FUNCTION_CALL">
+            <value>
+                <option name="FOREGROUND" value="dbdbaa"/>
+                <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
         <option name="PY.FUNCTION_CALL">
