@@ -3,6 +3,9 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.8.2 - 2023-06-29
+
 ### Fixed
 - #71 - Python - Inconsistent - Import and variables colors (initial)
 
