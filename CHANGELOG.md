@@ -3,6 +3,9 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.8.3 - 2023-06-29
+
 ### Changed
 - #71 - Python - annotation docstring optimization.
 
