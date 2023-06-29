@@ -3,12 +3,16 @@ package com.github.dinbtechit.vscodetheme.annotators
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
+import com.intellij.psi.util.PsiTreeUtil
 import com.intellij.psi.util.elementType
 import com.intellij.util.ObjectUtils
 import com.jetbrains.python.psi.*
 import com.jetbrains.python.psi.impl.PyImportedModule
 import com.jetbrains.python.psi.impl.references.PyImportReference
 import com.jetbrains.python.psi.impl.stubs.PyClassElementType
+import com.jetbrains.python.psi.types.PyClassType
+import com.jetbrains.python.psi.types.PyType
+import com.jetbrains.python.psi.types.TypeEvalContext
 
 
 class PyAnnotator : BaseAnnotator() {
@@ -58,6 +62,9 @@ class PyAnnotator : BaseAnnotator() {
             type = FUNCTION_WITH_BG
         }
 
+        if (element.parent is PyStringLiteralExpression) {
+            type = DefaultLanguageHighlighterColors.STRING
+        }
 
         if (element.parent.reference is PyImportReference
             || element.parent.reference?.resolve() is PyImportedModule
@@ -65,12 +72,12 @@ class PyAnnotator : BaseAnnotator() {
             type = CLASS_REFERENCE_WITH_BG
         }
 
-
         when (element.text) {
             "import", "as", "in",
             "continue", "del", "assert", "break", "finally", "for", "from",
             "elif", "else", "if", "except", "pass", "raise", "return", "try", "while",
             "with" -> type = SECONDARY_KEYWORD
+
             "self" -> type = DEFAULT_KEYWORD
             "async", "await" -> type = SECONDARY_KEYWORD_WITH_BG
             else -> {}
