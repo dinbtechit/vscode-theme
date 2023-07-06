@@ -35,6 +35,11 @@ class PyAnnotator : BaseAnnotator() {
             "PY.CLASS_REFERENCE",
             DefaultLanguageHighlighterColors.CLASS_REFERENCE
         )
+
+        val IMPORT_REFERENCE_WITH_BG: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
+            "PY.CLASS_REFERENCE",
+            DefaultLanguageHighlighterColors.CLASS_REFERENCE
+        )
     }
 
     override fun getKeywordType(element: PsiElement): TextAttributesKey? {
@@ -62,7 +67,7 @@ class PyAnnotator : BaseAnnotator() {
         if (element.parent.reference is PyImportReference
             || element.parent.reference?.resolve() is PyImportedModule
             || element.parent.reference?.resolve() is PyFile) {
-            type = CLASS_REFERENCE_WITH_BG
+            type = IMPORT_REFERENCE_WITH_BG
         }
 
 
