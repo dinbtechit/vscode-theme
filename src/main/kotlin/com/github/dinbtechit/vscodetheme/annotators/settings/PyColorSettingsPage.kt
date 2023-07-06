@@ -11,8 +11,9 @@ import java.util.*
 class PyColorSettingsPage : PythonColorsPage() {
     companion object {
         private val ATTRIBUTES: Array<AttributesDescriptor?> = arrayOf(
-            AttributesDescriptor("SecondaryKeywords", PyAnnotator.SECONDARY_KEYWORD),
-            AttributesDescriptor("SecondaryKeywordsBg", PyAnnotator.SECONDARY_KEYWORD_WITH_BG),
+            AttributesDescriptor("Secondary keywords", PyAnnotator.SECONDARY_KEYWORD),
+            AttributesDescriptor("Secondary keywords with Bg", PyAnnotator.SECONDARY_KEYWORD_WITH_BG),
+            AttributesDescriptor("Import reference with Bg", PyAnnotator.IMPORT_REFERENCE_WITH_BG),
         )
         val DESCRIPTORS = mutableMapOf<String, TextAttributesKey>()
     }
@@ -25,6 +26,7 @@ class PyColorSettingsPage : PythonColorsPage() {
         val descriptors: MutableMap<String, TextAttributesKey> = HashMap()
         descriptors["secondaryKeyword"] = PyAnnotator.SECONDARY_KEYWORD
         descriptors["secondaryKeywordBg"] = PyAnnotator.SECONDARY_KEYWORD_WITH_BG
+        descriptors["importReference"] = PyAnnotator.IMPORT_REFERENCE_WITH_BG
         return descriptors
     }
 
@@ -34,18 +36,19 @@ class PyColorSettingsPage : PythonColorsPage() {
 
     override fun getDemoText(): String {
         return """
-        <secondaryKeyword>from</secondaryKeyword> flask <secondaryKeyword>import</secondaryKeyword> work 
-        <secondaryKeyword>import</secondaryKeyword> string
+        <secondaryKeyword>from</secondaryKeyword> <importReference>flask</importReference> <secondaryKeyword>import</secondaryKeyword> <importReference>work</importReference> 
+        <secondaryKeyword>from</secondaryKeyword> <importReference>Something</importReference>, <importReference>Something2</importReference> <secondaryKeyword>import</secondaryKeyword> <importReference>work</importReference>  
+        <secondaryKeyword>import</secondaryKeyword> <importReference>string</importReference>
          
-        @app.get("/hello/somename")
-        <secondaryKeywordBg>async</secondaryKeywordBg> def say_bye(name: bool):
-            <secondaryKeyword>return</secondaryKeyword> {"message": f"bye {name}"}
+        @<decorator>app</decorator>.<nestedFuncDef>get</nestedFuncDef>("/hello/somename")
+        <secondaryKeywordBg>async</secondaryKeywordBg> def <nestedFuncDef>say_bye</nestedFuncDef>(name: bool):
+            <secondaryKeyword>return</secondaryKeyword> {"message": f"bye {<kwarg>name</kwarg>}"}
 
 
-        @app.get("/hello/{name}")
-        <secondaryKeywordBg>async</secondaryKeywordBg> def say_hello(name: bool):
-            <secondaryKeywordBg>await</secondaryKeywordBg> say_bye(name)
-            <secondaryKeyword>return</secondaryKeyword> {"message": f"Hello {name}"}
+        @<decorator>app</decorator>.<nestedFuncDef>get</nestedFuncDef>("/hello/{name}")
+        <secondaryKeywordBg>async</secondaryKeywordBg> def <nestedFuncDef>say_hello</nestedFuncDef>(<kwarg>name</kwarg>: bool):
+            <secondaryKeywordBg>await</secondaryKeywordBg> <nestedFuncDef>say_bye</nestedFuncDef>(<kwarg>name</kwarg>)
+            <secondaryKeyword>return</secondaryKeyword> {"message": f"Hello {<kwarg>name</kwarg>}"}
 
         """.trimIndent() + super.getDemoText()
     }

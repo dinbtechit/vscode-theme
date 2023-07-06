@@ -988,7 +988,13 @@
         </option>
         <option name="PY.DOC_COMMENT">
             <value>
-                <option name="FOREGROUND" value="cd9069"/>
+                <option name="FOREGROUND" value="4ec9b0"/>
+                <option name="BACKGROUND" value="1e1e1e"/>
+            </value>
+        </option>
+        <option name="PY.IMPORTS">
+            <value>
+                <option name="FOREGROUND" value="47CCB1"/>
             </value>
         </option>
         <option name="PY.FUNCTION_CALL">
