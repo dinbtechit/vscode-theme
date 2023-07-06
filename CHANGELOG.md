@@ -3,9 +3,12 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.8.4 - 2023-07-06
+
 ### Fixed
 - #77 - Pycharm Community edition - Inconsistent colors
-- #79 - Adding separate color settings for Python imports 
+- #79 - Adding separate color settings for Python imports
 
 ## 1.8.3 - 2023-06-29
 
