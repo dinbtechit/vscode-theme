@@ -37,7 +37,7 @@ class PyAnnotator : BaseAnnotator() {
         )
 
         val IMPORT_REFERENCE_WITH_BG: TextAttributesKey = TextAttributesKey.createTextAttributesKey(
-            "PY.CLASS_REFERENCE",
+            "PY.IMPORTS",
             DefaultLanguageHighlighterColors.CLASS_REFERENCE
         )
     }
