@@ -41,7 +41,7 @@ class PyColorSettingsPage : PythonColorsPage() {
         <secondaryKeyword>import</secondaryKeyword> <importReference>string</importReference>
          
         @<decorator>app</decorator>.<nestedFuncDef>get</nestedFuncDef>("/hello/somename")
-        <secondaryKeywordBg>async</secondaryKeywordBg> def <nestedFuncDef>say_bye</nestedFuncDef>(name: bool):
+        <secondaryKeywordBg>async</secondaryKeywordBg> def <nestedFuncDef>say_bye</nestedFuncDef>(<kwarg>name</kwarg>: <classDef>bool</classDef>):
             <secondaryKeyword>return</secondaryKeyword> {"message": f"bye {<kwarg>name</kwarg>}"}
 
 
