@@ -3,6 +3,9 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.8.5 - 2023-07-06
+
 ### Fixed
 - #79 - Adding separate color settings for Python imports (Part 2)
 
