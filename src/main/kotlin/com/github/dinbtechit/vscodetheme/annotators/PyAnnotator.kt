@@ -46,7 +46,8 @@ class PyAnnotator : BaseAnnotator() {
         var type: TextAttributesKey? = null
 
         if ((element.elementType is PyElementType
-                    && (element.parent is PyTargetExpression || element.parent is PyReferenceExpression)) && (element.parent !is PyFunction)
+                    && (element.parent is PyTargetExpression
+                    || element.parent is PyReferenceExpression)) && (element.parent !is PyFunction)
         ) {
             type = DefaultLanguageHighlighterColors.LOCAL_VARIABLE
         }
@@ -66,7 +67,8 @@ class PyAnnotator : BaseAnnotator() {
 
         if (element.parent.reference is PyImportReference
             || element.parent.reference?.resolve() is PyImportedModule
-            || element.parent.reference?.resolve() is PyFile) {
+            || element.parent.reference?.resolve() is PyFile
+        ) {
             type = IMPORT_REFERENCE_WITH_BG
         }
 
