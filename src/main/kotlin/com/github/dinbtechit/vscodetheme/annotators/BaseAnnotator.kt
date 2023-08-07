@@ -11,7 +11,7 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.tree.LeafPsiElement
 
 
-abstract class BaseAnnotator : Annotator {
+abstract class BaseAnnotator : Annotator, DumbAware {
 
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
 
@@ -23,6 +23,7 @@ abstract class BaseAnnotator : Annotator {
             holder.newSilentAnnotation(HighlightSeverity.INFORMATION)
                 .range(range)
                 .textAttributes(kind)
+                .needsUpdateOnTyping()
                 .create()
         }
 
