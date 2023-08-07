@@ -4,9 +4,11 @@
 
 ## Unreleased
 
+## 1.8.6 - 2023-08-07
+
 ### Changed
 - Removing experimental update on typing
-- Removing experimental Dumbaware as there are not visible improvements. 
+- Removing experimental Dumbaware as there are not visible improvements.
 
 ## 1.8.5 - 2023-07-06
 
