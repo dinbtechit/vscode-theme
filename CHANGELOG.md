@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## Unreleased
+# Added
+- #66 - VSCode Light Modern theme - Initial
 
 ## 1.8.6 - 2023-08-07
 
