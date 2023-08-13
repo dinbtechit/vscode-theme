@@ -12,9 +12,7 @@
       "errorFocusColor": "#843937",
       "inactiveErrorFocusColor": "#433239",
       "warningFocusColor": "#8F7B2E",
-      "inactiveWarningFocusColor": "#434136",
-      "iconColor": "#DFDFE0",
-      "hoverIconColor": "#FFFFFF"
+      "inactiveWarningFocusColor": "#434136"
     },
 
     "Editor": {
