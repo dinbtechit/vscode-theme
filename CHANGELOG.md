@@ -3,11 +3,15 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.9.1 - 2023-08-13
+
 ### Changed
-- #91 - operator and @decorator colors Python
+- #91 - operator and `@decorator` colors Python
 - Python - Keeping vscode light theme inline with dark modern theme.
 
 ## 1.9.0 - 2023-08-13
+
 ### Added
 - #66 - VSCode Light Modern theme - Initial
 
