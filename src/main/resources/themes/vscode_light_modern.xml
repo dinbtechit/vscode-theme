@@ -1103,6 +1103,11 @@
                 <option name="FOREGROUND" value="267f99"/>
             </value>
         </option>
+        <option name="PY.DOC_COMMENT">
+            <value>
+                <option name="FOREGROUND" value="a31515"/>
+            </value>
+        </option>
         <option name="PY.DECORATOR">
             <value>
                 <option name="FOREGROUND" value="795e26"/>

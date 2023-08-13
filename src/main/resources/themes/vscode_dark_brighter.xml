@@ -986,6 +986,11 @@
                 <option name="EFFECT_TYPE" value="1"/>
             </value>
         </option>
+        <option name="PY.DOC_COMMENT">
+            <value>
+                <option name="FOREGROUND" value="cd9069"/>
+            </value>
+        </option>
         <option name="PY.FUNCTION_CALL">
             <value>
                 <option name="FOREGROUND" value="e6e6aa"/>
