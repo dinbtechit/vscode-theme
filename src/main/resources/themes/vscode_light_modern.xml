@@ -1,9 +1,9 @@
 <scheme name="VSCode Light Modern" version="142" parent_scheme="Default">
   <metaInfo>
-    <property name="created">2023-08-13T00:44:46</property>
+    <property name="created">2023-08-13T00:48:34</property>
     <property name="ide">idea</property>
     <property name="ideVersion">2023.1.1.0.0</property>
-    <property name="modified">2023-08-13T00:44:52</property>
+    <property name="modified">2023-08-13T00:48:43</property>
     <property name="originalScheme">_@user_VSCode Light Modern</property>
   </metaInfo>
   <colors>
@@ -904,6 +904,11 @@
     <option name="MACRONAME">
       <value>
         <option name="FOREGROUND" value="795e26" />
+      </value>
+    </option>
+    <option name="NG.BANANA_BINDING_ATTR_NAME">
+      <value>
+        <option name="FOREGROUND" value="e50101" />
       </value>
     </option>
     <option name="NG.EVENT_BINDING_ATTR_NAME">
