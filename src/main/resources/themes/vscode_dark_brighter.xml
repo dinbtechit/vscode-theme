@@ -1,9 +1,9 @@
 <scheme name="VSCode Dark Brighter" version="142" parent_scheme="Darcula">
     <metaInfo>
-        <property name="created">2023-06-29T15:59:34</property>
+        <property name="created">2023-08-13T10:41:00</property>
         <property name="ide">idea</property>
         <property name="ideVersion">2023.1.1.0.0</property>
-        <property name="modified">2023-06-29T15:59:40</property>
+        <property name="modified">2023-08-13T10:41:08</property>
         <property name="originalScheme">_@user_VSCode Dark Brighter</property>
     </metaInfo>
     <colors>
@@ -982,19 +982,8 @@
         </option>
         <option name="PY.DECORATOR">
             <value>
-                <option name="FOREGROUND" value="47ccb1"/>
+                <option name="FOREGROUND" value="e6e6aa"/>
                 <option name="EFFECT_TYPE" value="1"/>
-            </value>
-        </option>
-        <option name="PY.DOC_COMMENT">
-            <value>
-                <option name="FOREGROUND" value="cd9069"/>
-            </value>
-        </option>
-        <option name="PY.IMPORTS">
-            <value>
-                <option name="FOREGROUND" value="47CCB1"/>
-                <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
         <option name="PY.FUNCTION_CALL">
@@ -1003,9 +992,20 @@
                 <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
+        <option name="PY.IMPORTS">
+            <value>
+                <option name="FOREGROUND" value="47ccb1"/>
+                <option name="BACKGROUND" value="1e1e1e"/>
+            </value>
+        </option>
         <option name="PY.KEYWORD_ARGUMENT">
             <value>
                 <option name="FOREGROUND" value="94dbfd"/>
+            </value>
+        </option>
+        <option name="PY.OPERATION_SIGN">
+            <value>
+                <option name="FOREGROUND" value="fdfcfc"/>
             </value>
         </option>
         <option name="PY.PREDEFINED_DEFINITION">
