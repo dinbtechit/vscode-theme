@@ -6,29 +6,28 @@
 
 
 <!-- Plugin description -->
-> If you find this plugin useful consider sponsoring its development to ensure that the project is actively maintained and improved. [Buy me a Coffee](https://www.buymeacoffee.com/dinbtechit) 
-
-[![image](https://user-images.githubusercontent.com/17984781/201556781-ed055fea-3217-421c-a4b6-296af779c1ce.png)](https://www.buymeacoffee.com/dinbtechit)
-
-
-Provides Visual Studio Code/VSCode Editor Color Scheme for Jetbrains IDEs (webstorm, Intellij, Rider & many more);
+Provides Visual Studio Code / VSCode Editor Color Scheme for Jetbrains IDEs (webstorm, Intellij, Rider & many more);
 While Jetbrains IDEs are great for productivity unfortunately the highlighting is not very
-intuitive. This plugin attempts to make the IDE fairly **close** to VSCode Dark+ theme. 
+intuitive. This plugin attempts to make the IDE fairly **close** to VSCode theme. 
 
-> Note - Some text colors might not be accurate due to either Jetbrains does not allow us to override those colors or the default colors were more intuitive. 
+> Note - Some text colors might not be accurate due to either Jetbrains does not allow us to override those colors or the default colors were more intuitive.
+
+#### Themes:
+
+**Dark:**
+- VSCode Dark+
+- VSCode Dark Modern
+
+**Light:**
+- VSCode Light Modern (Experimental - Feel free to submit bugs at https://github.com/dinbtechit/vscode-theme/issues)
 
 **For Best Viewing Experience:** 
 - Plugins: VSCode Theme + Rainbow Brackets
-- Only for, 2022.X or Higher: Settings -> Editor -> Font:
-  - JetBrains Mono (**Optional** - Font Size: 13.15)
-  - Typography Settings: 
-    - Main Weight -> `Medium`
-    - Bold Weight -> `Bold`
 
 ### Supported Languages
 - Advance Syntax highlighting Support: 
   - JavaScript, TypeScript, Java, Dart/Flutter, Rust, Python, Kotlin, C#/F#, Php, Go
-  - C, C++ and ObjectiveC
+  - C, C++ and Objective-C
 - Basic Syntax highlighting:
   - Ruby and many more. 
 
@@ -55,6 +54,7 @@ Intellij, Webstorm, Android Studio, CLion, PhpStorm, Rider, GoLang and many more
 
 ---
 ## Roadmap
+- [ ] Improvements to VSCode Light Modern to cover all major programming languages
 - [ ] Rainbow brackets (with 3 colors)
 - [ ] File icons to match VSCode
 - [ ] Enhanced syntax highlighting for Ruby
@@ -63,6 +63,10 @@ Intellij, Webstorm, Android Studio, CLion, PhpStorm, Rider, GoLang and many more
 ## How can I contribute?
 
 - By starring this Github project and rating the [VSCode plugin](https://plugins.jetbrains.com/plugin/19177-vscode-theme).
-- By submitting pull requests for above roadmap items.
+- By submitting bugs and features -> [https://github.com/dinbtechit/vscode-theme/issues](https://github.com/dinbtechit/vscode-theme/issues)
+- By submitting pull requests for the above roadmap items.
 - By sponsoring its development to ensure that the project is actively maintained and improved. 
-- Donate to [Buying me a Coffee](https://www.buymeacoffee.com/dinbtechit)
+
+> If you find this plugin useful consider sponsoring its development to ensure that the project is actively maintained and improved. [Buy me a Coffee](https://www.buymeacoffee.com/dinbtechit) 
+
+[![image](https://user-images.githubusercontent.com/17984781/201556781-ed055fea-3217-421c-a4b6-296af779c1ce.png)](https://www.buymeacoffee.com/dinbtechit)
