@@ -3,6 +3,8 @@
 ![Build](https://github.com/dinbtechit/vscode-theme/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/19177.svg)](https://plugins.jetbrains.com/plugin/19177)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/19177.svg)](https://plugins.jetbrains.com/plugin/19177)
+[![Static Badge](https://img.shields.io/badge/--FFDD04?style=flat&logo=buy-me-a-coffee&logoColor=222222&label=Buy%20Me%20a%20Coffee&labelColor=FFDD04&color=FFDD04&link=https%3A%2F%2Fwww.buymeacoffee.com%2Fdinbtechit)
+](https://www.buymeacoffee.com/dinbtechit)
 
 
 <!-- Plugin description -->
@@ -33,10 +35,6 @@ intuitive. This plugin attempts to make the IDE fairly **close** to VSCode theme
 
 ### Supported Platforms
 Intellij, Webstorm, Android Studio, CLion, PhpStorm, Rider, GoLang and many more.
-
-### Demo - Typescript
-
-<img style="transform: scale(0.60)" src="https://plugins.jetbrains.com/files/19177/screenshot_597cfa44-635d-4abd-85ef-e08775575963" alt=""/>
 
 <!-- Plugin description end -->
 
@@ -69,4 +67,4 @@ Intellij, Webstorm, Android Studio, CLion, PhpStorm, Rider, GoLang and many more
 
 > If you find this plugin useful consider sponsoring its development to ensure that the project is actively maintained and improved. [Buy me a Coffee](https://www.buymeacoffee.com/dinbtechit) 
 
-[![image](https://user-images.githubusercontent.com/17984781/201556781-ed055fea-3217-421c-a4b6-296af779c1ce.png)](https://www.buymeacoffee.com/dinbtechit)
+[![image](https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg)](https://www.buymeacoffee.com/dinbtechit)
