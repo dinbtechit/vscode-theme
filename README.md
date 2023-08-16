@@ -21,7 +21,7 @@ intuitive. This plugin attempts to make the IDE fairly **close** to VSCode theme
 - VSCode Dark Modern
 
 **Light:**
-- VSCode Light Modern (Experimental - Feel free to submit bugs at https://github.com/dinbtechit/vscode-theme/issues)
+- VSCode Light Modern (Experimental - Feel free to report bugs at https://github.com/dinbtechit/vscode-theme/issues)
 
 **For Best Viewing Experience:** 
 - Plugins: VSCode Theme + Rainbow Brackets
