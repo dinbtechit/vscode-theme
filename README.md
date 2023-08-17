@@ -9,10 +9,9 @@
 
 <!-- Plugin description -->
 Provides Visual Studio Code / VSCode Editor Color Scheme for Jetbrains IDEs (webstorm, Intellij, Rider & many more);
-While Jetbrains IDEs are great for productivity unfortunately the highlighting is not very
-intuitive. This plugin attempts to make the IDE fairly **close** to VSCode theme. 
+This plugin aims to closely emulate the VSCode theme within the IDE, simplifying the process of switching between different development environments.
 
-> Note - Some text colors might not be accurate due to either Jetbrains does not allow us to override those colors or the default colors were more intuitive.
+> Note - Some text colors might not be accurate due to either JetBrains does not allow us to override those colors or the default colors being more intuitive.
 
 #### Themes:
 
