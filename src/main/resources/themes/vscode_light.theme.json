@@ -8,13 +8,6 @@
       "background": "#F8F8F8"
     },
 
-    "Component": {
-      "errorFocusColor": "#843937",
-      "inactiveErrorFocusColor": "#433239",
-      "warningFocusColor": "#8F7B2E",
-      "inactiveWarningFocusColor": "#434136"
-    },
-
     "Editor": {
       "background": "#FFFFFF"
     },
@@ -23,6 +16,7 @@
       "startBackground": "#f5bc2d",
       "endBackground": "#e9b32b"
     },
+
 
     "ToggleButton": {
       "onBackground": "#1D7BED"
