@@ -3,13 +3,15 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.10.0 - 2023-08-18
+
 ### Added
 - Rainbow Brackets plugin will now be bundled within VSCode theme
 - #84 - Functionality to report bug through IDE error reporting tool
 
 ### Fixed
 - Icon colors are messed up in VSCode light theme
-
 
 ## 1.9.1 - 2023-08-13
 
