@@ -6,6 +6,7 @@
     <idea-version since-build="213"/>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>izhangzhihao.rainbow.brackets.lite</depends>
 
     <depends config-file="lang-config/dinbtechit-javascript.xml" optional="true">JavaScript</depends>
     <depends config-file="lang-config/dinbtechit-java.xml" optional="true">com.intellij.java</depends>
