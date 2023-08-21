@@ -12,12 +12,14 @@ import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.ide.ui.LafManager
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationGroupManager
+import com.intellij.notification.NotificationListener
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.extensions.PluginId
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.StartupActivity
-
+import java.awt.Desktop
+import java.net.URI
 
 
 class VSCodeStartupNotifyActivity : StartupActivity {
@@ -31,7 +33,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     private val updateContent: String by lazy {
         //language=HTML
         """
-         If you find this plugin useful consider sponsoring its development to ensure that the project is actively maintained and improved.
+        <a href='https://github.com/dinbtechit/vscode-theme/blob/main/CHANGELOG.md'>Click Here</a> to see the change logs.
         """.trimIndent()
     }
 
@@ -65,7 +67,9 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         if (isReady && getPlugin()?.version != VSCodeThemeSettingsStore.instance.version) {
             settings.version = getPlugin()!!.version
             if (settings.alwaysApply) {
-                VSCodeThemeManager.getInstance().switchToVSCodeTheme(selectedVSCodeTheme = settings.themeName)
+                if (settings.themeName != VSCodeTheme.UNKNOWN) {
+                    VSCodeThemeManager.getInstance().switchToVSCodeTheme(selectedVSCodeTheme = settings.themeName)
+                }
                 showNotificationPopup(project)
             } else if (settings.showNotificationOnUpdate) {
                 showNotificationPopup(project)
@@ -114,7 +118,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     private fun createNotification(
         title: String, content: String, type: NotificationType
     ): Notification {
-        return NotificationGroupManager.getInstance()
+        val notification = NotificationGroupManager.getInstance()
             .getNotificationGroup("VSCode Theme Notification Group")
             .createNotification(content, type)
             .setTitle(title)
@@ -131,6 +135,20 @@ class VSCodeStartupNotifyActivity : StartupActivity {
             .addAction(DonateAction())
             .addAction(StarGithubRepoAction())
             // .addAction(DismissNotification(isVSCodeThemeSelected()))
+
+        notification.setListener(object : NotificationListener.Adapter() {
+                override fun hyperlinkActivated(notification: Notification, hyperlinkEvent: javax.swing.event.HyperlinkEvent) {
+                    // Open URL in default browser
+                    if (Desktop.isDesktopSupported()) {
+                        try {
+                            Desktop.getDesktop().browse(URI(hyperlinkEvent.description))
+                        } catch (e: Exception) {
+                            throw(Error("Unable to view the change logs.", e))
+                        }
+                    }
+                }
+            })
+        return notification
     }
 
     private fun showFullNotification(project: Project, notification: Notification) {
