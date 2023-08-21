@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## Unreleased
+### Changed
+- #100 - removing rainbow bracket - can be installed separately if needed.
 
 ## 1.10.0 - 2023-08-18
 
