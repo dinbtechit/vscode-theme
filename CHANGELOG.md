@@ -3,7 +3,10 @@
 # vscode-theme Changelog
 
 ## Unreleased
-### Fixed 
+
+## 1.10.2 - 2023-08-22
+
+### Fixed
 - #103 - Fix for "Array contains no element matching the predicate"
 
 ## 1.10.1 - 2023-08-21
