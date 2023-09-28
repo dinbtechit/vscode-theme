@@ -17,7 +17,7 @@
     <depends config-file="lang-config/dinbtechit-php.xml" optional="true">com.jetbrains.php</depends>
     <depends config-file="lang-config/dinbtechit-clion.xml"  optional="true">com.intellij.cidr.lang</depends>
     <depends config-file="lang-config/dinbtechit-go.xml" optional="true">org.jetbrains.plugins.go</depends>
-    <depends config-file="lang-config/dinbtechit-rust.xml" optional="true">org.rust.lang</depends>
+    <depends config-file="lang-config/dinbtechit-rust.xml" optional="true">com.jetbrains.rust</depends>
     <depends config-file="lang-config/dinbtechit-sh.xml" optional="true">com.jetbrains.sh</depends>
     <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
 
@@ -38,16 +38,24 @@
         <errorHandler implementation="com.github.dinbtechit.vscodetheme.diagostic.VSCodeErrorReportSubmitter"/>
     </extensions>
     <actions>
-        <action id="AlwaysApplyThemeAction" class="com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction"
+        <action id="com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction"
+                class="com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction"
                 text="Always Apply" description="Always action">
         </action>
-        <action id="DismissNotification" class="com.github.dinbtechit.vscodetheme.actions.DismissNotification"
+        <action id="com.github.dinbtechit.vscodetheme.actions.DismissNotification"
+                class="com.github.dinbtechit.vscodetheme.actions.DismissNotification"
                 text="Dismiss" description="Dismiss notification">
         </action>
-        <action id="Support" class="com.github.dinbtechit.vscodetheme.actions.DonateAction"
+        <action id="com.github.dinbtechit.vscodetheme.actions.DonateAction"
+                class="com.github.dinbtechit.vscodetheme.actions.DonateAction"
                 text="Support">
         </action>
-        <action id="StarGithub" class="com.github.dinbtechit.vscodetheme.actions.StarGithubRepoAction"
+        <action id="com.github.dinbtechit.vscodetheme.actions.StarGithubRepoAction"
+                class="com.github.dinbtechit.vscodetheme.actions.StarGithubRepoAction"
+                text="Star Github Repo">
+        </action>
+        <action id="com.github.dinbtechit.vscodetheme.actions.WhatsNewAction"
+                class="com.github.dinbtechit.vscodetheme.actions.WhatsNewAction"
                 text="Star Github Repo">
         </action>
     </actions>

@@ -5,6 +5,7 @@ import com.github.dinbtechit.vscodetheme.VSCodeThemeManager
 import com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction
 import com.github.dinbtechit.vscodetheme.actions.DonateAction
 import com.github.dinbtechit.vscodetheme.actions.StarGithubRepoAction
+import com.github.dinbtechit.vscodetheme.actions.WhatsNewAction
 import com.github.dinbtechit.vscodetheme.icons.VSCodeIcons
 import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
 import com.intellij.ide.plugins.IdeaPluginDescriptor
@@ -12,14 +13,11 @@ import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.ide.ui.LafManager
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationGroupManager
-import com.intellij.notification.NotificationListener
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.extensions.PluginId
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.StartupActivity
-import java.awt.Desktop
-import java.net.URI
 
 
 class VSCodeStartupNotifyActivity : StartupActivity {
@@ -33,7 +31,8 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     private val updateContent: String by lazy {
         //language=HTML
         """
-        <a href='https://github.com/dinbtechit/vscode-theme/blob/main/CHANGELOG.md'>Click Here</a> to see the change logs.
+         If you find this plugin useful consider sponsoring its development to ensure that the project is 
+         actively maintained and improved.
         """.trimIndent()
     }
 
@@ -90,7 +89,8 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     }
 
     private fun isVSCodeThemeSelected() = LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK.theme
-    private fun isVSCodeDarkModernThemeSelected() = LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK_MODERN.theme
+    private fun isVSCodeDarkModernThemeSelected() =
+        LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK_MODERN.theme
 
     private fun showNotificationPopup(project: Project) {
         notification = createNotification(
@@ -125,29 +125,23 @@ class VSCodeStartupNotifyActivity : StartupActivity {
             .setIcon(VSCodeIcons.Logo).apply {
                 if (displayActionType == DisplayActionType.SHOW_ALL_THEMES_FOR_DEFAULT) {
                     addAction(DefaultActionGroup("Show All", false).apply {
-                        add(AlwaysApplyThemeAction(text = VSCodeTheme.DARK_MODERN.theme , vscodeTheme = VSCodeTheme.DARK_MODERN))
+                        add(
+                            AlwaysApplyThemeAction(
+                                text = VSCodeTheme.DARK_MODERN.theme,
+                                vscodeTheme = VSCodeTheme.DARK_MODERN
+                            )
+                        )
                         add(AlwaysApplyThemeAction(text = VSCodeTheme.DARK.theme, vscodeTheme = VSCodeTheme.DARK))
                     })
                 } else if (displayActionType == DisplayActionType.SHOW_NEW_DARK_MODERN_THEME) {
-                    addAction(AlwaysApplyThemeAction(text = "Switch Now" , vscodeTheme = VSCodeTheme.DARK_MODERN))
+                    addAction(AlwaysApplyThemeAction(text = "Switch Now", vscodeTheme = VSCodeTheme.DARK_MODERN))
                 }
             }
             .addAction(DonateAction())
             .addAction(StarGithubRepoAction())
-            // .addAction(DismissNotification(isVSCodeThemeSelected()))
+            .addAction(WhatsNewAction())
+        // .addAction(DismissNotification(isVSCodeThemeSelected()))
 
-        notification.setListener(object : NotificationListener.Adapter() {
-                override fun hyperlinkActivated(notification: Notification, hyperlinkEvent: javax.swing.event.HyperlinkEvent) {
-                    // Open URL in default browser
-                    if (Desktop.isDesktopSupported()) {
-                        try {
-                            Desktop.getDesktop().browse(URI(hyperlinkEvent.description))
-                        } catch (e: Exception) {
-                            throw(Error("Unable to view the change logs.", e))
-                        }
-                    }
-                }
-            })
         return notification
     }
 
@@ -169,7 +163,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
 //                ApplicationService.INSTANCE
 //            ).show(target, Balloon.Position.atLeft)
             notification.notify(project)
-        } catch(e: Exception) {
+        } catch (e: Exception) {
             notification.notify(project)
         }
     }
