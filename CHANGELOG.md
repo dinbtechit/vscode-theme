@@ -6,7 +6,7 @@
 ### Changed
 - Keeping in Sync with IntelliJ Template changes
 - Updated Rust plugin from (Deprecated)`org.rust.lang` to `com.jetbrains.rust`.
-- Removing deprecated API usages
+- Removing deprecated API usages - Unfortunately can no longer support 2021.1.x
 - Adding more logging to triage issue #123
 
 ## 1.10.2 - 2023-08-22
