@@ -3,6 +3,9 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.10.3 - 2023-10-01
+
 ### Changed
 - Keeping in Sync with IntelliJ Template changes
 - Updated Rust plugin from (Deprecated)`org.rust.lang` to `com.jetbrains.rust`.
