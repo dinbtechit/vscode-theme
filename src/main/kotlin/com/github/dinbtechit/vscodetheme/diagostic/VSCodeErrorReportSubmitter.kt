@@ -7,7 +7,6 @@ import com.intellij.openapi.diagnostic.ErrorReportSubmitter
 import com.intellij.openapi.diagnostic.IdeaLoggingEvent
 import com.intellij.openapi.diagnostic.SubmittedReportInfo
 import com.intellij.openapi.extensions.PluginId
-import org.apache.commons.lang.StringUtils
 import org.apache.http.client.utils.URIBuilder
 import java.awt.Component
 import java.io.BufferedReader
@@ -71,7 +70,7 @@ class VSCodeErrorReportSubmitter: ErrorReportSubmitter() {
                         .map { line ->
                             var abbreviated = line
                             packageAbbreviation?.entries?.forEach { entry ->
-                                abbreviated = StringUtils.replace(abbreviated, entry.key, entry.value)
+                                abbreviated = abbreviated.replace(entry.key, entry.value)
                             }
                             abbreviated
                         }.collect(Collectors.joining("\n"))
