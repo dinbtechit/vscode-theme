@@ -19,14 +19,20 @@ import com.intellij.openapi.extensions.PluginId
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.StartupActivity
 
+/*enum class DisplayActionType {
+    DONATION_ONLY,
+    SHOW_ALL_THEMES_FOR_DEFAULT,
+    SHOW_NEW_DARK_MODERN_THEME
+}*/
+object DisplayActionType {
+    const val DONATION_ONLY = "DONATION_ONLY"
+    const val SHOW_ALL_THEMES_FOR_DEFAULT = "SHOW_ALL_THEMES_FOR_DEFAULT"
+    const val SHOW_NEW_DARK_MODERN_THEME = "SHOW_NEW_DARK_MODERN_THEME"
+}
 
 class VSCodeStartupNotifyActivity : StartupActivity {
 
-    enum class DisplayActionType {
-        DONATION_ONLY,
-        SHOW_ALL_THEMES_FOR_DEFAULT,
-        SHOW_NEW_DARK_MODERN_THEME
-    }
+
 
     private val updateContent: String by lazy {
         //language=HTML
@@ -54,10 +60,13 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         """.trimIndent()
     }
 
+    object Util {
+        lateinit var notification: Notification
+        var displayActionType = DisplayActionType.DONATION_ONLY
+    }
+
     companion object {
         const val pluginId = "com.github.dinbtechit.vscodetheme"
-        lateinit var notification: Notification
-        var displayActionType: DisplayActionType = DisplayActionType.DONATION_ONLY
     }
 
     override fun runActivity(project: Project) {
@@ -88,28 +97,28 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         }
     }
 
-    private fun isVSCodeThemeSelected() = LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK.theme
+    private fun isVSCodeThemeSelected() = LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK
     private fun isVSCodeDarkModernThemeSelected() =
-        LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK_MODERN.theme
+        LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK_MODERN
 
     private fun showNotificationPopup(project: Project) {
-        notification = createNotification(
+        Util.notification = createNotification(
             updateMsg(),
             notificationContent(),
             NotificationType.INFORMATION
         )
-        showFullNotification(project, notification)
+        showFullNotification(project, Util.notification)
     }
 
     private fun notificationContent(): String {
         if (!isVSCodeThemeSelected() && !isVSCodeDarkModernThemeSelected()) {
-            displayActionType = DisplayActionType.SHOW_ALL_THEMES_FOR_DEFAULT
+            Util.displayActionType = DisplayActionType.SHOW_ALL_THEMES_FOR_DEFAULT
             return switchThemeQuestion
         } else if (isVSCodeThemeSelected()) {
-            displayActionType = DisplayActionType.SHOW_NEW_DARK_MODERN_THEME
+            Util.displayActionType = DisplayActionType.SHOW_NEW_DARK_MODERN_THEME
             return tryNewDarkModernThemeQuestion
         }
-        displayActionType = DisplayActionType.DONATION_ONLY
+        Util.displayActionType = DisplayActionType.DONATION_ONLY
         return updateContent
     }
 
@@ -123,17 +132,17 @@ class VSCodeStartupNotifyActivity : StartupActivity {
             .createNotification(content, type)
             .setTitle(title)
             .setIcon(VSCodeIcons.Logo).apply {
-                if (displayActionType == DisplayActionType.SHOW_ALL_THEMES_FOR_DEFAULT) {
+                if (Util.displayActionType == DisplayActionType.SHOW_ALL_THEMES_FOR_DEFAULT) {
                     addAction(DefaultActionGroup("Show All", false).apply {
                         add(
                             AlwaysApplyThemeAction(
-                                text = VSCodeTheme.DARK_MODERN.theme,
+                                text = VSCodeTheme.DARK_MODERN,
                                 vscodeTheme = VSCodeTheme.DARK_MODERN
                             )
                         )
-                        add(AlwaysApplyThemeAction(text = VSCodeTheme.DARK.theme, vscodeTheme = VSCodeTheme.DARK))
+                        add(AlwaysApplyThemeAction(text = VSCodeTheme.DARK, vscodeTheme = VSCodeTheme.DARK))
                     })
-                } else if (displayActionType == DisplayActionType.SHOW_NEW_DARK_MODERN_THEME) {
+                } else if (Util.displayActionType == DisplayActionType.SHOW_NEW_DARK_MODERN_THEME) {
                     addAction(AlwaysApplyThemeAction(text = "Switch Now", vscodeTheme = VSCodeTheme.DARK_MODERN))
                 }
             }

@@ -19,7 +19,7 @@ class VSCodeThemeSettingsStore: PersistentStateComponent<VSCodeThemeSettingsStor
     var alwaysApply = false
     var showNotificationOnUpdate = true
     var version = "unknown"
-    var themeName: VSCodeTheme = VSCodeTheme.UNKNOWN
+    var themeName = VSCodeTheme.UNKNOWN
 
     @Nullable
     override fun getState() = this
