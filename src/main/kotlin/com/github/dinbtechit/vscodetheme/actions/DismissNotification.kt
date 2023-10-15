@@ -7,10 +7,10 @@ import com.intellij.openapi.project.DumbAwareAction
 
 class DismissNotification(private val expire: Boolean = false) : DumbAwareAction("Dismiss") {
     override fun actionPerformed(e: AnActionEvent) {
-        VSCodeStartupNotifyActivity.notification.hideBalloon()
+        VSCodeStartupNotifyActivity.Util.notification.hideBalloon()
         if (expire) {
             NotificationsManagerImpl.getNotificationsManager().expire(
-                VSCodeStartupNotifyActivity.notification
+                VSCodeStartupNotifyActivity.Util.notification
             )
         }
     }

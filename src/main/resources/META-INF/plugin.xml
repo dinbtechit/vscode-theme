@@ -31,7 +31,6 @@
         <postStartupActivity implementation="com.github.dinbtechit.vscodetheme.startup.VSCodeStartupNotifyActivity"/>
         <applicationService
                 serviceImplementation="com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore"/>
-        <applicationService serviceImplementation="com.github.dinbtechit.vscodetheme.services.ApplicationService"/>
         <notificationGroup id="VSCode Theme Notification Group" displayType="STICKY_BALLOON"/>
         <!--https://github.com/dinbtechit/vscode-theme/issues/38 Default Annotator Issues-->
         <!--<annotator language="" order="last" implementationClass="com.github.dinbtechit.vscodetheme.annotators.DefaultAnnotator"/>-->

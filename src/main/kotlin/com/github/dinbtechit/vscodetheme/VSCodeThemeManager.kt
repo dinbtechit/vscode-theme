@@ -6,10 +6,16 @@ import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.ide.ui.LafManager
 import com.intellij.openapi.extensions.PluginId
 
-enum class VSCodeTheme(val theme: String) {
+/*enum class VSCodeTheme(val theme: String) {
     UNKNOWN("UNKNOWN"),
     DARK("VSCode Dark"),
     DARK_MODERN("VSCode Dark Modern");
+}*/
+
+object VSCodeTheme {
+    const val UNKNOWN = "UNKNOWN"
+    const val DARK = "VSCode Dark"
+    const val DARK_MODERN = "VSCode Dark Modern"
 }
 
 class VSCodeThemeManager {
@@ -29,20 +35,20 @@ class VSCodeThemeManager {
         try {
             if (getPlugin()?.isEnabled != null) {
                 val vscodeTheme =
-                    LafManager.getInstance().installedLookAndFeels.first { it.name == VSCodeTheme.DARK.theme }
+                    LafManager.getInstance().installedLookAndFeels.first { it.name == VSCodeTheme.DARK }
                 return vscodeTheme != null
             }
             return false
         } catch (e: Exception) {
-            return false;
+            return false
         }
     }
 
-    fun switchToVSCodeTheme(always: Boolean = false, selectedVSCodeTheme: VSCodeTheme = VSCodeTheme.DARK) {
+    fun switchToVSCodeTheme(always: Boolean = false, selectedVSCodeTheme: String = VSCodeTheme.DARK) {
         try {
             if (isVSCodeThemeReady()) {
                 val vscodeTheme =
-                    LafManager.getInstance().installedLookAndFeels.first { it.name == selectedVSCodeTheme.theme }
+                    LafManager.getInstance().installedLookAndFeels.first { it.name == selectedVSCodeTheme }
                 LafManager.getInstance().currentLookAndFeel = vscodeTheme
                 if (always) {
                     val settings = VSCodeThemeSettingsStore.instance

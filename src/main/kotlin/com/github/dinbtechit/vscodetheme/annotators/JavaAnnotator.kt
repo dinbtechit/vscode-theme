@@ -3,6 +3,7 @@ package com.github.dinbtechit.vscodetheme.annotators
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
+import com.intellij.psi.PsiKeyword
 import com.intellij.psi.PsiTypeElement
 import com.intellij.util.ObjectUtils
 
@@ -31,9 +32,11 @@ class JavaAnnotator : BaseAnnotator() {
             else -> {}
         }
 
-        when (element.parent) {
-            is PsiTypeElement -> type = TYPE_KEYWORD
-            else -> {}
+        if (element !is PsiKeyword) {
+            when (element.parent) {
+                is PsiTypeElement -> type = TYPE_KEYWORD
+                else -> {}
+            }
         }
 
         return type

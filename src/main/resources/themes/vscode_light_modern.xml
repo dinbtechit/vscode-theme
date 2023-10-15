@@ -1098,6 +1098,12 @@
                 <option name="BACKGROUND" value="ffffff"/>
             </value>
         </option>
+        <option name="PY.Jupyter.CLASS_REFERENCE">
+            <value>
+                <option name="FOREGROUND" value="267f99"/>
+                <option name="BACKGROUND" value="F7F8FA"/>
+            </value>
+        </option>
         <option name="PY.CLASS_DEFINITION">
             <value>
                 <option name="FOREGROUND" value="267f99"/>
@@ -1124,6 +1130,12 @@
                 <option name="BACKGROUND" value="ffffff"/>
             </value>
         </option>
+        <option name="PY.Jupyter.FUNCTION_CALL">
+            <value>
+                <option name="FOREGROUND" value="795e26"/>
+                <option name="BACKGROUND" value="F7F8FA"/>
+            </value>
+        </option>
         <option name="PY.FUNC_DEFINITION">
             <value>
                 <option name="FOREGROUND" value="795e26"/>
@@ -1133,6 +1145,12 @@
             <value>
                 <option name="FOREGROUND" value="277f99"/>
                 <option name="BACKGROUND" value="ffffff"/>
+            </value>
+        </option>
+        <option name="PY.Jupyter.IMPORTS">
+            <value>
+                <option name="FOREGROUND" value="277f99"/>
+                <option name="BACKGROUND" value="F7F8FA"/>
             </value>
         </option>
         <option name="PY.INVALID_STRING_ESCAPE">
@@ -1179,6 +1197,12 @@
             <value>
                 <option name="FOREGROUND" value="bf3be2"/>
                 <option name="BACKGROUND" value="ffffff"/>
+            </value>
+        </option>
+        <option name="PY.Jupyter.SECONDARY_KEYWORD_WITH_BG">
+            <value>
+                <option name="FOREGROUND" value="bf3be2"/>
+                <option name="BACKGROUND" value="F7F8FA"/>
             </value>
         </option>
         <option name="PY.STRING">

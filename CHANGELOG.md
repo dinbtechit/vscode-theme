@@ -4,6 +4,16 @@
 
 ## Unreleased
 
+### Changed
+- Removed Enum usage as it is not supported in PyCharm, CLion and RubyMine 2022.x.x
+- Upgrading Gradle - `8.1` to `8.3`
+
+### Fixed
+- #130 - VScode startup activity error - Specific to PyCharm, CLion and RubyMine.
+- #132 - Java -Wrong colors if there is extends or super keyword inside generic of generic.
+- #139 - Python Jupyter - Removed black background in Jupyter (Had to make a Temp fix might not be perfect.)
+- VSCode Light Theme - Toolbar background was white and hard to see the buttons.
+
 ## 1.10.3 - 2023-10-01
 
 ### Changed

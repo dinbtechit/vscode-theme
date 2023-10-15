@@ -980,6 +980,12 @@
                 <option name="BACKGROUND" value="1e1e1e"/>
             </value>
         </option>
+        <option name="PY.Jupyter.CLASS_REFERENCE">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0"/>
+                <option name="BACKGROUND" value="2B2D30"/>
+            </value>
+        </option>
         <option name="PY.DECORATOR">
             <value>
                 <option name="FOREGROUND" value="4ec9b0"/>
@@ -997,10 +1003,22 @@
                 <option name="FOREGROUND" value="47CCB1"/>
             </value>
         </option>
+        <option name="PY.Jupyter.IMPORTS">
+            <value>
+                <option name="FOREGROUND" value="47ccb1"/>
+                <option name="BACKGROUND" value="2B2D30"/>
+            </value>
+        </option>
         <option name="PY.FUNCTION_CALL">
             <value>
                 <option name="FOREGROUND" value="dbdbaa"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
+            </value>
+        </option>
+        <option name="PY.Jupyter.FUNCTION_CALL">
+            <value>
+                <option name="FOREGROUND" value="dbdbaa"/>
+                <option name="BACKGROUND" value="2B2D30"/>
             </value>
         </option>
         <option name="PY.KEYWORD_ARGUMENT">
@@ -1027,6 +1045,12 @@
             <value>
                 <option name="FOREGROUND" value="c586C0"/>
                 <option name="BACKGROUND" value="1e1e1e"/>
+            </value>
+        </option>
+        <option name="PY.Jupyter.SECONDARY_KEYWORD_WITH_BG">
+            <value>
+                <option name="FOREGROUND" value="c586C0"/>
+                <option name="BACKGROUND" value="2B2D30"/>
             </value>
         </option>
         <option name="PY.SELF_PARAMETER">
