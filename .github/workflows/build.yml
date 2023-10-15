@@ -45,7 +45,7 @@ jobs:
           sudo apt-get remove -y 'php.*' || true
           sudo apt-get remove -y '^mongodb-.*' || true
           sudo apt-get remove -y '^mysql-.*' || true
-          sudo apt-get autoremove -y | true
+          sudo apt-get autoremove -y || true
           sudo apt-get clean
           df -h
           echo "Removing large directories"
