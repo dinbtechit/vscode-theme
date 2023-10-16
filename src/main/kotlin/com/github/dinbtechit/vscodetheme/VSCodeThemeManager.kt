@@ -47,8 +47,9 @@ class VSCodeThemeManager {
     fun switchToVSCodeTheme(always: Boolean = false, selectedVSCodeTheme: String = VSCodeTheme.DARK) {
         try {
             if (isVSCodeThemeReady()) {
+                val convertedSelectedVSCodeTheme = convertOldToNewTheme(selectedVSCodeTheme)
                 val vscodeTheme =
-                    LafManager.getInstance().installedLookAndFeels.first { it.name == selectedVSCodeTheme }
+                    LafManager.getInstance().installedLookAndFeels.first { it.name == convertedSelectedVSCodeTheme }
                 LafManager.getInstance().currentLookAndFeel = vscodeTheme
                 if (always) {
                     val settings = VSCodeThemeSettingsStore.instance
@@ -59,5 +60,14 @@ class VSCodeThemeManager {
         } catch (e: Exception) {
             throw(Error("Unable to select the default theme $selectedVSCodeTheme", e))
         }
+    }
+
+    private fun convertOldToNewTheme(theme: String): String {
+        return when (theme) {
+            "DARK_MODERN" -> "VSCode Dark Modern"
+            "DARK" -> "VSCode Dark"
+            else -> theme
+        }
+
     }
 }

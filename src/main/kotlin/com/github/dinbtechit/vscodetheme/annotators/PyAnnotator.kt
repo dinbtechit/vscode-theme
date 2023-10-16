@@ -1,6 +1,7 @@
 package com.github.dinbtechit.vscodetheme.annotators
 
 
+import com.intellij.lang.Language
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
@@ -10,7 +11,6 @@ import com.jetbrains.python.psi.*
 import com.jetbrains.python.psi.impl.PyImportedModule
 import com.jetbrains.python.psi.impl.references.PyImportReference
 import com.jetbrains.python.psi.impl.stubs.PyClassElementType
-import org.jetbrains.plugins.notebooks.jupyter.python.JupyterPyDialect
 
 
 class PyAnnotator : BaseAnnotator() {
@@ -110,8 +110,7 @@ class PyAnnotator : BaseAnnotator() {
 
     private fun isJupyterNoteBook(element: PsiElement): Boolean {
          return element.containingFile.name.contains(".ipynb")
-                    || element.containingFile.language.displayName == JupyterPyDialect.displayName
-
+                 || element.containingFile.language == Language.findLanguageByID("JupyterPython")
     }
 
 }
