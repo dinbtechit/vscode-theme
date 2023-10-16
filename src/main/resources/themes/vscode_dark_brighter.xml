@@ -16,16 +16,9 @@
         <option name="RIGHT_MARGIN_COLOR" value="3b3b3b"/>
         <option name="SELECTION_BACKGROUND" value="264e77"/>
         <option name="VISUAL_INDENT_GUIDE" value="3b3b3b"/>
+        <option name="JUPYTER.CODE_CELL_BACKGROUND" value="292929"/>
     </colors>
     <attributes>
-        <option name="JUPYTER.CELL_UNDER_CARET_COMMAND_MODE_STRIPE_COLOR" value="FF9800"/>
-        <option name="JUPYTER.CELL_UNDER_CARET_EDITOR_MODE_STRIPE_COLOR" value="3F3F3F"/>
-        <option name="JUPYTER.CODE_CELL_BACKGROUND" value="292929"/>
-        <option name="JUPYTER.GUTTER_INPUT_EXECUTION_COUNT" value="f78c6c"/>
-        <option name="JUPYTER.GUTTER_OUTPUT_EXECUTION_COUNT" value="80cbc4"/>
-        <option name="JUPYTER.PROGRESS_STATUS_RUNNING_COLOR" value="FF9800"/>
-        <option name="JUPYTER.SAUSAGE_BUTTON_BORDER_COLOR" value="292929"/>
-        <option name="JUPYTER.SAUSAGE_BUTTON_SHORTCUT_COLOR" value="727272"/>
         <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
             <value>
                 <option name="FOREGROUND" value="8cd7ff"/>
