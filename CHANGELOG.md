@@ -3,7 +3,11 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.10.6 - 2023-10-16
+
 ### Fixed
+
 - #139 - Python Jupyter - Removed black background in Jupyter (Had to make a Temp fix might not be perfect.)
 
 ## 1.10.5 - 2023-10-16
