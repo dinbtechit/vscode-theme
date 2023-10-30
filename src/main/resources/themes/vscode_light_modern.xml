@@ -9,6 +9,8 @@
     <colors>
         <option name="GUTTER_BACKGROUND" value="ffffff"/>
         <option name="LINE_NUMBERS_COLOR" value="3b3b3b"/>
+        <option name="SELECTION_BACKGROUND" value="a6d2ff" />
+        <option name="SELECTION_FOREGROUND" value="" />
     </colors>
     <attributes>
         <option name="BAD_CHARACTER">
