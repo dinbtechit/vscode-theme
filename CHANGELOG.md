@@ -4,6 +4,13 @@
 
 ## Unreleased
 
+### Fixed
+- [#159](https://github.com/dinbtechit/vscode-theme/issues/159) by @trofoto
+
+### Changed
+- @trofoto - Added colors const for following official light theme style 
+- @trofoto - change several selection-about colors, including selection color in editor, global selection background color and foreground color. It's more compatible with the Intellij Light theme, also closer with VS code light theme;
+
 ## 1.10.6 - 2023-10-16
 
 ### Fixed
