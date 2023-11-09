@@ -4,6 +4,10 @@
 
 ## Unreleased
 
+### Fixed:
+- VScode Light Modern — The icon color of RunWidge is too light to see; by @trofoto
+- VScode Light Modern — The background color of RecentProject is too dark. by @trofoto
+
 ## 1.10.7 - 2023-10-30
 
 ### Fixed
