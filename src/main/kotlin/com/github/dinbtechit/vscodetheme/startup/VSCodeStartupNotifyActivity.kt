@@ -10,7 +10,6 @@ import com.github.dinbtechit.vscodetheme.icons.VSCodeIcons
 import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
 import com.intellij.ide.plugins.IdeaPluginDescriptor
 import com.intellij.ide.plugins.PluginManagerCore
-import com.intellij.ide.ui.LafManager
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
@@ -31,7 +30,6 @@ object DisplayActionType {
 }
 
 class VSCodeStartupNotifyActivity : StartupActivity {
-
 
 
     private val updateContent: String by lazy {
@@ -84,7 +82,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
             }
         }
         // Uncomment for Testing popup
-        // showNotificationPopup(project)
+        showNotificationPopup(project)
 
     }
 
@@ -97,10 +95,6 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         }
     }
 
-    private fun isVSCodeThemeSelected() = LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK
-    private fun isVSCodeDarkModernThemeSelected() =
-        LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK_MODERN
-
     private fun showNotificationPopup(project: Project) {
         Util.notification = createNotification(
             updateMsg(),
@@ -111,10 +105,12 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     }
 
     private fun notificationContent(): String {
-        if (!isVSCodeThemeSelected() && !isVSCodeDarkModernThemeSelected()) {
+        if (!VSCodeThemeManager.getInstance().isVSCodeThemeSelected() && !VSCodeThemeManager.getInstance()
+                .isVSCodeDarkModernThemeSelected()
+        ) {
             Util.displayActionType = DisplayActionType.SHOW_ALL_THEMES_FOR_DEFAULT
             return switchThemeQuestion
-        } else if (isVSCodeThemeSelected()) {
+        } else if (VSCodeThemeManager.getInstance().isVSCodeThemeSelected()) {
             Util.displayActionType = DisplayActionType.SHOW_NEW_DARK_MODERN_THEME
             return tryNewDarkModernThemeQuestion
         }

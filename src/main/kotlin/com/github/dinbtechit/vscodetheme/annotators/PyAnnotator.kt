@@ -7,6 +7,7 @@ import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
 import com.intellij.psi.util.elementType
 import com.intellij.util.ObjectUtils
+import com.jetbrains.python.PyTokenTypes
 import com.jetbrains.python.psi.*
 import com.jetbrains.python.psi.impl.PyImportedModule
 import com.jetbrains.python.psi.impl.references.PyImportReference
@@ -103,6 +104,10 @@ class PyAnnotator : BaseAnnotator() {
             "async", "await" -> type = if(isJupyterNoteBook(element)) SECONDARY_KEYWORD_WITH_BG_JUPYTER
             else SECONDARY_KEYWORD_WITH_BG
             else -> {}
+        }
+
+        when(element.elementType) {
+            PyTokenTypes.RETURN_KEYWORD -> type = SECONDARY_KEYWORD
         }
 
         return type

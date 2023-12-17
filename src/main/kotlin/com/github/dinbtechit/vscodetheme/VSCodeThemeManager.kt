@@ -4,7 +4,12 @@ import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
 import com.intellij.ide.plugins.IdeaPluginDescriptor
 import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.ide.ui.LafManager
+import com.intellij.ide.ui.LafManagerListener
+import com.intellij.ide.ui.ThemeListProvider
+import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.extensions.PluginId
+import com.intellij.util.ui.JBUI
+import com.jetbrains.rd.util.string.printToString
 
 /*enum class VSCodeTheme(val theme: String) {
     UNKNOWN("UNKNOWN"),
@@ -35,7 +40,7 @@ class VSCodeThemeManager {
         try {
             if (getPlugin()?.isEnabled != null) {
                 val vscodeTheme =
-                    LafManager.getInstance().installedLookAndFeels.first { it.name == VSCodeTheme.DARK }
+                    LafManager.getInstance().installedThemes.firstOrNull { it.toString().contains(VSCodeTheme.DARK) }
                 return vscodeTheme != null
             }
             return false
@@ -49,8 +54,11 @@ class VSCodeThemeManager {
             if (isVSCodeThemeReady()) {
                 val convertedSelectedVSCodeTheme = convertOldToNewTheme(selectedVSCodeTheme)
                 val vscodeTheme =
-                    LafManager.getInstance().installedLookAndFeels.first { it.name == convertedSelectedVSCodeTheme }
-                LafManager.getInstance().currentLookAndFeel = vscodeTheme
+                    LafManager.getInstance().installedThemes.firstOrNull { it.toString().contains(convertedSelectedVSCodeTheme) }
+
+                if (vscodeTheme != null) {
+                    LafManager.getInstance().currentUIThemeLookAndFeel = vscodeTheme
+                }
                 if (always) {
                     val settings = VSCodeThemeSettingsStore.instance
                     settings.alwaysApply = true
@@ -58,8 +66,21 @@ class VSCodeThemeManager {
                 }
             }
         } catch (e: Exception) {
-            throw(Error("Unable to select the default theme $selectedVSCodeTheme", e))
+            throw (Error("Unable to select the default theme $selectedVSCodeTheme", e))
         }
+    }
+
+    fun isVSCodeThemeSelected(): Boolean {
+        val theme = LafManager.getInstance().currentUIThemeLookAndFeel
+        if (theme != null) {
+            return theme.toString().contains(VSCodeTheme.DARK) && !theme.toString().contains("Modern")
+        }
+        return false
+    }
+
+    fun isVSCodeDarkModernThemeSelected(): Boolean {
+        val theme = LafManager.getInstance().currentUIThemeLookAndFeel
+        return theme?.toString()?.contains(VSCodeTheme.DARK_MODERN) ?: false
     }
 
     private fun convertOldToNewTheme(theme: String): String {
