@@ -10,8 +10,6 @@ import com.github.dinbtechit.vscodetheme.icons.VSCodeIcons
 import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
 import com.intellij.ide.plugins.IdeaPluginDescriptor
 import com.intellij.ide.plugins.PluginManagerCore
-import com.intellij.ide.ui.LafManager
-import com.intellij.ide.ui.laf.UIThemeLookAndFeelInfoImpl
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
@@ -19,7 +17,6 @@ import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.extensions.PluginId
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.StartupActivity
-import com.intellij.openapi.application.ApplicationInfo
 
 /*enum class DisplayActionType {
     DONATION_ONLY,
@@ -98,20 +95,6 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         }
     }
 
-    private fun isVSCodeThemeSelected(): Boolean {
-        val currentIDEVersion = ApplicationInfo.getInstance().build
-        val targetIDEVersion = com.intellij.openapi.util.BuildNumber.fromString("2023.3")
-        print(currentIDEVersion)
-        print(targetIDEVersion)
-        /* if (currentIDEVersion.compareTo(targetIDEVersion) <= 0) {
-             return LafManager.getInstance().currentUIThemeLookAndFeel.name == VSCodeTheme.DARK
-         }*/
-        return (LafManager.getInstance().currentUIThemeLookAndFeel as UIThemeLookAndFeelInfoImpl).theme.name == VSCodeTheme.DARK
-    }
-
-    private fun isVSCodeDarkModernThemeSelected() =
-        (LafManager.getInstance().currentUIThemeLookAndFeel as UIThemeLookAndFeelInfoImpl).theme.name == VSCodeTheme.DARK_MODERN
-
     private fun showNotificationPopup(project: Project) {
         Util.notification = createNotification(
             updateMsg(),
@@ -122,10 +105,12 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     }
 
     private fun notificationContent(): String {
-        if (!isVSCodeThemeSelected() && !isVSCodeDarkModernThemeSelected()) {
+        if (!VSCodeThemeManager.getInstance().isVSCodeThemeSelected() && !VSCodeThemeManager.getInstance()
+                .isVSCodeDarkModernThemeSelected()
+        ) {
             Util.displayActionType = DisplayActionType.SHOW_ALL_THEMES_FOR_DEFAULT
             return switchThemeQuestion
-        } else if (isVSCodeThemeSelected()) {
+        } else if (VSCodeThemeManager.getInstance().isVSCodeThemeSelected()) {
             Util.displayActionType = DisplayActionType.SHOW_NEW_DARK_MODERN_THEME
             return tryNewDarkModernThemeQuestion
         }
