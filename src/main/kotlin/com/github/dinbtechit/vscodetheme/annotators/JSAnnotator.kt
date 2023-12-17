@@ -1,12 +1,13 @@
 package com.github.dinbtechit.vscodetheme.annotators
 
-import com.intellij.lang.ecmascript6.psi.ES6FromClause
 import com.intellij.lang.ecmascript6.psi.ES6ImportSpecifier
 import com.intellij.lang.ecmascript6.psi.ES6ImportedBinding
+import com.intellij.lang.javascript.JSTokenTypes
 import com.intellij.lang.javascript.psi.JSLoopStatement
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
+import com.intellij.psi.util.elementType
 import com.intellij.util.ObjectUtils
 
 class JSAnnotator : BaseAnnotator() {
@@ -42,15 +43,23 @@ class JSAnnotator : BaseAnnotator() {
     override fun getKeywordType(element: PsiElement): TextAttributesKey? {
         var type: TextAttributesKey? = null
         when (element.text) {
-            "package", "export", "import", "require", "module", "return" -> type = SECONDARY_KEYWORDS
-            "await" -> type = SECONDARY_KEYWORDS_WITH_BG
-             "try", "throw", "catch", "finally", "yield", "break", "continue", "with",
-            "if", "else", "switch", "case", "default" -> type = SECONDARY_KEYWORDS
-            "for", "while", "do" -> if (element.context is JSLoopStatement) type = SECONDARY_KEYWORDS
-            "from" -> if (element.parent is ES6FromClause) type = FROM_KEYWORD
             "null", "undefined" -> type = JS_NULL
             "console" -> type = JS_KEYWORD
             else -> {}
+        }
+
+        when (element.elementType) {
+            JSTokenTypes.PACKAGE_KEYWORD, JSTokenTypes.EXPORT_KEYWORD, JSTokenTypes.IMPORT_KEYWORD,
+            JSTokenTypes.REQUIRE_KEYWORD, JSTokenTypes.MODULE_KEYWORD, JSTokenTypes.RETURN_KEYWORD,
+            JSTokenTypes.TRY_KEYWORD, JSTokenTypes.THROW_KEYWORD, JSTokenTypes.CATCH_KEYWORD,
+            JSTokenTypes.FINALLY_KEYWORD, JSTokenTypes.YIELD_KEYWORD, JSTokenTypes.BREAK_KEYWORD,
+            JSTokenTypes.IF_KEYWORD, JSTokenTypes.ELSE_KEYWORD, JSTokenTypes.SWITCH_KEYWORD,
+            JSTokenTypes.CASE_KEYWORD, JSTokenTypes.DEFAULT_KEYWORD,
+            JSTokenTypes.CONTINUE_KEYWORD, JSTokenTypes.WITH_KEYWORD,
+            JSTokenTypes.FROM_KEYWORD, JSTokenTypes.AWAIT_KEYWORD -> type = SECONDARY_KEYWORDS
+
+            JSTokenTypes.FOR_KEYWORD, JSTokenTypes.WHILE_KEYWORD,
+            JSTokenTypes.DO_KEYWORD -> if (element.context is JSLoopStatement) type = SECONDARY_KEYWORDS
         }
 
         when (element.parent) {

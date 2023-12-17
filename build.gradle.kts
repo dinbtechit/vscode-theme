@@ -1,3 +1,4 @@
+
 import org.jetbrains.changelog.Changelog
 import org.jetbrains.changelog.markdownToHTML
 
@@ -11,6 +12,7 @@ plugins {
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
     alias(libs.plugins.qodana) // Gradle Qodana Plugin
     alias(libs.plugins.kover) // Gradle Kover Plugin
+    id("org.jetbrains.grammarkit") version "2021.2.2"
 }
 
 group = properties("pluginGroup").get()
@@ -20,6 +22,7 @@ version = properties("pluginVersion").get()
 repositories {
     mavenCentral()
 }
+sourceSets["main"].java.srcDirs("src/main/gen")
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
@@ -28,7 +31,11 @@ dependencies {
 
 // Set the JVM language level used to build the project. Use Java 11 for 2020.3+, and Java 17 for 2022.2+.
 kotlin {
-    jvmToolchain(17)
+    @Suppress("UnstableApiUsage")
+    jvmToolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+        vendor = JvmVendorSpec.JETBRAINS
+    }
 }
 
 // Configure Gradle IntelliJ Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
@@ -36,7 +43,7 @@ intellij {
     pluginName = properties("pluginName")
     version = properties("platformVersion")
     type = properties("platformType")
-
+    downloadSources = true
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins = properties("platformPlugins").map { it.split(',').map(String::trim).filter(String::isNotEmpty) }
 }
@@ -68,6 +75,21 @@ tasks {
     wrapper {
         gradleVersion = properties("gradleVersion").get()
     }
+
+/*    generateLexer {
+        source.set("src/main/kotlin/com/github/dinbtechit/vscodetheme/languages/dart/grammar/_DartLexer.flex")
+        targetDir.set("src/main/gen/com/github/dinbtechit/vscodetheme/languages/dart/grammar")
+        targetClass.set("_DartLexer")
+        purgeOldFiles.set(true)
+    }
+
+    generateParser {
+        source.set("src/main/kotlin/com/github/dinbtechit/vscodetheme/languages/dart/grammar/dart.bnf")
+        targetRoot.set("src/main/gen")
+        pathToParser.set("/com/github/dinbtechit/vscodetheme/languages/dart/grammar/_DartLexer.java")
+        pathToPsiRoot.set("/com/github/dinbtechit/vscodetheme/languages/dart/psi")
+        purgeOldFiles.set(true)
+    }*/
 
     patchPluginXml {
         version = properties("pluginVersion")

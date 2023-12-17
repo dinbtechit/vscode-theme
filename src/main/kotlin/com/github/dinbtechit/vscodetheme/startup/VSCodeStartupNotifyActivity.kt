@@ -11,6 +11,7 @@ import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
 import com.intellij.ide.plugins.IdeaPluginDescriptor
 import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.ide.ui.LafManager
+import com.intellij.ide.ui.laf.UIThemeLookAndFeelInfoImpl
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
@@ -18,6 +19,7 @@ import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.extensions.PluginId
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.StartupActivity
+import com.intellij.openapi.application.ApplicationInfo
 
 /*enum class DisplayActionType {
     DONATION_ONLY,
@@ -31,7 +33,6 @@ object DisplayActionType {
 }
 
 class VSCodeStartupNotifyActivity : StartupActivity {
-
 
 
     private val updateContent: String by lazy {
@@ -84,7 +85,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
             }
         }
         // Uncomment for Testing popup
-        // showNotificationPopup(project)
+        showNotificationPopup(project)
 
     }
 
@@ -97,9 +98,19 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         }
     }
 
-    private fun isVSCodeThemeSelected() = LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK
+    private fun isVSCodeThemeSelected(): Boolean {
+        val currentIDEVersion = ApplicationInfo.getInstance().build
+        val targetIDEVersion = com.intellij.openapi.util.BuildNumber.fromString("2023.3")
+        print(currentIDEVersion)
+        print(targetIDEVersion)
+        /* if (currentIDEVersion.compareTo(targetIDEVersion) <= 0) {
+             return LafManager.getInstance().currentUIThemeLookAndFeel.name == VSCodeTheme.DARK
+         }*/
+        return (LafManager.getInstance().currentUIThemeLookAndFeel as UIThemeLookAndFeelInfoImpl).theme.name == VSCodeTheme.DARK
+    }
+
     private fun isVSCodeDarkModernThemeSelected() =
-        LafManager.getInstance().currentLookAndFeel.name == VSCodeTheme.DARK_MODERN
+        (LafManager.getInstance().currentUIThemeLookAndFeel as UIThemeLookAndFeelInfoImpl).theme.name == VSCodeTheme.DARK_MODERN
 
     private fun showNotificationPopup(project: Project) {
         Util.notification = createNotification(

@@ -1,7 +1,8 @@
 <idea-plugin>
     <extensions defaultExtensionNs="com.intellij">
-        <annotator language="Dart" order="last"
+        <annotator language="Dart" order="first"
                    implementationClass="com.github.dinbtechit.vscodetheme.annotators.DartAnnotator"/>
         <colorSettingsPage order="last" implementation="com.github.dinbtechit.vscodetheme.annotators.settings.DartColorSettingsPage"/>
+
     </extensions>
 </idea-plugin>
