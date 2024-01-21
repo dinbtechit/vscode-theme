@@ -3,7 +3,11 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.10.9 - 2024-01-21
+
 ### Fixed:
+
 - Removed internal APIs - So we can release v1.10.8
 
 ## 1.10.8 - 2023-12-17
