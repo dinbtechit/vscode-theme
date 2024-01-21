@@ -4,12 +4,8 @@ import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
 import com.intellij.ide.plugins.IdeaPluginDescriptor
 import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.ide.ui.LafManager
-import com.intellij.ide.ui.LafManagerListener
-import com.intellij.ide.ui.ThemeListProvider
-import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.extensions.PluginId
-import com.intellij.util.ui.JBUI
-import com.jetbrains.rd.util.string.printToString
+import com.intellij.util.containers.ContainerUtil
 
 /*enum class VSCodeTheme(val theme: String) {
     UNKNOWN("UNKNOWN"),
@@ -40,7 +36,7 @@ class VSCodeThemeManager {
         try {
             if (getPlugin()?.isEnabled != null) {
                 val vscodeTheme =
-                    LafManager.getInstance().installedThemes.firstOrNull { it.toString().contains(VSCodeTheme.DARK) }
+                    LafManager.getInstance().installedLookAndFeels.firstOrNull { it.toString().contains(VSCodeTheme.DARK) }
                 return vscodeTheme != null
             }
             return false
@@ -53,11 +49,12 @@ class VSCodeThemeManager {
         try {
             if (isVSCodeThemeReady()) {
                 val convertedSelectedVSCodeTheme = convertOldToNewTheme(selectedVSCodeTheme)
-                val vscodeTheme =
-                    LafManager.getInstance().installedThemes.firstOrNull { it.toString().contains(convertedSelectedVSCodeTheme) }
 
+                val vscodeTheme =
+                    LafManager.getInstance().installedLookAndFeels.firstOrNull { it.toString().contains(convertedSelectedVSCodeTheme) }
+                ContainerUtil.find(LafManager.getInstance().installedLookAndFeels) { it.name === convertedSelectedVSCodeTheme}
                 if (vscodeTheme != null) {
-                    LafManager.getInstance().currentUIThemeLookAndFeel = vscodeTheme
+                    LafManager.getInstance().currentLookAndFeel = vscodeTheme
                 }
                 if (always) {
                     val settings = VSCodeThemeSettingsStore.instance
@@ -71,7 +68,7 @@ class VSCodeThemeManager {
     }
 
     fun isVSCodeThemeSelected(): Boolean {
-        val theme = LafManager.getInstance().currentUIThemeLookAndFeel
+        val theme = LafManager.getInstance().currentLookAndFeel
         if (theme != null) {
             return theme.toString().contains(VSCodeTheme.DARK) && !theme.toString().contains("Modern")
         }
@@ -79,9 +76,11 @@ class VSCodeThemeManager {
     }
 
     fun isVSCodeDarkModernThemeSelected(): Boolean {
-        val theme = LafManager.getInstance().currentUIThemeLookAndFeel
+        val theme = LafManager.getInstance().currentLookAndFeel
         return theme?.toString()?.contains(VSCodeTheme.DARK_MODERN) ?: false
     }
+
+
 
     private fun convertOldToNewTheme(theme: String): String {
         return when (theme) {
@@ -89,6 +88,5 @@ class VSCodeThemeManager {
             "DARK" -> "VSCode Dark"
             else -> theme
         }
-
     }
 }

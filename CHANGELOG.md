@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## Unreleased
+### Fixed:
+- Removed internal APIs - So we can release v1.10.8
 
 ### Fixed:
 - VScode Light Modern — The icon color of RunWidge is too light to see; by @trofoto
