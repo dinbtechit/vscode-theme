@@ -44,7 +44,7 @@
     "Green7": "#89C398",
     "Green8": "#AFDBB8",
     "Green9": "#C5E5CC",
-    "Green10": "#E6F7E9",
+    "Green10": "#E3F7E7",
     "Green11": "#F2FCF3",
 
     "Yellow1": "#A46704",
@@ -55,7 +55,7 @@
     "Yellow6": "#FED277",
     "Yellow7": "#FEE6B1",
     "Yellow8": "#FFF1D1",
-    "Yellow9": "#FFF6DE",
+    "Yellow9": "#FFF5DB",
     "Yellow10": "#FFFAEB",
 
     "Red1": "#AD2B38",
@@ -67,8 +67,9 @@
     "Red7": "#ED99A1",
     "Red8": "#F2B6BB",
     "Red9": "#FAD4D8",
-    "Red10": "#FFF2F3",
-    "Red11": "#FFF7F7",
+    "Red10": "#FFEBEC",
+    "Red11": "#FFF2F3",
+    "Red12": "#FFF7F7",
 
     "Orange1": "#A14916",
     "Orange2": "#B85516",
@@ -77,7 +78,7 @@
     "Orange5": "#EC8F4C",
     "Orange6": "#F2B181",
     "Orange7": "#F9D2B6",
-    "Orange8": "#FCE6D6",
+    "Orange8": "#FFEFE3",
     "Orange9": "#FFF4EB",
 
     "Teal1": "#096A6E",
@@ -98,7 +99,8 @@
     "Purple6": "#BFA1F8",
     "Purple7": "#DCCBFB",
     "Purple8": "#EFE5FF",
-    "Purple9": "#FAF5FF"
+    "Purple9": "#F5EDFF",
+    "Purple10": "#FAF5FF"
   },
 
   "ui": {
@@ -113,7 +115,24 @@
     },
 
     "Editor": {
-      "background": "#FFFFFF"
+      "SearchField" : {
+        "background": "Grey14"
+      },
+      "Toolbar" : {
+        "borderColor" : "Grey12"
+      },
+      "ToolTip": {
+        "foreground": "Grey1",
+        "background": "Grey14",
+        "border": "Grey9",
+        "errorBackground": "Red12",
+        "errorBorder": "Red9",
+        "successBackground": "Green11",
+        "successBorder": "Green8",
+        "warningBackground": "Yellow9",
+        "warningBorder": "Yellow6",
+        "selectionBackground": "Grey12"
+      }
     },
 
     "SearchMatch": {
