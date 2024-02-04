@@ -4,6 +4,11 @@
 
 ## Unreleased
 
+### Fixed
+
+- VScode Light Modern — fix xml foreground color purple to blue(0000ff same as VSCode) by @trofoto
+- VScode Light Modern — fix the colors of tooltip in the editor, especially the background color with same color with text by @trofoto
+
 ## 1.10.9 - 2024-01-21
 
 ### Fixed:
