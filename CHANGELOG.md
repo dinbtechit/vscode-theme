@@ -4,6 +4,8 @@
 
 ## Unreleased
 
+## 1.10.10 - 2024-02-04
+
 ### Fixed
 
 - VScode Light Modern — fix xml foreground color purple to blue(0000ff same as VSCode) by @trofoto
