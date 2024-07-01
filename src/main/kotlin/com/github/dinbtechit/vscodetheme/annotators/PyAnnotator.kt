@@ -98,7 +98,7 @@ class PyAnnotator : BaseAnnotator() {
         when (element.text) {
             "import", "as", "in",
             "continue", "del", "assert", "break", "finally", "for", "from",
-            "elif", "else", "if", "except", "pass", "raise", "return", "try", "while",
+            "elif", "else", "if", "except", "pass", "raise", "return", "try", "while", "yield",
             "with" -> type = SECONDARY_KEYWORD
             "self" -> type = DEFAULT_KEYWORD
             "async", "await" -> type = if(isJupyterNoteBook(element)) SECONDARY_KEYWORD_WITH_BG_JUPYTER
