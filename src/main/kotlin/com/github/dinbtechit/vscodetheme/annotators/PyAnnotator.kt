@@ -97,7 +97,7 @@ class PyAnnotator : BaseAnnotator() {
 
         when (element.text) {
             "import", "as", "in",
-            "continue", "del", "assert", "break", "finally", "for", "from",
+            "continue", "del", "assert", "break", "finally", "for", "from", "yield",
             "elif", "else", "if", "except", "pass", "raise", "return", "try", "while",
             "with" -> type = SECONDARY_KEYWORD
             "self" -> type = DEFAULT_KEYWORD
