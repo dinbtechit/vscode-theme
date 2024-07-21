@@ -4,6 +4,9 @@
 
 ## Unreleased
 
+## Changed
+- Syncing with Template Changes - Upgrading to latest version of Intellij
+
 ## 1.10.10 - 2024-02-04
 
 ### Fixed
