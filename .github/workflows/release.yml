@@ -18,7 +18,7 @@ jobs:
       pull-requests: write
     steps:
 
-      # Check out current repository
+      # Check out the current repository
       - name: Fetch Sources
         uses: actions/checkout@v4
         with:
@@ -33,7 +33,7 @@ jobs:
 
       # Setup Gradle
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/actions/setup-gradle@v3
         with:
           gradle-home-cache-cleanup: true
 

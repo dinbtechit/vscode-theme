@@ -3,6 +3,10 @@
 # vscode-theme Changelog
 
 ## Unreleased
+### Fixed
+- 194 - Fixing Yield key word for Pycharm
+### Changed
+- Syncing with Template Changes - Upgrading to latest version of Intellij
 
 ## 1.10.10 - 2024-02-04
 
