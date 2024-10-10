@@ -18,10 +18,10 @@ class CSharpAnnotator : BaseAnnotator() {
     override fun getKeywordType(element: PsiElement): TextAttributesKey? {
         var type: TextAttributesKey? = null
         when (element.text) {
-            "return" -> type = SECONDARY_KEYWORD
+            "return", "yield" -> type = SECONDARY_KEYWORD
             "if", "else", "switch", "case", "default", "break", "continue" -> type = SECONDARY_KEYWORD
             "try", "catch", "finally", "throw" -> type = SECONDARY_KEYWORD
-            "for", "while", "do" -> type = SECONDARY_KEYWORD
+            "for", "while", "do", "foreach" -> type = SECONDARY_KEYWORD
             else -> {}
         }
         return type
