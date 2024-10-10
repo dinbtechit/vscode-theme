@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## Unreleased
+### Added
+- CSharp - Adding yield and foreach to provide secondary color.
 
 ## 1.10.11 - 2024-07-21
 
