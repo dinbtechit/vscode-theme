@@ -3,6 +3,8 @@
 # vscode-theme Changelog
 
 ## Unreleased
+### Fixed
+- #201 - Rust mut keyword inconsistent colors
 
 ## 1.10.12 - 2024-10-26
 

@@ -22,7 +22,7 @@ class RustAnnotator : BaseAnnotator() {
     override fun getKeywordType(element: PsiElement): TextAttributesKey? {
         var type: TextAttributesKey? = null
         when (element.text) {
-            "mut", "match","return" -> type = SECONDARY_KEYWORD
+            "match","return" -> type = SECONDARY_KEYWORD
             "if", "else", "switch", "case", "default", "break", "continue", "as" -> type = SECONDARY_KEYWORD
             "try", "catch", "finally", "throw" -> type = SECONDARY_KEYWORD
             "for", "while", "loop", "in" -> type = SECONDARY_KEYWORD
