@@ -5,6 +5,8 @@
 ## Unreleased
 ### Fixed
 - #201 - Rust mut keyword inconsistent colors
+### Added
+- Init Ruby Annotator
 
 ## 1.10.12 - 2024-10-26
 
