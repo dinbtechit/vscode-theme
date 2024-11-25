@@ -193,8 +193,8 @@
       "background": "#181818",
       "SidePanel.background": "#1e1e1e",
       "borderColor": "#ffffff12",
-      "Projects.background": "#181818",
-      "Projects.actions.background": "#225DA1"
+      "Projects.background": "#1e1e1e",
+      "Projects.actions.background": "#1e1e1e"
     }
   }
 }

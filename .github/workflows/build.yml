@@ -86,7 +86,7 @@ jobs:
 
       # Setup Gradle
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
         with:
           gradle-home-cache-cleanup: true
 
@@ -105,8 +105,6 @@ jobs:
           echo "changelog<<EOF" >> $GITHUB_OUTPUT
           echo "$CHANGELOG" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-
-          ./gradlew listProductsReleases # prepare list of IDEs for Plugin Verifier
 
       # Build plugin
       - name: Build plugin
@@ -150,9 +148,7 @@ jobs:
 
       # Setup Gradle
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-home-cache-cleanup: true
+        uses: gradle/actions/setup-gradle@v4
 
       # Run tests
       - name: Run Tests
@@ -193,6 +189,9 @@ jobs:
       # Check out the current repository
       - name: Fetch Sources
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}  # to check out the actual pull request commit, not the merge commit
+          fetch-depth: 0  # a full history is required for pull request analysis
 
       # Set up Java environment for the next steps
       - name: Setup Java
@@ -203,7 +202,7 @@ jobs:
 
       # Run Qodana inspections
       - name: Qodana - Code Inspection
-        uses: JetBrains/qodana-action@v2024.1.5
+        uses: JetBrains/qodana-action@v2024.2
         with:
           cache-default-branch-only: true
 
@@ -212,7 +211,6 @@ jobs:
     name: Verify plugin
     needs: [ build ]
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
 
       # Free GitHub Actions Environment Disk Space
@@ -235,9 +233,7 @@ jobs:
 
       # Setup Gradle
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-home-cache-cleanup: true
+        uses: gradle/actions/setup-gradle@v4
 
       # Cache Plugin Verifier IDEs
       - name: Setup Plugin Verifier IDEs Cache
@@ -248,7 +244,7 @@ jobs:
 
       # Run Verify Plugin task and IntelliJ Plugin Verifier tool
       - name: Run Plugin Verification tasks
-        run: ./gradlew runPluginVerifier -Dplugin.verifier.home.dir=${{ needs.build.outputs.pluginVerifierHomeDir }}
+        run: ./gradlew verifyPlugin -Dplugin.verifier.home.dir=${{ needs.build.outputs.pluginVerifierHomeDir }}
 
       # Collect Plugin Verifier Result
       - name: Collect Plugin Verifier Result

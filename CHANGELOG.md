@@ -4,6 +4,21 @@
 
 ## Unreleased
 
+## 1.10.13 - 2024-11-23
+
+### Added
+
+- Init Ruby Annotator
+
+### Fixed
+
+- #201 - Rust mut keyword inconsistent colors
+- Welcome screen - Project actions - background fixed
+
+### Changed
+
+- Updating library versions and syncing with template
+
 ## 1.10.12 - 2024-10-26
 
 ### Added
