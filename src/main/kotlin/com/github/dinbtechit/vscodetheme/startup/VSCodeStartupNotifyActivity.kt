@@ -1,7 +1,7 @@
 package com.github.dinbtechit.vscodetheme.startup
 
 import com.github.dinbtechit.vscodetheme.VSCodeThemeManager
-import com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction
+
 import com.github.dinbtechit.vscodetheme.actions.DonateAction
 import com.github.dinbtechit.vscodetheme.actions.StarGithubRepoAction
 import com.github.dinbtechit.vscodetheme.actions.WhatsNewAction
@@ -95,7 +95,6 @@ class VSCodeStartupNotifyActivity : ProjectActivity {
             .createNotification(content, type)
             .setTitle(title)
             .setIcon(VSCodeIcons.Logo)
-            .addAction(AlwaysApplyThemeAction(text = "Themes"))
             .addAction(DonateAction())
             .addAction(StarGithubRepoAction())
             .addAction(WhatsNewAction())

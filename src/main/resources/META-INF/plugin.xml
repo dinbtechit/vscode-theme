@@ -36,10 +36,6 @@
         <errorHandler implementation="com.github.dinbtechit.vscodetheme.diagostic.VSCodeErrorReportSubmitter"/>
     </extensions>
     <actions>
-        <action id="com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction"
-                class="com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction"
-                text="Always Apply" description="Always action">
-        </action>
         <action id="com.github.dinbtechit.vscodetheme.actions.DismissNotification"
                 class="com.github.dinbtechit.vscodetheme.actions.DismissNotification"
                 text="Dismiss" description="Dismiss notification">
