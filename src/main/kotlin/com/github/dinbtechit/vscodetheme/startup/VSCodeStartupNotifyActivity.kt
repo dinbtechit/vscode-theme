@@ -1,6 +1,5 @@
 package com.github.dinbtechit.vscodetheme.startup
 
-import com.github.dinbtechit.vscodetheme.VSCodeTheme
 import com.github.dinbtechit.vscodetheme.VSCodeThemeManager
 import com.github.dinbtechit.vscodetheme.actions.AlwaysApplyThemeAction
 import com.github.dinbtechit.vscodetheme.actions.DonateAction
@@ -15,19 +14,15 @@ import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.extensions.PluginId
 import com.intellij.openapi.project.Project
-import com.intellij.openapi.startup.StartupActivity
+import com.intellij.openapi.startup.ProjectActivity
 
-/*enum class DisplayActionType {
-    DONATION_ONLY,
-    SHOW_ALL_THEMES_FOR_DEFAULT,
-    SHOW_NEW_DARK_MODERN_THEME
-}*/
+
 object DisplayActionType {
     const val DONATION_ONLY = "DONATION_ONLY"
     const val SHOW_ALL_THEMES_FOR_DEFAULT = "SHOW_ALL_THEMES_FOR_DEFAULT"
 }
 
-class VSCodeStartupNotifyActivity : StartupActivity {
+class VSCodeStartupNotifyActivity : ProjectActivity {
 
 
     private val updateContent: String by lazy {
@@ -41,16 +36,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     private val switchThemeQuestion: String by lazy {
         //language=HTML
         """
-          Set one of the <b>VSCode Theme(s)</b> as a default theme.
-          <br/>
-          $updateContent
-        """.trimIndent()
-    }
-
-    private val tryNewDarkModernThemeQuestion: String by lazy {
-        //language=HTML
-        """
-          Would you like to set the <b>VSCode Dark Modern</b> as a default theme?
+          Select <b>VSCode Theme(s)</b> from themes.
           <br/>
           $updateContent
         """.trimIndent()
@@ -65,7 +51,7 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         const val pluginId = "com.github.dinbtechit.vscodetheme"
     }
 
-    override fun runActivity(project: Project) {
+    override suspend fun execute(project: Project) {
         val settings = VSCodeThemeSettingsStore.instance
         val isReady = VSCodeThemeManager.getInstance().isVSCodeThemeReady()
         if (isReady && getPlugin()?.version != VSCodeThemeSettingsStore.instance.version) {

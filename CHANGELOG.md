@@ -3,9 +3,12 @@
 # vscode-theme Changelog
 
 ## Unreleased
+### Added
+- Support k2 compiler
 ### Changed
 - Removing Deprecated APIs
-- Min intellj Platform SDK is now 243
+- Min intellj Platform SDK is now 242
+- JDK version to 21
 
 ## 1.10.13 - 2024-11-23
 
