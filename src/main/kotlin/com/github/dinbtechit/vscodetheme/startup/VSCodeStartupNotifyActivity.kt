@@ -13,7 +13,6 @@ import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
-import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.extensions.PluginId
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.StartupActivity
@@ -26,7 +25,6 @@ import com.intellij.openapi.startup.StartupActivity
 object DisplayActionType {
     const val DONATION_ONLY = "DONATION_ONLY"
     const val SHOW_ALL_THEMES_FOR_DEFAULT = "SHOW_ALL_THEMES_FOR_DEFAULT"
-    const val SHOW_NEW_DARK_MODERN_THEME = "SHOW_NEW_DARK_MODERN_THEME"
 }
 
 class VSCodeStartupNotifyActivity : StartupActivity {
@@ -72,18 +70,10 @@ class VSCodeStartupNotifyActivity : StartupActivity {
         val isReady = VSCodeThemeManager.getInstance().isVSCodeThemeReady()
         if (isReady && getPlugin()?.version != VSCodeThemeSettingsStore.instance.version) {
             settings.version = getPlugin()!!.version
-            if (settings.alwaysApply) {
-                if (settings.themeName != VSCodeTheme.UNKNOWN) {
-                    VSCodeThemeManager.getInstance().switchToVSCodeTheme(selectedVSCodeTheme = settings.themeName)
-                }
-                showNotificationPopup(project)
-            } else if (settings.showNotificationOnUpdate) {
-                showNotificationPopup(project)
-            }
+            showNotificationPopup(project)
         }
         // Uncomment for Testing popup
         //showNotificationPopup(project)
-
     }
 
     private fun updateMsg(): String {
@@ -105,17 +95,8 @@ class VSCodeStartupNotifyActivity : StartupActivity {
     }
 
     private fun notificationContent(): String {
-        if (!VSCodeThemeManager.getInstance().isVSCodeThemeSelected() && !VSCodeThemeManager.getInstance()
-                .isVSCodeDarkModernThemeSelected()
-        ) {
-            Util.displayActionType = DisplayActionType.SHOW_ALL_THEMES_FOR_DEFAULT
-            return switchThemeQuestion
-        } else if (VSCodeThemeManager.getInstance().isVSCodeThemeSelected()) {
-            Util.displayActionType = DisplayActionType.SHOW_NEW_DARK_MODERN_THEME
-            return tryNewDarkModernThemeQuestion
-        }
-        Util.displayActionType = DisplayActionType.DONATION_ONLY
-        return updateContent
+        Util.displayActionType = DisplayActionType.SHOW_ALL_THEMES_FOR_DEFAULT
+        return switchThemeQuestion
     }
 
     private fun getPlugin(): IdeaPluginDescriptor? = PluginManagerCore.getPlugin(PluginId.getId(pluginId))
@@ -127,21 +108,8 @@ class VSCodeStartupNotifyActivity : StartupActivity {
             .getNotificationGroup("VSCode Theme Notification Group")
             .createNotification(content, type)
             .setTitle(title)
-            .setIcon(VSCodeIcons.Logo).apply {
-                if (Util.displayActionType == DisplayActionType.SHOW_ALL_THEMES_FOR_DEFAULT) {
-                    addAction(DefaultActionGroup("Show All", false).apply {
-                        add(
-                            AlwaysApplyThemeAction(
-                                text = VSCodeTheme.DARK_MODERN,
-                                vscodeTheme = VSCodeTheme.DARK_MODERN
-                            )
-                        )
-                        add(AlwaysApplyThemeAction(text = VSCodeTheme.DARK, vscodeTheme = VSCodeTheme.DARK))
-                    })
-                } else if (Util.displayActionType == DisplayActionType.SHOW_NEW_DARK_MODERN_THEME) {
-                    addAction(AlwaysApplyThemeAction(text = "Switch Now", vscodeTheme = VSCodeTheme.DARK_MODERN))
-                }
-            }
+            .setIcon(VSCodeIcons.Logo)
+            .addAction(AlwaysApplyThemeAction(text = "Themes"))
             .addAction(DonateAction())
             .addAction(StarGithubRepoAction())
             .addAction(WhatsNewAction())

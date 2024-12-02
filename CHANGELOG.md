@@ -3,6 +3,9 @@
 # vscode-theme Changelog
 
 ## Unreleased
+### Changed
+- Removing Deprecated APIs
+- Min intellj Platform SDK is now 243
 
 ## 1.10.13 - 2024-11-23
 

@@ -16,10 +16,8 @@ class VSCodeThemeSettingsStore: PersistentStateComponent<VSCodeThemeSettingsStor
             get() = ApplicationManager.getApplication().getService(VSCodeThemeSettingsStore::class.java)
     }
     var isVSCodeEnabled = true
-    var alwaysApply = false
     var showNotificationOnUpdate = true
     var version = "unknown"
-    var themeName = VSCodeTheme.UNKNOWN
 
     @Nullable
     override fun getState() = this

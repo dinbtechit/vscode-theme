@@ -1,11 +1,16 @@
 package com.github.dinbtechit.vscodetheme
 
-import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
 import com.intellij.ide.plugins.IdeaPluginDescriptor
 import com.intellij.ide.plugins.PluginManagerCore
-import com.intellij.ide.ui.LafManager
+import com.intellij.openapi.actionSystem.ActionManager
+import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.actionSystem.DataContext
+import com.intellij.openapi.actionSystem.Presentation
+import com.intellij.openapi.actionSystem.impl.SimpleDataContext
+import com.intellij.openapi.diagnostic.logger
 import com.intellij.openapi.extensions.PluginId
-import com.intellij.util.containers.ContainerUtil
+import com.intellij.openapi.project.ProjectManager
+import org.jetbrains.kotlin.console.actions.logError
 
 /*enum class VSCodeTheme(val theme: String) {
     UNKNOWN("UNKNOWN"),
@@ -33,60 +38,35 @@ class VSCodeThemeManager {
 
     private fun getPlugin(): IdeaPluginDescriptor? = PluginManagerCore.getPlugin(PluginId.getId(pluginId))
     fun isVSCodeThemeReady(): Boolean {
-        try {
-            if (getPlugin()?.isEnabled != null) {
-                val vscodeTheme =
-                    LafManager.getInstance().installedLookAndFeels.firstOrNull { it.toString().contains(VSCodeTheme.DARK) }
-                return vscodeTheme != null
-            }
-            return false
-        } catch (e: Exception) {
-            return false
+      return getPlugin() != null
+    }
+
+    fun showThemePopUp() {
+        //ShowSettingsUtil.getInstance().showSettingsDialog(null, "preferences.lookFeel")
+        val action = ActionManager.getInstance().getAction("ChangeLaf")
+        if (action != null) {
+            val openProjects = ProjectManager.getInstance().openProjects
+            if (openProjects.isNullOrEmpty()) return
+
+            val dataContext: DataContext = SimpleDataContext.getProjectContext(openProjects.first())
+
+            val presentation = Presentation()
+            val event = AnActionEvent(
+                null,
+                dataContext,
+                "",
+                presentation,
+                ActionManager.getInstance(),
+                0
+            )
+
+            // Perform the action
+            action.actionPerformed(event)
+        }
+        else {
+            logger<VSCodeThemeManager>().warn("ChangeLaf action was not found - Unable to show all themes")
         }
     }
 
-    fun switchToVSCodeTheme(always: Boolean = false, selectedVSCodeTheme: String = VSCodeTheme.DARK) {
-        try {
-            if (isVSCodeThemeReady()) {
-                val convertedSelectedVSCodeTheme = convertOldToNewTheme(selectedVSCodeTheme)
 
-                val vscodeTheme =
-                    LafManager.getInstance().installedLookAndFeels.firstOrNull { it.toString().contains(convertedSelectedVSCodeTheme) }
-                ContainerUtil.find(LafManager.getInstance().installedLookAndFeels) { it.name === convertedSelectedVSCodeTheme}
-                if (vscodeTheme != null) {
-                    LafManager.getInstance().currentLookAndFeel = vscodeTheme
-                }
-                if (always) {
-                    val settings = VSCodeThemeSettingsStore.instance
-                    settings.alwaysApply = true
-                    settings.themeName = selectedVSCodeTheme
-                }
-            }
-        } catch (e: Exception) {
-            throw (Error("Unable to select the default theme $selectedVSCodeTheme", e))
-        }
-    }
-
-    fun isVSCodeThemeSelected(): Boolean {
-        val theme = LafManager.getInstance().currentLookAndFeel
-        if (theme != null) {
-            return theme.toString().contains(VSCodeTheme.DARK) && !theme.toString().contains("Modern")
-        }
-        return false
-    }
-
-    fun isVSCodeDarkModernThemeSelected(): Boolean {
-        val theme = LafManager.getInstance().currentLookAndFeel
-        return theme?.toString()?.contains(VSCodeTheme.DARK_MODERN) ?: false
-    }
-
-
-
-    private fun convertOldToNewTheme(theme: String): String {
-        return when (theme) {
-            "DARK_MODERN" -> "VSCode Dark Modern"
-            "DARK" -> "VSCode Dark"
-            else -> theme
-        }
-    }
 }
