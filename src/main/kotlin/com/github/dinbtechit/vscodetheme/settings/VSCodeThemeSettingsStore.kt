@@ -1,6 +1,5 @@
 package com.github.dinbtechit.vscodetheme.settings
 
-import com.github.dinbtechit.vscodetheme.VSCodeTheme
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.State
@@ -16,10 +15,8 @@ class VSCodeThemeSettingsStore: PersistentStateComponent<VSCodeThemeSettingsStor
             get() = ApplicationManager.getApplication().getService(VSCodeThemeSettingsStore::class.java)
     }
     var isVSCodeEnabled = true
-    var alwaysApply = false
     var showNotificationOnUpdate = true
     var version = "unknown"
-    var themeName = VSCodeTheme.UNKNOWN
 
     @Nullable
     override fun getState() = this
