@@ -5,6 +5,7 @@ import com.intellij.lang.Language
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
+import com.intellij.psi.PsiWhiteSpace
 import com.intellij.psi.util.elementType
 import com.intellij.util.ObjectUtils
 import com.jetbrains.python.PyTokenTypes
@@ -101,8 +102,26 @@ class PyAnnotator : BaseAnnotator() {
             "elif", "else", "if", "except", "pass", "raise", "return", "try", "while",
             "with" -> type = SECONDARY_KEYWORD
             "self" -> type = DEFAULT_KEYWORD
-            "async", "await" -> type = if(isJupyterNoteBook(element)) SECONDARY_KEYWORD_WITH_BG_JUPYTER
-            else SECONDARY_KEYWORD_WITH_BG
+            "await" ->
+                type =
+                    if(isJupyterNoteBook(element))
+                        SECONDARY_KEYWORD_WITH_BG_JUPYTER
+                    else
+                        SECONDARY_KEYWORD_WITH_BG
+            "async" -> {
+                type =
+                    generateSequence(element.nextSibling) { it.nextSibling }
+                        .firstOrNull { it !is PsiWhiteSpace }
+                        ?.let { nextWord ->
+                            when {
+                                nextWord.elementType == PyTokenTypes.DEF_KEYWORD -> DEFAULT_KEYWORD
+                                isJupyterNoteBook(element) -> SECONDARY_KEYWORD_WITH_BG_JUPYTER
+                                else -> SECONDARY_KEYWORD_WITH_BG
+                            }
+                        }
+                        ?: if (isJupyterNoteBook(element)) SECONDARY_KEYWORD_WITH_BG_JUPYTER
+                        else SECONDARY_KEYWORD_WITH_BG
+            }
             else -> {}
         }
 
@@ -117,5 +136,4 @@ class PyAnnotator : BaseAnnotator() {
          return element.containingFile.name.contains(".ipynb")
                  || element.containingFile.language == Language.findLanguageByID("JupyterPython")
     }
-
 }
