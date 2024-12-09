@@ -104,10 +104,8 @@ class PyAnnotator : BaseAnnotator() {
             "self" -> type = DEFAULT_KEYWORD
             "await" ->
                 type =
-                    if(isJupyterNoteBook(element))
-                        SECONDARY_KEYWORD_WITH_BG_JUPYTER
-                    else
-                        SECONDARY_KEYWORD_WITH_BG
+                    if (isJupyterNoteBook(element)) SECONDARY_KEYWORD_WITH_BG_JUPYTER
+                    else SECONDARY_KEYWORD_WITH_BG
             "async" -> {
                 type =
                     generateSequence(element.nextSibling) { it.nextSibling }
