@@ -3,12 +3,15 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
 ### Added
 - Support k2 compiler
+
 ### Changed
 - Removing Deprecated APIs
 - Min intellj Platform SDK is now 242
 - JDK version to 21
+- #210 - Categorize async Python keyword as a primary keyword (Thanks @j-d-ha) 
 
 ## 1.10.13 - 2024-11-23
 
