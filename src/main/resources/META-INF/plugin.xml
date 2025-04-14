@@ -3,7 +3,7 @@
     <id>com.github.dinbtechit.vscodetheme</id>
     <name>VSCode Theme</name>
     <vendor>dinbtechit</vendor>
-    <idea-version since-build="213"/>
+    <idea-version/>
 
     <depends>com.intellij.modules.platform</depends>
 
