@@ -1240,5 +1240,29 @@
         <option name="XML_TAG_NAME" baseAttributes="DEFAULT_KEYWORD"/>
         <option name="XPATH.KEYWORD" baseAttributes="DEFAULT_KEYWORD"/>
         <option name="XPATH.XPATH_VARIABLE" baseAttributes="DEFAULT_LOCAL_VARIABLE"/>
+
+        <option name="HCL.BLOCK_FIRST_TYPE_KEY">
+            <value>
+                <option name="FOREGROUND" value="4ec9b0" />
+            </value>
+        </option>
+        <option name="HCL.BLOCK_NAME_KEY">
+            <value>
+                <option name="FOREGROUND" value="4fc1ff" />
+                <option name="EFFECT_TYPE" value="1" />
+            </value>
+        </option>
+        <option name="HCL.BLOCK_SECOND_TYPE_KEY">
+            <value>
+                <option name="FOREGROUND" value="4fc1ff" />
+                <option name="EFFECT_COLOR" value="4fc1ff" />
+                <option name="EFFECT_TYPE" value="1" />
+            </value>
+        </option>
+        <option name="HCL.KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="c586c0" />
+            </value>
+        </option>
     </attributes>
 </scheme>
