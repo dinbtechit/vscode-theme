@@ -1,0 +1,6 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="HCL" order="last"
+                   implementationClass="com.github.dinbtechit.vscodetheme.annotators.HCLAnnotator"/>
+    </extensions>
+</idea-plugin>

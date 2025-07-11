@@ -19,6 +19,8 @@
     <depends config-file="lang-config/dinbtechit-go.xml" optional="true">org.jetbrains.plugins.go</depends>
     <depends config-file="lang-config/dinbtechit-rust.xml" optional="true">com.jetbrains.rust</depends>
     <depends config-file="lang-config/dinbtechit-sh.xml" optional="true">com.jetbrains.sh</depends>
+    <depends config-file="lang-config/dinbtechit-hcl.xml" optional="true">org.intellij.plugins.hcl</depends>
+    <depends config-file="lang-config/dinbtechit-hil.xml" optional="true">org.intellij.plugins.hcl</depends>
     <!--<depends config-file="lang-config/dinbtechit-typescript.xml" optional="true">JavaScript</depends>-->
     <extensions defaultExtensionNs="org.jetbrains.kotlin">
         <supportsKotlinPluginMode supportsK2="true"/>
