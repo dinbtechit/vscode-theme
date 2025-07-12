@@ -1746,5 +1746,67 @@
                 <option name="FOREGROUND" value="a31515"/>
             </value>
         </option>
+
+        <option name="HCL.BLOCK_FIRST_TYPE_KEY">
+            <value>
+                <option name="FOREGROUND" value="267f99"/>
+            </value>
+        </option>
+        <option name="HCL.BLOCK_NAME_KEY">
+            <value>
+                <option name="FOREGROUND" value="70c1"/>
+                <option name="EFFECT_TYPE" value="1"/>
+            </value>
+        </option>
+        <option name="HCL.BLOCK_SECOND_TYPE_KEY">
+            <value>
+                <option name="FOREGROUND" value="70c1"/>
+                <option name="EFFECT_COLOR" value="70c1"/>
+                <option name="EFFECT_TYPE" value="1"/>
+            </value>
+        </option>
+        <option name="HCL.FUNCTION_CALL">
+            <value>
+                <option name="FOREGROUND" value="795e26"/>
+            </value>
+        </option>
+        <option name="HCL.IDENTIFIER">
+            <value>
+                <option name="FOREGROUND" value="1080"/>
+            </value>
+        </option>
+        <option name="HCL.SECONDARY_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="af00db"/>
+            </value>
+        </option>
+        <option name="HCL.TYPE">
+            <value>
+                <option name="FOREGROUND" value="af00db"/>
+            </value>
+        </option>
+
+        <option name="TIL.BRACES">
+            <value>
+                <option name="FOREGROUND" value="ff"/>
+            </value>
+        </option>
+        <option name="TIL.PREDEFINED_SCOPE">
+            <value>
+                <option name="FOREGROUND" value="1080"/>
+            </value>
+        </option>
+        <option name="TIL.RESOURCE_INSTANCE_REFERENCE">
+            <value>
+                <option name="FOREGROUND" value="1080"/>
+                <option name="EFFECT_TYPE" value="1"/>
+            </value>
+        </option>
+        <option name="TIL.RESOURCE_TYPE_REFERENCE">
+            <value>
+                <option name="FOREGROUND" value="1080"/>
+                <option name="EFFECT_TYPE" value="1"/>
+            </value>
+        </option>
     </attributes>
 </scheme>
