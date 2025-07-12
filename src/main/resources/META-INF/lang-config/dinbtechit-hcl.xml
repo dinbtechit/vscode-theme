@@ -1,5 +1,7 @@
 <idea-plugin>
     <extensions defaultExtensionNs="com.intellij">
+        <annotator language="HIL" order="last"
+                   implementationClass="com.github.dinbtechit.vscodetheme.annotators.HCLAnnotator"/>
         <annotator language="HCL" order="last"
                    implementationClass="com.github.dinbtechit.vscodetheme.annotators.HCLAnnotator"/>
         <colorSettingsPage order="last"
