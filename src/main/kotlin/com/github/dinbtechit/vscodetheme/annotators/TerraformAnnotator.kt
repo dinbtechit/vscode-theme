@@ -17,7 +17,7 @@ import org.intellij.terraform.hil.psi.ILDefinedMethodExpression
 import org.intellij.terraform.hil.psi.ILMethodCallExpression
 import org.intellij.terraform.hil.psi.ILSelectExpression
 
-class HILAnnotator : Annotator {
+class TerraformAnnotator : Annotator {
     companion object {
         val DEFAULT_KEYWORD: TextAttributesKey =
             ObjectUtils.notNull(
@@ -41,7 +41,7 @@ class HILAnnotator : Annotator {
 
         // All HCL data type keywords except for `null` as in VSCode, `null` is colored as a primary
         // keyword.
-        private val HCL_DATA_TYPES =
+        private val TERRAFORM_TYPES =
             setOf(
                 "string",
                 "number",
@@ -56,35 +56,36 @@ class HILAnnotator : Annotator {
                 "false",
             )
 
-        private val HCL_CONTROL_FLOW_KEYWORDS = setOf("for", "in", "if")
+        private val TERRAFORM_CONTROL_KEYWORDS = setOf("for", "in", "if")
     }
 
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
-        val lang = element.language
-        println()
         val (kind: TextAttributesKey, targetElement: PsiElement) =
             when {
                 // 1. Check if running in batch mode, early exit.
                 holder.isBatchMode -> return
 
                 // 2. Check if the element is a method call expression. If so, we know the first
-                // element _should_ be a method name
-                element is ILMethodCallExpression ->
+                // element _should_ be a method name (handles both HIL and HCL)
+                element is ILMethodCallExpression || element is HCLMethodCallExpression ->
                     DEFAULT_FUNCTION_DECLARATION to element.firstChild
 
                 // 3. Check if an element is part of a provider-defined function and is NOT the
                 // actual end expression. The last expression is handled by step 2.
-                element.parent is ILDefinedMethodExpression && element !is ILSelectExpression -> {
-                    val text = element.text
-                    DEFAULT_FUNCTION_DECLARATION to element
-                }
+                (element.parent is ILDefinedMethodExpression && element !is ILSelectExpression) ||
+                        (element.parent is HCLDefinedMethodExpression &&
+                                element !is HCLSelectExpression) -> DEFAULT_FUNCTION_DECLARATION to element
 
+                // 4. At this point, we only care about leaf elements as we will be doing direct
+                // text comparison. As such, we can return early for non-leaf elements or for
+                // comments.
                 element !is LeafPsiElement || element.parent is PsiComment -> return
 
+                // 5. At this point, we shift to direct text comparisons.
                 else ->
                     when (element.text) {
-                        in HCL_DATA_TYPES -> SECONDARY_KEYWORD to element
-                        in HCL_CONTROL_FLOW_KEYWORDS -> SECONDARY_KEYWORD to element
+                        in TERRAFORM_TYPES -> SECONDARY_KEYWORD to element
+                        in TERRAFORM_CONTROL_KEYWORDS -> SECONDARY_KEYWORD to element
                         else -> return
                     }
             }
