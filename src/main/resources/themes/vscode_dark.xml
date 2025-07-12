@@ -1269,7 +1269,11 @@
                 <option name="FOREGROUND" value="c586C0"/>
             </value>
         </option>
-        <option name="HCL.FUNCTION" baseAttributes="DEFAULT_FUNCTION_DECLARATION"/>
+        <option name="HCL.FUNCTION_CALL">
+            <value>
+                <option name="FOREGROUND" value="dcdcaa"/>
+            </value>
+        </option>
         <option name="HCL.TYPE">
             <value>
                 <option name="FOREGROUND" value="c586C0"/>

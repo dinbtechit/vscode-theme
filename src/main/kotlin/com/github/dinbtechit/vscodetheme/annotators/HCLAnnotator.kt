@@ -9,6 +9,7 @@ import com.intellij.psi.PsiComment
 import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.tree.LeafPsiElement
 import com.intellij.util.ObjectUtils
+import org.intellij.terraform.hcl.HCLLanguage
 import org.intellij.terraform.hcl.psi.HCLDefinedMethodExpression
 import org.intellij.terraform.hcl.psi.HCLMethodCallExpression
 import org.intellij.terraform.hcl.psi.HCLSelectExpression
@@ -16,8 +17,7 @@ import org.intellij.terraform.hil.psi.ILDefinedMethodExpression
 import org.intellij.terraform.hil.psi.ILMethodCallExpression
 import org.intellij.terraform.hil.psi.ILSelectExpression
 
-
-class TerraformAnnotator : Annotator {
+class HCLAnnotator : Annotator {
     companion object {
         val SECONDARY_KEYWORD: TextAttributesKey =
             TextAttributesKey.createTextAttributesKey(
@@ -25,9 +25,9 @@ class TerraformAnnotator : Annotator {
                 DefaultLanguageHighlighterColors.KEYWORD,
             )
 
-        val FUNCTION: TextAttributesKey =
+        val FUNCTION_CALL: TextAttributesKey =
             ObjectUtils.notNull(
-                TextAttributesKey.find("HCL.FUNCTION"),
+                TextAttributesKey.find("HCL.FUNCTION_CALL"),
                 DefaultLanguageHighlighterColors.FUNCTION_CALL,
             )
 
@@ -58,6 +58,9 @@ class TerraformAnnotator : Annotator {
     }
 
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
+        // isHcl is used to determine if the language of the element is HCL (true) or HIL (false).
+        val isHcl = element.language is HCLLanguage
+
         val (kind: TextAttributesKey, targetElement: PsiElement) =
             when {
                 // 1. Check if running in batch mode, early exit.
@@ -65,14 +68,18 @@ class TerraformAnnotator : Annotator {
 
                 // 2. Check if the element is a method call expression. If so, we know the first
                 // element _should_ be a method name (handles both HIL and HCL)
-                element is ILMethodCallExpression || element is HCLMethodCallExpression ->
-                    FUNCTION to element.firstChild
+                (!isHcl && element is ILMethodCallExpression) ||
+                        (isHcl && element is HCLMethodCallExpression) ->
+                    FUNCTION_CALL to element.firstChild
 
                 // 3. Check if an element is part of a provider-defined function and is NOT the
                 // actual end expression. The last expression is handled by step 2.
-                (element.parent is ILDefinedMethodExpression && element !is ILSelectExpression) ||
-                        (element.parent is HCLDefinedMethodExpression &&
-                                element !is HCLSelectExpression) -> FUNCTION to element
+                (!isHcl &&
+                        element.parent is ILDefinedMethodExpression &&
+                        element !is ILSelectExpression) ||
+                        (isHcl &&
+                                element.parent is HCLDefinedMethodExpression &&
+                                element !is HCLSelectExpression) -> FUNCTION_CALL to element
 
                 // 4. At this point, we only care about leaf elements as we will be doing direct
                 // text comparison. As such, we can return early for non-leaf elements or for
@@ -111,4 +118,3 @@ class TerraformAnnotator : Annotator {
         }
     }
 }
-

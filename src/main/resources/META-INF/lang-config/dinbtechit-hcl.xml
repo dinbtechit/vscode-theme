@@ -1,6 +1,8 @@
 <idea-plugin>
     <extensions defaultExtensionNs="com.intellij">
         <annotator language="HCL" order="last"
-                   implementationClass="com.github.dinbtechit.vscodetheme.annotators.TerraformAnnotator"/>
+                   implementationClass="com.github.dinbtechit.vscodetheme.annotators.HCLAnnotator"/>
+        <colorSettingsPage order="last"
+                           implementation="com.github.dinbtechit.vscodetheme.annotators.settings.HCLColorSettingsPage"/>
     </extensions>
 </idea-plugin>
