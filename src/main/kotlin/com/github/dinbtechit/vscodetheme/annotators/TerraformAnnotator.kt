@@ -5,7 +5,6 @@ import com.intellij.lang.annotation.Annotator
 import com.intellij.lang.annotation.HighlightSeverity
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
-import com.intellij.openapi.util.TextRange
 import com.intellij.psi.PsiComment
 import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.tree.LeafPsiElement
@@ -17,31 +16,28 @@ import org.intellij.terraform.hil.psi.ILDefinedMethodExpression
 import org.intellij.terraform.hil.psi.ILMethodCallExpression
 import org.intellij.terraform.hil.psi.ILSelectExpression
 
+
 class TerraformAnnotator : Annotator {
     companion object {
-        val DEFAULT_KEYWORD: TextAttributesKey =
-            ObjectUtils.notNull(
-                TextAttributesKey.find("DEFAULT_KEYWORD"),
-                DefaultLanguageHighlighterColors.KEYWORD,
-            )
         val SECONDARY_KEYWORD: TextAttributesKey =
-            TextAttributesKey.createTextAttributesKey("DEFAULT_SECONDARY_KEYWORD", DEFAULT_KEYWORD)
-
-        val SECONDARY_KEYWORD_BG: TextAttributesKey =
-            ObjectUtils.notNull(
-                TextAttributesKey.find("DEFAULT_SECONDARY_KEYWORD_WITH_BG"),
+            TextAttributesKey.createTextAttributesKey(
+                "HCL.SECONDARY_KEYWORD",
                 DefaultLanguageHighlighterColors.KEYWORD,
             )
 
-        val DEFAULT_FUNCTION_DECLARATION: TextAttributesKey =
+        val FUNCTION: TextAttributesKey =
             ObjectUtils.notNull(
-                TextAttributesKey.find("DEFAULT_FUNCTION_DECLARATION"),
+                TextAttributesKey.find("HCL.FUNCTION"),
+                DefaultLanguageHighlighterColors.FUNCTION_CALL,
+            )
+
+        val TYPE: TextAttributesKey =
+            ObjectUtils.notNull(
+                TextAttributesKey.find("HCL.TYPE"),
                 DefaultLanguageHighlighterColors.KEYWORD,
             )
 
-        // All HCL data type keywords except for `null` as in VSCode, `null` is colored as a primary
-        // keyword.
-        private val TERRAFORM_TYPES =
+        private val HCL_TYPES =
             setOf(
                 "string",
                 "number",
@@ -56,7 +52,9 @@ class TerraformAnnotator : Annotator {
                 "false",
             )
 
-        private val TERRAFORM_CONTROL_KEYWORDS = setOf("for", "in", "if")
+        private val HCL_BOOLEAN_VALUES = setOf("true", "false")
+
+        private val HCL_CONTROL_KEYWORDS = setOf("for", "in", "if")
     }
 
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
@@ -68,13 +66,13 @@ class TerraformAnnotator : Annotator {
                 // 2. Check if the element is a method call expression. If so, we know the first
                 // element _should_ be a method name (handles both HIL and HCL)
                 element is ILMethodCallExpression || element is HCLMethodCallExpression ->
-                    DEFAULT_FUNCTION_DECLARATION to element.firstChild
+                    FUNCTION to element.firstChild
 
                 // 3. Check if an element is part of a provider-defined function and is NOT the
                 // actual end expression. The last expression is handled by step 2.
                 (element.parent is ILDefinedMethodExpression && element !is ILSelectExpression) ||
                         (element.parent is HCLDefinedMethodExpression &&
-                                element !is HCLSelectExpression) -> DEFAULT_FUNCTION_DECLARATION to element
+                                element !is HCLSelectExpression) -> FUNCTION to element
 
                 // 4. At this point, we only care about leaf elements as we will be doing direct
                 // text comparison. As such, we can return early for non-leaf elements or for
@@ -82,21 +80,21 @@ class TerraformAnnotator : Annotator {
                 element !is LeafPsiElement || element.parent is PsiComment -> return
 
                 // 5. At this point, we shift to direct text comparisons.
-                else ->
+                else -> {
+                    // println(element.text)
                     when (element.text) {
-                        in TERRAFORM_TYPES -> SECONDARY_KEYWORD to element
-                        in TERRAFORM_CONTROL_KEYWORDS -> SECONDARY_KEYWORD to element
+                        in HCL_CONTROL_KEYWORDS -> SECONDARY_KEYWORD to element
+                        in HCL_TYPES -> TYPE to element
+                        in HCL_BOOLEAN_VALUES -> TYPE to element
                         else -> return
                     }
+                }
             }
-
-        val range =
-            TextRange(targetElement.textRange.startOffset, targetElement.textRange.endOffset)
 
         try {
             holder
                 .newSilentAnnotation(HighlightSeverity.INFORMATION)
-                .range(range)
+                .range(targetElement.textRange)
                 .textAttributes(kind)
                 .create()
         } catch (e: Exception) {
@@ -105,7 +103,7 @@ class TerraformAnnotator : Annotator {
                      parent: ${element.parent.text},
                      element: ${element.text},
                      kind: $kind,
-                     range: $range
+                     range: ${targetElement.textRange}
                      }"""
                     .trimIndent(),
                 e,
@@ -113,3 +111,4 @@ class TerraformAnnotator : Annotator {
         }
     }
 }
+

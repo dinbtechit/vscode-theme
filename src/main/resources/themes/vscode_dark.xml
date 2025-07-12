@@ -1264,5 +1264,16 @@
                 <option name="FOREGROUND" value="c586c0" />
             </value>
         </option>
+        <option name="HCL.SECONDARY_KEYWORD">
+            <value>
+                <option name="FOREGROUND" value="c586C0"/>
+            </value>
+        </option>
+        <option name="HCL.FUNCTION" baseAttributes="DEFAULT_FUNCTION_DECLARATION"/>
+        <option name="HCL.TYPE">
+            <value>
+                <option name="FOREGROUND" value="c586C0"/>
+            </value>
+        </option>
     </attributes>
 </scheme>
