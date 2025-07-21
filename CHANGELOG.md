@@ -3,12 +3,16 @@
 # vscode-theme Changelog
 
 ## Unreleased
+
+## 1.12.0 - 2025-07-21
+
 ### Added
+
 - Support for HCL syntax highlighting - Thanks to @j-d-ha for your contribution.
 
 ### Changed
-- Support only 251 or higher.
 
+- Support only 251 or higher.
 
 ## 1.11.1 - 2025-04-14
 
