@@ -18,9 +18,11 @@ This plugin aims to closely emulate the VSCode theme within the IDE, simplifying
 **Dark:**
 - VSCode Dark+
 - VSCode Dark Modern
+- VSCode 2026 Dark
 
 **Light:**
 - VSCode Light Modern (Experimental - Feel free to report bugs at https://github.com/dinbtechit/vscode-theme/issues)
+- VSCode 2026 Light
 
 **For Best Viewing Experience:** 
 - Plugins: VSCode Theme + Rainbow Brackets
