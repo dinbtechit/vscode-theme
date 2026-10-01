@@ -38,7 +38,7 @@ class DartColorSettingsPage : BaseColorSettings() {
     }
 
     override fun getIcon(): Icon {
-        return DartFileType.INSTANCE.icon
+        return DartFileType.INSTANCE.icon ?: AllIcons.FileTypes.Any_type
     }
 
 

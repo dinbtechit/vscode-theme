@@ -2,6 +2,7 @@ package com.github.dinbtechit.vscodetheme.annotators.settings
 
 
 import com.github.dinbtechit.vscodetheme.annotators.JavaAnnotator
+import com.intellij.icons.AllIcons
 import com.intellij.lang.Language
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.openapi.fileTypes.SyntaxHighlighter
@@ -38,7 +39,7 @@ class KtColorSettingsPage : BaseColorSettings() {
     }
 
     override fun getIcon(): Icon {
-        return KotlinFileType.INSTANCE.icon
+        return KotlinFileType.INSTANCE.icon ?: AllIcons.FileTypes.Any_type
     }
 
 

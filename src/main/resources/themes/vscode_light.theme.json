@@ -3,6 +3,7 @@
   "dark": false,
   "author": "Dinesh Srinivasan",
   "editorScheme": "/themes/vscode_light_modern.xml",
+  "parentTheme": "Islands Light",
 
   "colors": {
     "Grey1": "#000000",
@@ -104,6 +105,16 @@
   },
 
   "ui": {
+    "Islands": 1,
+    "Island.arc": 20,
+    "Island.borderWidth": 5,
+    "Island.borderColor": "#F7F8FA",
+    "Island.inactiveAlpha": 0.44,
+    "MainWindow.background": "#EBECF0",
+    "MainToolbar.borderColor": "#F7F8FA00",
+    "ToolWindow.Stripe.borderColor": "#F7F8FA00",
+    "StatusBar.borderColor": "#F7F8FA00",
+
     "*": {
       "selectionBackground": "Blue11",
       "lightSelectionBackground": "Blue11",
@@ -115,6 +126,7 @@
     },
 
     "Editor": {
+      "background": "Grey14",
       "SearchField" : {
         "background": "Grey14"
       },
@@ -135,6 +147,14 @@
       }
     },
 
+    "EditorTabs": {
+      "background": "Grey14",
+      "underlinedBorderColor": "Blue4",
+      "inactiveUnderlinedTabBorderColor": "Blue7",
+      "underlinedTabBackground": "Grey14",
+      "inactiveUnderlinedTabBackground": "Grey13"
+    },
+
     "SearchMatch": {
       "startBackground": "#f5bc2d",
       "endBackground": "#e9b32b"
@@ -153,6 +173,12 @@
       "SidePanel.background": "#F8F8F8",
       "Projects.background": "#FFFFFF",
       "Projects.actions.background": "#225DA1"
+    },
+
+    "ToolWindow": {
+      "background": "Grey13",
+      "Header.background": "Grey13",
+      "Header.inactiveBackground": "Grey13"
     },
 
     "RecentProject": {

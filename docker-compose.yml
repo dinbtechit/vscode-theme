@@ -1,0 +1,13 @@
+services:
+  build:
+    image: gradle:8.13-jdk21
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - gradle-cache:/home/gradle/.gradle
+    environment:
+      GRADLE_USER_HOME: /home/gradle/.gradle
+    command: ["./gradlew", "buildPlugin", "--no-daemon"]
+
+volumes:
+  gradle-cache:

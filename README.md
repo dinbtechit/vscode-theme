@@ -25,6 +25,24 @@ This plugin aims to closely emulate the VSCode theme within the IDE, simplifying
 **For Best Viewing Experience:** 
 - Plugins: VSCode Theme + Rainbow Brackets
 
+#### Islands UI
+
+The VSCode Dark, VSCode Dark Modern, and VSCode Light Modern themes use the JetBrains Islands UI on IDE version 2025.2.3 and later. After installing the plugin, select the desired theme under <kbd>Settings/Preferences</kbd> > <kbd>Appearance & Behavior</kbd> > <kbd>Appearance</kbd> > <kbd>Theme</kbd>. You can optionally enable <kbd>Different tool window background</kbd> for stronger editor focus.
+
+### Build with Docker
+
+Docker and Docker Compose are enough; the Compose service provides JDK 21 and Gradle 8.13:
+
+```bash
+docker compose run --rm build
+```
+
+The plugin ZIP is written to `build/distributions/`. To run other Gradle tasks, override the service command, for example:
+
+```bash
+docker compose run --rm build ./gradlew test --no-daemon
+```
+
 ### Supported Languages
 - Advance Syntax highlighting Support: 
   - JavaScript, TypeScript, Java, Dart/Flutter, Rust, Python, Kotlin, C#/F#, Php, Go

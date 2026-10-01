@@ -3,7 +3,18 @@
   "dark": true,
   "author": "Dinesh Srinivasan",
   "editorScheme": "/themes/vscode_dark_brighter.xml",
+  "parentTheme": "Islands Dark",
   "ui": {
+    "Islands": 1,
+    "Island.arc": 20,
+    "Island.borderWidth": 5,
+    "Island.borderColor": "#1e1e1e",
+    "Island.inactiveAlpha": 0.44,
+    "MainWindow.background": "#323333",
+    "MainToolbar.borderColor": "#1e1e1e00",
+    "ToolWindow.Stripe.borderColor": "#1e1e1e00",
+    "StatusBar.borderColor": "#1e1e1e00",
+
     "*": {
       "background": "#1e1e1e",
       "foreground": "#DFDFE0",
@@ -125,7 +136,11 @@
     },
     "EditorTabs": {
       "tabInsets": true,
+      "background": "#1f1f1f",
+      "underlinedBorderColor": "#1D7BED",
+      "inactiveUnderlinedTabBorderColor": "#24648D",
       "underlinedTabBackground": "#1f1f1f",
+      "inactiveUnderlinedTabBackground": "#2A2B2B",
       "inactiveColoredFileBackground": "#2d281d"
     },
 
@@ -178,6 +193,8 @@
     },
     "ToolWindow": {
       "background": "#1e1e1e",
+      "Header.background": "#1e1e1e",
+      "Header.inactiveBackground": "#1e1e1e",
       "Header.borderColor": "#ffffff12"
     },
     "Tree": {
