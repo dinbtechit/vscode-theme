@@ -1,7 +1,8 @@
+.DS_Store
 .gradle
 .idea
+.idea/**
+.intellijPlatform
+.kotlin
 .qodana
 build
-.idea/**
-.DS_Store
-/.intellijPlatform/

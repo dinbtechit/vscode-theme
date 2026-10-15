@@ -1,4 +1,4 @@
-# This workflow warns and then closes issues and PRs that have had no activity for a specified amount of time.
+# This workflow marks issues and PRs as stale when they have had no activity for a specified amount of time.
 #
 # You can adjust the behavior by modifying this file.
 # For more information, see:
@@ -18,13 +18,19 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: actions/stale@v5
+    - uses: actions/stale@v11
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        stale-issue-message: 'Stale issue message'
-        stale-pr-message: 'Stale pull request message'
+        stale-issue-message: >
+          This issue has been automatically marked as stale because it has had no activity for 30 days.
+          It will not be closed. If it is still relevant, please leave a comment with any new details
+          (IDE version, plugin version, steps to reproduce) and the stale label will be removed.
+        stale-pr-message: >
+          This pull request has been automatically marked as stale because it has had no activity for 30 days.
+          It will not be closed. If you are still working on it, please push an update or leave a comment
+          and the stale label will be removed.
         stale-issue-label: 'no-issue-activity'
         stale-pr-label: 'no-pr-activity'
         days-before-stale: 30
-        days-before-close: 5
-        days-before-pr-close: -1
+        # Only label stale issues and PRs; never close them automatically
+        days-before-close: -1

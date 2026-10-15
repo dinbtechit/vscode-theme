@@ -37,7 +37,7 @@ class DartColorSettingsPage : BaseColorSettings() {
         return descriptors
     }
 
-    override fun getIcon(): Icon {
+    override fun getIcon(): Icon? {
         return DartFileType.INSTANCE.icon
     }
 

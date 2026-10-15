@@ -1,5 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run Qodana" type="GradleRunConfiguration" factoryName="Gradle">
+  <configuration default="false" name="Run Plugin" type="GradleRunConfiguration" factoryName="Gradle">
+    <log_file alias="IDE logs" path="$PROJECT_DIR$/.intellijPlatform/sandbox/*/*/log/idea.log" show_all="true" />
     <ExternalSystemSettings>
       <option name="executionName" />
       <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -10,12 +11,12 @@
       </option>
       <option name="taskNames">
         <list>
-          <option value="qodanaScan" />
+          <option value="runIde" />
         </list>
       </option>
-      <option name="vmOptions" />
+      <option name="vmOptions" value="" />
     </ExternalSystemSettings>
-    <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+    <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
     <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
     <DebugAllEnabled>false</DebugAllEnabled>
     <RunAsTest>false</RunAsTest>

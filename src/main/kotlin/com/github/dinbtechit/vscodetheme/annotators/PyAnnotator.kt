@@ -5,6 +5,7 @@ import com.intellij.lang.Language
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
+import com.intellij.psi.PsiInvalidElementAccessException
 import com.intellij.psi.PsiWhiteSpace
 import com.intellij.psi.util.elementType
 import com.intellij.util.ObjectUtils
@@ -12,7 +13,6 @@ import com.jetbrains.python.PyTokenTypes
 import com.jetbrains.python.psi.*
 import com.jetbrains.python.psi.impl.PyImportedModule
 import com.jetbrains.python.psi.impl.references.PyImportReference
-import com.jetbrains.python.psi.impl.stubs.PyClassElementType
 
 
 class PyAnnotator : BaseAnnotator() {
@@ -63,33 +63,39 @@ class PyAnnotator : BaseAnnotator() {
     }
 
     override fun getKeywordType(element: PsiElement): TextAttributesKey? {
-        var type: TextAttributesKey? = null
+        if (!element.isValid) return null
 
+        // Leave function definitions and special (dunder) names to the Python highlighter so the
+        // "Function Definition", "Nested Function Definition" and "Special Names" options take effect
+        val parent = element.parent
+        if (parent is PyFunction && element.elementType == PyTokenTypes.IDENTIFIER) return null
+        if (element.text.let { it.length > 4 && it.startsWith("__") && it.endsWith("__") }) return null
+
+        var type: TextAttributesKey? = null
+        val resolved = parent.safeResolve()
 
         if ((element.elementType is PyElementType
-                    && (element.parent is PyTargetExpression
-                    || element.parent is PyReferenceExpression)) && (element.parent !is PyFunction)
+                    && (parent is PyTargetExpression
+                    || parent is PyReferenceExpression)) && (parent !is PyFunction)
         ) {
             type = DefaultLanguageHighlighterColors.LOCAL_VARIABLE
         }
 
-        if ((element.parent is PyClass && element.nextSibling is PyArgumentList)
-            || element.parent.reference?.resolve().elementType is PyClassElementType
+        if ((parent is PyClass && element.nextSibling is PyArgumentList)
+            || resolved is PyClass
         ) {
             type = if(isJupyterNoteBook(element)) CLASS_REFERENCE_WITH_BG_JUPYTER else CLASS_REFERENCE_WITH_BG
 
         }
 
-        if ((element.parent is PyFunction && element.text != "def")
-            || (element.parent.reference?.resolve() is PyFunction && element.text != "def")
-        ) {
+        if (resolved is PyFunction && element.text != "def") {
             type = if(isJupyterNoteBook(element)) FUNCTION_WITH_BG_JUPYTER else FUNCTION_WITH_BG
         }
 
 
-        if (element.parent.reference is PyImportReference
-            || element.parent.reference?.resolve() is PyImportedModule
-            || element.parent.reference?.resolve() is PyFile
+        if (parent.reference is PyImportReference
+            || resolved is PyImportedModule
+            || resolved is PyFile
         ) {
             type =  if(isJupyterNoteBook(element)) IMPORT_REFERENCE_WITH_BG_JUPYTER else IMPORT_REFERENCE_WITH_BG
 
@@ -128,6 +134,13 @@ class PyAnnotator : BaseAnnotator() {
         }
 
         return type
+    }
+
+    // Third-party references (e.g. Django) may throw while resolving against PSI that was invalidated mid-highlighting
+    private fun PsiElement.safeResolve(): PsiElement? = try {
+        reference?.resolve()?.takeIf { it.isValid }
+    } catch (_: PsiInvalidElementAccessException) {
+        null
     }
 
     private fun isJupyterNoteBook(element: PsiElement): Boolean {
