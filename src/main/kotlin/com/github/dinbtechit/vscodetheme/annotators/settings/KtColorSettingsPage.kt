@@ -37,7 +37,7 @@ class KtColorSettingsPage : BaseColorSettings() {
         return descriptors
     }
 
-    override fun getIcon(): Icon {
+    override fun getIcon(): Icon? {
         return KotlinFileType.INSTANCE.icon
     }
 

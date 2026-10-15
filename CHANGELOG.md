@@ -4,6 +4,25 @@
 
 ## Unreleased
 
+### Changed
+
+- Sync build setup with the latest IntelliJ Platform Plugin Template
+- Build against IntelliJ IDEA `2025.3.6.1` - support only 253 or higher
+- Upgrade Gradle Wrapper to `9.8.0`
+- Dependencies - upgrade `org.jetbrains.intellij.platform` to `2.19.0`
+- Dependencies - upgrade `org.jetbrains.kotlin.jvm` to `2.4.20`
+- Dependencies - upgrade `org.jetbrains.changelog` to `2.5.0`
+- Dependencies (GitHub Actions) - upgrade `actions/checkout` to `v7`, `actions/setup-java` to `v6`, `gradle/actions/setup-gradle` to `v6`, `actions/upload-artifact` to `v7`
+
+### Removed
+
+- Remove Gradle version catalog, Qodana, Kover and UI test configuration
+
+### Fixed
+
+- Python: `Function Definition`, `Nested Function Definition` and `Special Names` color settings are no longer overridden by `Function Call` - [#247](https://github.com/dinbtechit/vscode-theme/issues/247)
+- Python: `PsiInvalidElementAccessException` when resolving references to invalidated elements (e.g. Django models) - [#244](https://github.com/dinbtechit/vscode-theme/issues/244)
+
 ## 1.12.0 - 2025-07-21
 
 ### Added
