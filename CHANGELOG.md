@@ -2,7 +2,9 @@
 
 # vscode-theme Changelog
 
-## Unreleased
+## [Unreleased]
+
+## [1.13.1] - 2026-10-16
 
 ### Changed
 
@@ -23,7 +25,7 @@
 - Python: `Function Definition`, `Nested Function Definition` and `Special Names` color settings are no longer overridden by `Function Call` - [#247](https://github.com/dinbtechit/vscode-theme/issues/247)
 - Python: `PsiInvalidElementAccessException` when resolving references to invalidated elements (e.g. Django models) - [#244](https://github.com/dinbtechit/vscode-theme/issues/244)
 
-## 1.12.0 - 2025-07-21
+## [1.12.0] - 2025-07-21
 
 ### Added
 
@@ -33,13 +35,13 @@
 
 - Support only 251 or higher.
 
-## 1.11.1 - 2025-04-14
+## [1.11.1] - 2025-04-14
 
 ### Changed
 
 - Supporting 2025.x
 
-## 1.11.0 - 2024-12-17
+## [1.11.0] - 2024-12-17
 
 ### Added
 
@@ -52,7 +54,7 @@
 - JDK version to 21
 - #210 - Categorize async Python keyword as a primary keyword (Thanks @j-d-ha)
 
-## 1.10.13 - 2024-11-23
+## [1.10.13] - 2024-11-23
 
 ### Added
 
@@ -67,13 +69,13 @@
 
 - Updating library versions and syncing with template
 
-## 1.10.12 - 2024-10-26
+## [1.10.12] - 2024-10-26
 
 ### Added
 
 - CSharp - Adding yield and foreach to provide secondary color.
 
-## 1.10.11 - 2024-07-21
+## [1.10.11] - 2024-07-21
 
 ### Fixed
 
@@ -83,20 +85,20 @@
 
 - Syncing with Template Changes - Upgrading to latest version of Intellij
 
-## 1.10.10 - 2024-02-04
+## [1.10.10] - 2024-02-04
 
 ### Fixed
 
 - VScode Light Modern — fix xml foreground color purple to blue(0000ff same as VSCode) by @trofoto
 - VScode Light Modern — fix the colors of tooltip in the editor, especially the background color with same color with text by @trofoto
 
-## 1.10.9 - 2024-01-21
+## [1.10.9] - 2024-01-21
 
 ### Fixed:
 
 - Removed internal APIs - So we can release v1.10.8
 
-## 1.10.8 - 2023-12-17
+## [1.10.8] - 2023-12-17
 
 ### Fixed:
 
@@ -105,7 +107,7 @@
 - Dart Secondary Color Highlighting issues fixed
 - Replaced Deprecated APIs
 
-## 1.10.7 - 2023-10-30
+## [1.10.7] - 2023-10-30
 
 ### Fixed
 
@@ -116,13 +118,13 @@
 - @trofoto - Added colors const for following official light theme style 
 - @trofoto - change several selection-about colors, including selection color in editor, global selection background color and foreground color. It's more compatible with the Intellij Light theme, also closer with VS code light theme;
 
-## 1.10.6 - 2023-10-16
+## [1.10.6] - 2023-10-16
 
 ### Fixed
 
 - #139 - Python Jupyter - Removed black background in Jupyter (Had to make a Temp fix might not be perfect.)
 
-## 1.10.5 - 2023-10-16
+## [1.10.5] - 2023-10-16
 
 ### Changed
 
@@ -138,7 +140,7 @@
 - #150 - Unable to select the default theme DARK_MODERN
 - #151 - java.lang.NoClassDefFoundError JupyterPyDialect
 
-## 1.10.4 - 2023-10-15
+## [1.10.4] - 2023-10-15
 
 ### Changed
 
@@ -152,7 +154,7 @@
 - #139 - Python Jupyter - Removed black background in Jupyter (Had to make a Temp fix might not be perfect.)
 - VSCode Light Theme - Toolbar background was white and hard to see the buttons.
 
-## 1.10.3 - 2023-10-01
+## [1.10.3] - 2023-10-01
 
 ### Changed
 
@@ -161,19 +163,19 @@
 - Removing deprecated API usages - Unfortunately can no longer support 2021.1.x
 - Adding more logging to triage issue #123
 
-## 1.10.2 - 2023-08-22
+## [1.10.2] - 2023-08-22
 
 ### Fixed
 
 - #103 - Fix for "Array contains no element matching the predicate"
 
-## 1.10.1 - 2023-08-21
+## [1.10.1] - 2023-08-21
 
 ### Changed
 
 - #100 - removing rainbow bracket - can be installed separately if needed.
 
-## 1.10.0 - 2023-08-18
+## [1.10.0] - 2023-08-18
 
 ### Added
 
@@ -184,82 +186,82 @@
 
 - Icon colors are messed up in VSCode light theme
 
-## 1.9.1 - 2023-08-13
+## [1.9.1] - 2023-08-13
 
 ### Changed
 
 - #91 - operator and `@decorator` colors Python
 - Python - Keeping vscode light theme inline with dark modern theme.
 
-## 1.9.0 - 2023-08-13
+## [1.9.0] - 2023-08-13
 
 ### Added
 
 - #66 - VSCode Light Modern theme - Initial
 
-## 1.8.6 - 2023-08-07
+## [1.8.6] - 2023-08-07
 
 ### Changed
 
 - Removing experimental update on typing
 - Removing experimental Dumbaware as there are not visible improvements.
 
-## 1.8.5 - 2023-07-06
+## [1.8.5] - 2023-07-06
 
 ### Fixed
 
 - #79 - Adding separate color settings for Python imports (Part 2)
 
-## 1.8.4 - 2023-07-06
+## [1.8.4] - 2023-07-06
 
 ### Fixed
 
 - #77 - Pycharm Community edition - Inconsistent colors
 - #79 - Adding separate color settings for Python imports
 
-## 1.8.3 - 2023-06-29
+## [1.8.3] - 2023-06-29
 
 ### Changed
 
 - #71 - Python - annotation docstring optimization.
 
-## 1.8.2 - 2023-06-29
+## [1.8.2] - 2023-06-29
 
 ### Fixed
 
 - #71 - Python - Inconsistent - Import and variables colors (initial)
 
-## 1.8.1 - 2023-06-25
+## [1.8.1] - 2023-06-25
 
 - #67 - Fix inactive selection color in Dark Modern theme
 
-## 1.8.0 - 2023-05-17
+## [1.8.0] - 2023-05-17
 
 - #59 - VSCode Dark Modern Theme Initial
 - [Chores] - Updating links
 - [Chores] - syncing with Intellij Templates
 
-## 1.7.9 - 2023-05-07
+## [1.7.9] - 2023-05-07
 
 - #55 - Syntax highlighting for shell scripts (For local variables explicitly)
 
-## 1.7.8 - 2023-03-26
+## [1.7.8] - 2023-03-26
 
 - [Experimental] Apply highlighting when indexing.
 - Syncing with Template changes.
 
-## 1.7.7
+## [1.7.7]
 
 - #47 - Purple color is inconsistent - Fixed only in VSCode theme. Not affects Brighter theme.
 - #49 - Markdown color inconsistencies - ordered and unordered List Text colors
 
-## 1.7.6
+## [1.7.6]
 
 ### Fixed
 
 - AppCode colors to be consistent with VSCode.
 
-## 1.7.5
+## [1.7.5]
 
 ### Changed
 
@@ -269,14 +271,14 @@
 
 - #42 - Fix Startup errors.
 
-## 1.7.4
+## [1.7.4]
 
 ### Changed
 
 - Default Annotation - Decommissioning Default Annotator due to Issue #38
 - Typescript await keyword inconsistency.
 
-## 1.7.3
+## [1.7.3]
 
 ### Fixed
 
@@ -286,7 +288,7 @@
 
 - Option to star the github repo
 
-## 1.7.2
+## [1.7.2]
 
 ### Fixed
 
@@ -297,7 +299,7 @@
 - Adding Default syntax highlighting for base control statements to match vscode
 - Adding a basic version of Rust specific syntax highlighting.
 
-## 1.7.1
+## [1.7.1]
 
 ### Fixed
 
@@ -310,47 +312,47 @@
 - Syncing up with the template changes
 - Update popup wording changes
 
-## 1.6.2
+## [1.6.2]
 
 ### Added
 
 - (Feature #16) - Add proper highlighting for react templates (jsx and tsx)
 
-## 1.6.1
+## [1.6.1]
 
 ### Fixed
 
 - (Bug #21) GoLang all keywords are purple not same as VScode
 
-## 1.6.0
+## [1.6.0]
 
 ### Added
 
 - (feature #15) Added extensive syntax highlighting for Go
 
-## 1.5.4
+## [1.5.4]
 
 ### Fixed
 
 - [Bug #11] - Scroll bar opaque - Hides warning and erros in the right-side gutter
 
-## 1.5.3
+## [1.5.3]
 
 ### Fixed
 
 - [Bug] - Kotlin - Removing incorrect highlighting for catch
 
-## 1.5.2
+## [1.5.2]
 
 - When theme is not selected. Popup will be displayed to apply theme.
 
-## 1.5.1
+## [1.5.1]
 
 ### Fixed
 
 - Notification startup issue
 
-## 1.5.0
+## [1.5.0]
 
 ### Added
 
@@ -365,7 +367,7 @@
 
 - [Improvement] Java - Annotation Attribute to different color.
 
-## 1.4.0
+## [1.4.0]
 
 ### Added
 
@@ -377,7 +379,7 @@
 - Javascript/Typescript - decorator and local variable color same as VSCode
 - Javascript/Typescript - await keyword to be same color as VSCode
 
-## 1.3.0
+## [1.3.0]
 
 ### Added
 
@@ -389,7 +391,7 @@
 
 - (Bug) - JavaScript - `from` keyword highlight only when used in import context
 
-## 1.2.0
+## [1.2.0]
 
 ### Added
 
@@ -405,7 +407,7 @@
 - (Improvement) - JS/TS - Static variables and method change to italics & yellow
 - (Improvement) - TS - Enum constants color to be same as VSCode.
 
-## 1.1.0
+## [1.1.0]
 
 ### Added
 
@@ -421,7 +423,7 @@
 - start highlight onTyping
 - Documentation on tips for best viewing experience.
 
-## 1.0.0
+## [1.0.0]
 
 ### Added
 
@@ -431,3 +433,54 @@
 ### Fixed
 
 - WelcomeScreen color issues and Toolbar border
+
+[Unreleased]: https://github.com/dinbtechit/vscode-theme/compare/v1.13.1...HEAD
+[1.13.1]: https://github.com/dinbtechit/vscode-theme/compare/v1.12.0...v1.13.1
+[1.12.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.11.1...v1.12.0
+[1.11.1]: https://github.com/dinbtechit/vscode-theme/compare/v1.11.0...v1.11.1
+[1.11.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.13...v1.11.0
+[1.10.13]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.12...v1.10.13
+[1.10.12]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.11...v1.10.12
+[1.10.11]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.10...v1.10.11
+[1.10.10]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.9...v1.10.10
+[1.10.9]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.8...v1.10.9
+[1.10.8]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.7...v1.10.8
+[1.10.7]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.6...v1.10.7
+[1.10.6]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.5...v1.10.6
+[1.10.5]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.4...v1.10.5
+[1.10.4]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.3...v1.10.4
+[1.10.3]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.2...v1.10.3
+[1.10.2]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.1...v1.10.2
+[1.10.1]: https://github.com/dinbtechit/vscode-theme/compare/v1.10.0...v1.10.1
+[1.10.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.9.1...v1.10.0
+[1.9.1]: https://github.com/dinbtechit/vscode-theme/compare/v1.9.0...v1.9.1
+[1.9.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.8.6...v1.9.0
+[1.8.6]: https://github.com/dinbtechit/vscode-theme/compare/v1.8.5...v1.8.6
+[1.8.5]: https://github.com/dinbtechit/vscode-theme/compare/v1.8.4...v1.8.5
+[1.8.4]: https://github.com/dinbtechit/vscode-theme/compare/v1.8.3...v1.8.4
+[1.8.3]: https://github.com/dinbtechit/vscode-theme/compare/v1.8.2...v1.8.3
+[1.8.2]: https://github.com/dinbtechit/vscode-theme/compare/v1.8.1...v1.8.2
+[1.8.1]: https://github.com/dinbtechit/vscode-theme/compare/v1.8.0...v1.8.1
+[1.8.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.7.9...v1.8.0
+[1.7.9]: https://github.com/dinbtechit/vscode-theme/compare/v1.7.8...v1.7.9
+[1.7.8]: https://github.com/dinbtechit/vscode-theme/compare/v1.7.7...v1.7.8
+[1.7.7]: https://github.com/dinbtechit/vscode-theme/compare/v1.7.6...v1.7.7
+[1.7.6]: https://github.com/dinbtechit/vscode-theme/compare/v1.7.5...v1.7.6
+[1.7.5]: https://github.com/dinbtechit/vscode-theme/compare/v1.7.4...v1.7.5
+[1.7.4]: https://github.com/dinbtechit/vscode-theme/compare/v1.7.3...v1.7.4
+[1.7.3]: https://github.com/dinbtechit/vscode-theme/compare/v1.7.2...v1.7.3
+[1.7.2]: https://github.com/dinbtechit/vscode-theme/compare/v1.7.1...v1.7.2
+[1.7.1]: https://github.com/dinbtechit/vscode-theme/compare/v1.6.2...v1.7.1
+[1.6.2]: https://github.com/dinbtechit/vscode-theme/compare/v1.6.1...v1.6.2
+[1.6.1]: https://github.com/dinbtechit/vscode-theme/compare/v1.6.0...v1.6.1
+[1.6.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.5.4...v1.6.0
+[1.5.4]: https://github.com/dinbtechit/vscode-theme/compare/v1.5.3...v1.5.4
+[1.5.3]: https://github.com/dinbtechit/vscode-theme/compare/v1.5.2...v1.5.3
+[1.5.2]: https://github.com/dinbtechit/vscode-theme/compare/v1.5.1...v1.5.2
+[1.5.1]: https://github.com/dinbtechit/vscode-theme/compare/v1.5.0...v1.5.1
+[1.5.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.4.0...v1.5.0
+[1.4.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.3.0...v1.4.0
+[1.3.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.2.0...v1.3.0
+[1.2.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/dinbtechit/vscode-theme/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/dinbtechit/vscode-theme/commits/v1.0.0
