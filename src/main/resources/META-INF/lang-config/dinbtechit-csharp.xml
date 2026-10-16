@@ -1,6 +1,0 @@
-<idea-plugin>
-    <extensions defaultExtensionNs="com.intellij">
-        <annotator language="C#" order="last"
-                   implementationClass="com.github.dinbtechit.vscodetheme.annotators.CSharpAnnotator"/>
-    </extensions>
-</idea-plugin>

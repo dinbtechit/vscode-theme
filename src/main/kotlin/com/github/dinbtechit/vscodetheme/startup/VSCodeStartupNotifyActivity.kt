@@ -7,12 +7,11 @@ import com.github.dinbtechit.vscodetheme.actions.StarGithubRepoAction
 import com.github.dinbtechit.vscodetheme.actions.WhatsNewAction
 import com.github.dinbtechit.vscodetheme.icons.VSCodeIcons
 import com.github.dinbtechit.vscodetheme.settings.VSCodeThemeSettingsStore
-import com.intellij.ide.plugins.IdeaPluginDescriptor
-import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
-import com.intellij.openapi.extensions.PluginId
+import com.intellij.openapi.extensions.PluginAware
+import com.intellij.openapi.extensions.PluginDescriptor
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.ProjectActivity
 
@@ -22,7 +21,13 @@ object DisplayActionType {
     const val SHOW_ALL_THEMES_FOR_DEFAULT = "SHOW_ALL_THEMES_FOR_DEFAULT"
 }
 
-class VSCodeStartupNotifyActivity : ProjectActivity {
+class VSCodeStartupNotifyActivity : ProjectActivity, PluginAware {
+
+    private var pluginDescriptor: PluginDescriptor? = null
+
+    override fun setPluginDescriptor(pluginDescriptor: PluginDescriptor) {
+        this.pluginDescriptor = pluginDescriptor
+    }
 
 
     private val updateContent: String by lazy {
@@ -85,7 +90,7 @@ class VSCodeStartupNotifyActivity : ProjectActivity {
         return switchThemeQuestion
     }
 
-    private fun getPlugin(): IdeaPluginDescriptor? = PluginManagerCore.getPlugin(PluginId.getId(pluginId))
+    private fun getPlugin(): PluginDescriptor? = pluginDescriptor
 
     private fun createNotification(
         title: String, content: String, type: NotificationType

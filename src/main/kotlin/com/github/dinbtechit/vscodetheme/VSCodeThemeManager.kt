@@ -1,6 +1,5 @@
 package com.github.dinbtechit.vscodetheme
 
-import com.intellij.ide.plugins.IdeaPluginDescriptor
 import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.openapi.extensions.PluginId
 
@@ -16,8 +15,7 @@ class VSCodeThemeManager {
         }
     }
 
-    private fun getPlugin(): IdeaPluginDescriptor? = PluginManagerCore.getPlugin(PluginId.getId(pluginId))
     fun isVSCodeThemeReady(): Boolean {
-      return getPlugin() != null
+      return PluginManagerCore.isLoaded(PluginId.getId(pluginId))
     }
 }

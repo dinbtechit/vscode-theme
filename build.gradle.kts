@@ -51,6 +51,12 @@ intellijPlatform {
             }
         }
     }
+
+    pluginVerification {
+        ides {
+            recommended()
+        }
+    }
 }
 
 tasks {

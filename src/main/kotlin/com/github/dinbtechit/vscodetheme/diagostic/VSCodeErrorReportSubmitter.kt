@@ -1,12 +1,10 @@
 package com.github.dinbtechit.vscodetheme.diagostic
 
 import com.intellij.ide.BrowserUtil
-import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.openapi.application.ApplicationInfo
 import com.intellij.openapi.diagnostic.ErrorReportSubmitter
 import com.intellij.openapi.diagnostic.IdeaLoggingEvent
 import com.intellij.openapi.diagnostic.SubmittedReportInfo
-import com.intellij.openapi.extensions.PluginId
 import org.apache.http.client.utils.URIBuilder
 import java.awt.Component
 import java.io.BufferedReader
@@ -53,8 +51,7 @@ class VSCodeErrorReportSubmitter: ErrorReportSubmitter() {
 
         val appName = ApplicationInfo.getInstance().fullApplicationName
 
-        val plugin = PluginManagerCore.getPlugin(PluginId.getId("com.github.dinbtechit.vscodetheme"))
-        val pluginVersion = plugin?.version
+        val pluginVersion = pluginDescriptor.version
 
         var stackTrace = ""
         for (event in events) {

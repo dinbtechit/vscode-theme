@@ -13,8 +13,7 @@
     <depends config-file="lang-config/dinbtechit-python-community.xml" optional="true">PythonCore</depends>
     <depends config-file="lang-config/dinbtechit-python.xml" optional="true">Pythonid</depends>
     <depends config-file="lang-config/dinbtechit-kotlin.xml" optional="true">org.jetbrains.kotlin</depends>
-    <depends config-file="lang-config/dinbtechit-csharp.xml" optional="true">com.intellij.modules.rider</depends>
-    <depends config-file="lang-config/dinbtechit-fsharp.xml" optional="true">com.intellij.modules.rider</depends>
+    <depends config-file="lang-config/dinbtechit-rider.xml" optional="true">com.intellij.modules.rider</depends>
     <depends config-file="lang-config/dinbtechit-php.xml" optional="true">com.jetbrains.php</depends>
     <depends config-file="lang-config/dinbtechit-clion.xml"  optional="true">com.intellij.cidr.lang</depends>
     <depends config-file="lang-config/dinbtechit-go.xml" optional="true">org.jetbrains.plugins.go</depends>
